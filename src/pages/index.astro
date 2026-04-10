@@ -3,31 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
-<Layout title="探究プレゼンバトル 2026 — 団体参加のご案内｜スクール・塾の先生へ">
+<Layout title="探究プレゼンバトル 2026 — 団体参加のご提案">
 
 <!-- ============================================================
-  S1  ファーストビュー — 参加者LPと同じリッチ×ポップ
+  S1  ファーストビュー — 提案書の表紙
   ============================================================ -->
 <section class="hero">
-  <!-- 背景エフェクト -->
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-rays"></div>
-    <div class="hero-bubble hero-bubble--1"></div>
-    <div class="hero-bubble hero-bubble--2"></div>
-    <div class="hero-bubble hero-bubble--3"></div>
-    <div class="hero-bubble hero-bubble--4"></div>
-    <div class="hero-bubble hero-bubble--5"></div>
-    <div class="hero-confetti hero-confetti--1"></div>
-    <div class="hero-confetti hero-confetti--2"></div>
-    <div class="hero-confetti hero-confetti--3"></div>
-    <div class="hero-confetti hero-confetti--4"></div>
-    <div class="hero-confetti hero-confetti--5"></div>
-    <div class="hero-confetti hero-confetti--6"></div>
-  </div>
-
   <div class="hero-inner">
+
     <!-- 共催ロゴ -->
-    <div class="hero-cohost">
+    <div class="hero-cohost rv">
       <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="小川探究" class="cohost-logo" />
       <span class="cohost-x">&times;</span>
       <img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" class="cohost-logo" />
@@ -35,46 +20,40 @@ import '../styles/global.css';
     </div>
 
     <!-- 大会ロゴ -->
-    <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="hero-logo" />
+    <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル 2026" class="hero-logo rv" />
 
-    <!-- メインコピー（企業向け） -->
-    <h1 class="hero-theme">
-      あなたのスクールの生徒に、<br>全国規模の"本番"を。
-    </h1>
+    <!-- タイトル -->
+    <h1 class="hero-title rv">探究プレゼンバトル 2026</h1>
+    <p class="hero-subtitle rv">団体参加のご提案</p>
 
-    <!-- サブコピー -->
-    <p class="hero-sub-b2b">探究プレゼンバトル 2026｜団体参加のご案内</p>
+    <!-- テーマ -->
+    <div class="hero-theme-box rv">
+      <span class="hero-theme-label">テーマ</span>
+      <p class="hero-theme-text">あなたの街の１０年後！<br>―地域活性化を提案せよ―</p>
+    </div>
 
-    <!-- 帯タグ -->
-    <div class="hero-badges-wrap">
-      <div class="hero-badges-row">
-        <span class="htag htag--purple" style="animation-delay:.5s">🎓 小学生〜高校生</span>
-        <span class="htag htag--green" style="animation-delay:.65s">🆓 参加無料</span>
-      </div>
-      <div class="hero-badges-row">
-        <span class="htag htag--blue" style="animation-delay:.8s">💻 オンライン開催</span>
-        <span class="htag htag--orange" style="animation-delay:.95s">💬 全員にフィードバック</span>
-      </div>
+    <!-- タグ -->
+    <div class="hero-tags rv">
+      <span class="hero-tag">参加無料</span>
+      <span class="hero-tag">オンライン開催</span>
+      <span class="hero-tag">全員にフィードバック</span>
+      <span class="hero-tag">小学生〜高校生</span>
     </div>
 
   </div>
 
   <!-- オルカ船長 -->
   <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="オルカ船長" class="hero-orca" />
-
-  <!-- スクロール誘導 -->
-  <div class="hero-scroll" aria-hidden="true">
-    <span class="hero-scroll-arrow"></span>
-  </div>
 </section>
 
+
 <!-- ============================================================
-  S1.5  CTA（独立セクション）
+  S1.5  CTA
   ============================================================ -->
 <section class="sec cta-sec">
   <div class="container" style="text-align:center">
-    <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
-    <p class="cta-note">※ 参加無料・全員にフィードバックをお届けします</p>
+    <a href="#" class="cta-btn">無料でエントリーする</a>
+    <p class="cta-note">※ 参加費無料・全参加者にフィードバックをお届けします</p>
   </div>
 </section>
 
@@ -82,77 +61,85 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S2  ベネフィット — 企業視点
+  S2  この大会が選ばれる理由
   ============================================================ -->
 <section class="sec sec--white" id="benefits">
   <div class="container">
-    <h2 class="sec-heading rv">生徒を送り出すと<span class="pop">何が変わる？</span></h2>
-    <div class="bene-grid">
-      <article class="bene rv rv-d1" style="--ac:var(--c-orange)">
-        <div class="bene-badge" style="background:var(--c-orange)">🔥</div>
-        <h3>スクール内では出せない<br>「本気」を引き出せる</h3>
-        <p>いつもの先生、いつものメンバーの前だと、どうしても「いつも通り」になる。でも、知らない審査員の前で3分間プレゼンするとなると話が変わる。「ちゃんと伝わるか？」という緊張感が、生徒の目の色を変えます。この"外の本番"は、スクール単体では用意しにくい場です。</p>
+    <h2 class="sec-heading rv">この大会が選ばれる理由</h2>
+    <div class="benefit-grid">
+
+      <article class="benefit-card rv rv-d1">
+        <div class="benefit-icon" style="background:rgba(37,99,235,.08);color:var(--c-blue)">01</div>
+        <h3>スクール内では再現できない「外の本番」</h3>
+        <p>知らない審査員、他スクールの参加者。いつもの教室では出せない緊張感の中で、生徒が「伝わるか？」と本気で向き合う。その経験は、安全な場所での練習とはまったく別物です。</p>
       </article>
-      <article class="bene rv rv-d2" style="--ac:var(--c-blue)">
-        <div class="bene-badge" style="background:var(--c-blue)">📊</div>
-        <h3>NORDT診断で、一人ひとりの<br>成長を"数字"で見せられる</h3>
-        <p>「なんとなく上手になった気がする」で終わらせない。5つの軸（Needs・Original・Real・Design・Talk）でスコアが出るから、生徒自身も、保護者も「どこが伸びたか」「次に何を磨くか」がひと目でわかる。保護者面談やスクールの成果報告に、そのまま活用できます。</p>
+
+      <article class="benefit-card rv rv-d2">
+        <div class="benefit-icon" style="background:rgba(5,150,105,.08);color:var(--nordt-o)">02</div>
+        <h3>全員に届く「プレゼンタイプ診断」</h3>
+        <p>NORDT（5軸）に基づく個別診断を、参加者全員にお届けします。成績や順位ではなく、一人ひとりの伝え方の特性を客観的に可視化。保護者への成果報告にも活用できます。</p>
       </article>
-      <article class="bene rv rv-d3" style="--ac:var(--c-green)">
-        <div class="bene-badge" style="background:var(--c-green)">🏆</div>
-        <h3>「全国大会に出ました」が<br>保護者への強い訴求になる</h3>
-        <p>「うちの生徒が全国大会に出場した」——この実績は、新規入会の後押しになります。入賞すればなおさら。結果だけでなく「挑戦した」という事実が、スクールの教育力を見える形にしてくれます。</p>
+
+      <article class="benefit-card rv rv-d3">
+        <div class="benefit-icon" style="background:rgba(217,119,6,.08);color:var(--nordt-d)">03</div>
+        <h3>「全国大会」という実績</h3>
+        <p>「全国規模のプレゼン大会に出場した」という事実は、保護者の信頼を後押しします。入賞すればなおのこと。スクールの教育力を、目に見える形で伝えられます。</p>
       </article>
+
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S2.5  プレゼンテーマ（そのまま維持）
+  S2.5  テーマ
   ============================================================ -->
-<section class="sec theme-sec" id="theme">
+<section class="sec sec--alt" id="theme">
   <div class="container">
     <div class="theme-box rv">
-      <span class="theme-label">🎯 今回のプレゼンテーマ</span>
+      <span class="theme-label">今回のプレゼンテーマ</span>
       <p class="theme-title">あなたの街の１０年後！<br>―地域活性化を提案せよ―</p>
+      <p class="theme-desc">自分の住む街を10年後まで見通し、課題と解決策をプレゼンで提案する。<br>探究学習の授業やワークショップとの相性がよいテーマです。</p>
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S3  大会の仕組み + NORDT（そのまま維持）
+  S3  大会概要 + NORDT
   ============================================================ -->
-<section class="sec sec--tinted angle-top" id="overview">
+<section class="sec sec--white" id="overview">
   <div class="container">
-    <h2 class="sec-heading rv">どんな<span class="pop">大会？</span></h2>
+    <h2 class="sec-heading rv">大会概要</h2>
 
+    <!-- 情報テーブル -->
     <div class="info-table rv">
-      <dl>
-        <div class="info-row"><dt>⏱ 時間</dt><dd>3分のプレゼン</dd></div>
-        <div class="info-row"><dt>💻 開催形式</dt><dd><strong>オンライン開催</strong></dd></div>
-        <div class="info-row"><dt>👥 審査員</dt><dd>教育者・ビジネスパーソンなどの大人が<strong>本気で聞く</strong></dd></div>
-        <div class="info-row"><dt>🎓 対象</dt><dd>小学生〜高校生</dd></div>
-        <div class="info-row"><dt>💰 参加費</dt><dd class="info-free">無料</dd></div>
-      </dl>
+      <table>
+        <tbody>
+          <tr><th>プレゼン時間</th><td>3分</td></tr>
+          <tr><th>開催形式</th><td>オンライン開催</td></tr>
+          <tr><th>審査員</th><td>教育者・ビジネスパーソンなどが審査</td></tr>
+          <tr><th>対象</th><td>小学生〜高校生</td></tr>
+          <tr><th>参加費</th><td><strong>無料</strong></td></tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- NORDT -->
-    <div class="nordt rv">
-      <h3 class="nordt-title">
-        <span>評価基準</span>
+    <div class="nordt-section rv">
+      <h3 class="nordt-heading">
+        評価基準
         <span class="nordt-letters" aria-label="NORDT">
           <b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b>
         </span>
       </h3>
 
-      <div class="nordt-hero rv">
+      <div class="nordt-lead rv">
         <p class="nordt-main-copy">100人が納得するニーズに、<br>1人しか持てないオリジナリティを。</p>
-        <p class="nordt-sub-copy">「みんなが本当に困っていること」をちゃんと見つける力。<br>そこに、自分にしか思いつかないアイデアで切り込む力。<br>この2つが重なったとき、その子だけの「最強の提案」が生まれる。<br>審査員はそれを楽しみにしています。</p>
+        <p class="nordt-sub-copy">「みんなが困っていること」を見つける力と、自分だけのアイデアで切り込む力。<br>この2つが重なったとき、その子だけの「最強の提案」が生まれます。</p>
       </div>
 
-      <div class="nordt-list">
+      <div class="nordt-grid">
         <div class="nordt-card rv" style="--nc:var(--nordt-n)"><span class="nordt-l">N</span><div><strong>Needs</strong><small>課題把握力</small><p>課題の本質を見抜き、需要を捉えているか</p></div></div>
         <div class="nordt-card rv" style="--nc:var(--nordt-o)"><span class="nordt-l">O</span><div><strong>Original</strong><small>独創性</small><p>独創性があり、遊び心やこだわりが感じられるか</p></div></div>
         <div class="nordt-card rv" style="--nc:var(--nordt-r)"><span class="nordt-l">R</span><div><strong>Real</strong><small>現実性</small><p>多様な視点から物事を現実的に考えられているか</p></div></div>
@@ -160,104 +147,89 @@ import '../styles/global.css';
         <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><div><strong>Talk</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div></div>
       </div>
 
-      <p class="nordt-note-text rv">スクールでの指導にそのまま活用できる基準です。「何を伸ばせばいいか」が明確になるので、大会後のカリキュラム設計にも役立ちます。</p>
+      <p class="nordt-note rv">5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S3.5  大会スケジュール（詳細版 — チーム数の絞り込みあり）
+  S3.5  大会スケジュール
   ============================================================ -->
-<section class="sec sec--white" id="schedule">
+<section class="sec sec--alt" id="schedule">
   <div class="container">
-    <h2 class="sec-heading rv">大会<span class="pop">スケジュール</span></h2>
+    <h2 class="sec-heading rv">大会スケジュール</h2>
+    <p class="sec-heading-sub rv">応募から決勝まで、5つのフェーズで進行します。</p>
 
-    <div class="sched-flow">
+    <div class="timeline">
 
-      <!-- Phase 1: エントリー＆動画提出 -->
-      <div class="sched-card sched-card--1 rv" style="--pc:var(--nordt-n)">
-        <span class="sched-watermark" aria-hidden="true">1</span>
-        <div class="sched-head">
-          <span class="sched-step">STEP 1</span>
-          <span class="sched-date">〜 8/20（締切）</span>
+      <div class="timeline-item rv">
+        <div class="timeline-marker" style="--tc:var(--nordt-n)">1</div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-step">STEP 1</span>
+            <span class="timeline-date">〜 8/20（締切）</span>
+          </div>
+          <h3>エントリー＆動画提出</h3>
+          <p>テーマに沿ってプレゼンを準備し、3分の動画を撮影して提出。スマホ撮影で問題ありません。</p>
         </div>
-        <h3 class="sched-title">エントリー＆動画提出</h3>
-        <p class="sched-desc">テーマに沿ってプレゼンを準備し、3分の動画を撮影して提出。スマホ撮影でOKです。</p>
       </div>
 
-      <!-- コネクタ矢印 -->
-      <div class="sched-connector rv" style="--pc:var(--nordt-n)" aria-hidden="true">
-        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
-        <span class="sched-funnel">応募チーム → 上位100チームへ</span>
-      </div>
+      <div class="timeline-funnel rv">応募チーム → 上位100チームへ</div>
 
-      <!-- Phase 2: 一次選考 -->
-      <div class="sched-card sched-card--2 rv" style="--pc:var(--nordt-o)">
-        <span class="sched-watermark" aria-hidden="true">2</span>
-        <div class="sched-head">
-          <span class="sched-step">STEP 2</span>
-          <span class="sched-date">8/21 〜 9/19</span>
+      <div class="timeline-item rv">
+        <div class="timeline-marker" style="--tc:var(--nordt-o)">2</div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-step">STEP 2</span>
+            <span class="timeline-date">8/21 〜 9/19</span>
+          </div>
+          <h3>一次選考（動画審査）</h3>
+          <p>提出された動画をNORDT基準で審査。9/20に通過チームを発表します。</p>
         </div>
-        <h3 class="sched-title">一次選考（動画審査）</h3>
-        <p class="sched-desc">提出された動画をNORDT基準で審査。9/20に通過チームを発表。</p>
-        <span class="sched-teams">📋 上位100チームが通過</span>
       </div>
 
-      <!-- コネクタ矢印 -->
-      <div class="sched-connector rv" style="--pc:var(--nordt-o)" aria-hidden="true">
-        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
-        <span class="sched-funnel">100チーム → 10チームへ</span>
-      </div>
+      <div class="timeline-funnel rv">100チーム → 10チームへ</div>
 
-      <!-- Phase 3: 二次選考 -->
-      <div class="sched-card sched-card--3 rv" style="--pc:var(--nordt-r)">
-        <span class="sched-watermark" aria-hidden="true">3</span>
-        <div class="sched-head">
-          <span class="sched-step">STEP 3</span>
-          <span class="sched-date">10/1 〜 10/19</span>
+      <div class="timeline-item rv">
+        <div class="timeline-marker" style="--tc:var(--nordt-r)">3</div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-step">STEP 3</span>
+            <span class="timeline-date">10/1 〜 10/19</span>
+          </div>
+          <h3>二次選考（Zoomプレゼン）</h3>
+          <p>通過チームがZoomでライブプレゼン。審査を経て10/20に結果を発表します。</p>
         </div>
-        <h3 class="sched-title">二次選考（Zoomプレゼン）</h3>
-        <p class="sched-desc">通過チームがZoomでライブプレゼン。審査を経て10/20に結果発表。</p>
-        <span class="sched-teams">🎯 上位10チームが決勝へ</span>
       </div>
 
-      <!-- コネクタ矢印 -->
-      <div class="sched-connector rv" style="--pc:var(--nordt-r)" aria-hidden="true">
-        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
-      </div>
-
-      <!-- Phase 4: 個別レクチャー -->
-      <div class="sched-card sched-card--4 rv" style="--pc:var(--nordt-d)">
-        <span class="sched-watermark" aria-hidden="true">4</span>
-        <div class="sched-head">
-          <span class="sched-step">STEP 4</span>
-          <span class="sched-date">10/21 〜 11/15</span>
+      <div class="timeline-item rv">
+        <div class="timeline-marker" style="--tc:var(--nordt-d)">4</div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-step">STEP 4</span>
+            <span class="timeline-date">10/21 〜 11/15</span>
+          </div>
+          <h3>個別レクチャー</h3>
+          <p>決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導を行います。</p>
         </div>
-        <h3 class="sched-title">個別レクチャー</h3>
-        <p class="sched-desc">決勝進出10チームに、プレゼンのプロがオンラインでマンツーマン指導。</p>
-        <span class="sched-teams">🎓 プロが直接コーチング</span>
       </div>
 
-      <!-- コネクタ矢印 -->
-      <div class="sched-connector rv" style="--pc:var(--nordt-d)" aria-hidden="true">
-        <svg viewBox="0 0 40 48" class="sched-arrow"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--pc)" /></svg>
-      </div>
-
-      <!-- Phase 5: 決勝 -->
-      <div class="sched-card sched-card--5 sched-card--final rv" style="--pc:var(--nordt-t)">
-        <span class="sched-watermark" aria-hidden="true">5</span>
-        <div class="sched-head">
-          <span class="sched-step">FINAL</span>
-          <span class="sched-date">11/22（日）</span>
+      <div class="timeline-item rv">
+        <div class="timeline-marker timeline-marker--final" style="--tc:var(--nordt-t)">F</div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-step">FINAL</span>
+            <span class="timeline-date">11/22（日）</span>
+          </div>
+          <h3>オンライン決勝</h3>
+          <p>ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定します。</p>
         </div>
-        <h3 class="sched-title">🏆 オンライン決勝</h3>
-        <p class="sched-desc">ファイナリスト10チームが最高のプレゼンを披露。優勝チームが決定！</p>
       </div>
 
     </div>
 
-    <p class="schedule-note rv">※ 一次選考の通過チーム数は応募総数の10%（上限100チーム）です。選考に漏れた生徒にもNORDT診断シートとフィードバックを届けます。</p>
+    <p class="timeline-note rv">※ 一次選考の通過チーム数は応募総数の10%（上限100チーム）です。選考に漏れた生徒にもNORDT診断シートとフィードバックをお届けします。</p>
   </div>
 </section>
 
@@ -270,31 +242,32 @@ import '../styles/global.css';
   <img src={`${import.meta.env.BASE_URL}images/char4.png`} alt="" class="char-band-img" />
 </div>
 
+
 <!-- ============================================================
-  S4  プレゼンタイプ診断（キャラクター全維持）
+  S4  プレゼンタイプ診断
   ============================================================ -->
 <section class="sec sec--white" id="diagnosis">
   <div class="container">
-    <h2 class="sec-heading rv">生徒の<span class="pop">伝え方タイプ</span>がわかる</h2>
+    <h2 class="sec-heading rv">参加者全員に届く — プレゼンタイプ診断</h2>
 
     <!-- リード -->
     <div class="diag-intro rv">
       <p class="diag-lead">人の心を動かす方法は、ひとつじゃない。</p>
       <p class="diag-big">プレゼンタイプ診断</p>
-      <p class="diag-desc">論理で納得させるのが得意な子。ストーリーで感情を揺さぶる子。データで圧倒する子。問いかけで考えさせる子。——プレゼンの「正解」は、人の数だけある。<br>参加者全員にNORDT（5つの軸）をもとにした<strong>プレゼンタイプ診断</strong>をお届けします。<br><strong>生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。</strong></p>
+      <p class="diag-desc">論理で納得させるタイプ。ストーリーで感情を揺さぶるタイプ。データで圧倒するタイプ。問いかけで考えさせるタイプ。——プレゼンの「正解」は、人の数だけあります。<br>参加者全員にNORDT（5つの軸）をもとにした<strong>プレゼンタイプ診断</strong>をお届けします。<br>生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。</p>
     </div>
 
-    <!-- キャラクター画像 -->
+    <!-- キャラクター一覧画像 -->
     <div class="diag-chars rv">
-      <img src={`${import.meta.env.BASE_URL}images/characters.webp`} alt="プレゼンタイプ診断キャラクター" class="diag-chars-img" />
+      <img src={`${import.meta.env.BASE_URL}images/characters.webp`} alt="プレゼンタイプ診断 16タイプ＋ラスボス" class="diag-chars-img" />
     </div>
 
     <!-- タイプカード一覧 -->
     <div class="type-showcase">
 
-      <!-- バランサー（独立カード） -->
+      <!-- バランサー -->
       <div class="type-section">
-        <h3 class="type-section-title rv">⚖️ バランサータイプ</h3>
+        <h3 class="type-section-title rv">バランサータイプ</h3>
         <div class="type-solo rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-t))">
           <img src={`${import.meta.env.BASE_URL}images/type-balancer.png`} alt="" class="type-solo-char" aria-hidden="true" />
           <div class="type-solo-content">
@@ -307,7 +280,7 @@ import '../styles/global.css';
 
       <!-- ストーリーテラー -->
       <div class="type-section">
-        <h3 class="type-section-title rv">🎭 ストーリーテラータイプ</h3>
+        <h3 class="type-section-title rv">ストーリーテラータイプ</h3>
         <div class="type-pair">
           <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-o),var(--nordt-t))">
             <img src={`${import.meta.env.BASE_URL}images/type-storyteller-ot.png`} alt="" class="type-card-char" aria-hidden="true" />
@@ -330,7 +303,7 @@ import '../styles/global.css';
 
       <!-- ディベーター -->
       <div class="type-section">
-        <h3 class="type-section-title rv">⚔️ ディベータータイプ</h3>
+        <h3 class="type-section-title rv">ディベータータイプ</h3>
         <div class="type-pair">
           <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-t))">
             <img src={`${import.meta.env.BASE_URL}images/type-debater-nt.png`} alt="" class="type-card-char" aria-hidden="true" />
@@ -353,7 +326,7 @@ import '../styles/global.css';
 
       <!-- アナライザー -->
       <div class="type-section">
-        <h3 class="type-section-title rv">🎯 アナライザータイプ</h3>
+        <h3 class="type-section-title rv">アナライザータイプ</h3>
         <div class="type-pair">
           <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-r))">
             <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nr.png`} alt="" class="type-card-char" aria-hidden="true" />
@@ -376,7 +349,7 @@ import '../styles/global.css';
 
       <!-- クリエイター -->
       <div class="type-section">
-        <h3 class="type-section-title rv">🎨 クリエイタータイプ</h3>
+        <h3 class="type-section-title rv">クリエイタータイプ</h3>
         <div class="type-pair">
           <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-o),var(--nordt-d))">
             <img src={`${import.meta.env.BASE_URL}images/type-creator-od.png`} alt="" class="type-card-char" aria-hidden="true" />
@@ -399,7 +372,7 @@ import '../styles/global.css';
 
       <!-- パイオニア -->
       <div class="type-section">
-        <h3 class="type-section-title rv">🚀 パイオニアタイプ</h3>
+        <h3 class="type-section-title rv">パイオニアタイプ</h3>
         <div class="type-pair">
           <div class="type-card rv" style="--tc:linear-gradient(135deg,var(--nordt-n),var(--nordt-o))">
             <img src={`${import.meta.env.BASE_URL}images/type-pioneer-no.png`} alt="" class="type-card-char" aria-hidden="true" />
@@ -422,34 +395,35 @@ import '../styles/global.css';
 
       <!-- ラスボス -->
       <div class="type-section">
-        <h3 class="type-section-title rv">👑 ラスボスタイプ</h3>
+        <h3 class="type-section-title rv">ラスボスタイプ</h3>
         <div class="secret-card rv">
           <div class="secret-silhouette">
             <img src={`${import.meta.env.BASE_URL}images/type-lastboss.png`} alt="" class="secret-char" aria-hidden="true" />
             <div class="secret-overlay"></div>
           </div>
           <div class="secret-info">
-            <span class="secret-badge">👑 ULTRA RARE</span>
+            <span class="secret-badge">ULTRA RARE</span>
             <p class="secret-title">？？？タイプ</p>
             <p class="secret-desc">全能力が最高値に達した者だけが覚醒する<br>伝説のプレゼンタイプ。<br>その正体は——診断結果で明かされる。</p>
-            <p class="secret-cta">▶ あなたの生徒がこのタイプかもしれない</p>
+            <p class="secret-cta">あなたの生徒がこのタイプかもしれません</p>
           </div>
         </div>
       </div>
 
     </div>
 
-    <p class="diag-bottom-note rv">参加するだけで届く。勝っても負けても、全員がもらえる「その子だけの診断シート」です。</p>
+    <p class="diag-bottom-note rv">参加するだけで届きます。結果に関わらず、全員が受け取れる「その子だけの診断シート」です。</p>
   </div>
 </section>
 
-<!-- CTA① -->
-<div class="cta-wrap cta-wrap--pop rv">
+
+<!-- CTA（オルカ付き） -->
+<div class="cta-wrap rv">
   <div class="cta-with-orca">
     <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="" class="cta-orca" aria-hidden="true" />
     <div>
-      <p class="cta-sub"><strong>生徒の「伝え方タイプ」、知りたくないですか？</strong></p>
-      <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
+      <p class="cta-sub">生徒の「伝え方タイプ」を可視化しませんか？</p>
+      <a href="#" class="cta-btn">無料でエントリーする</a>
     </div>
   </div>
 </div>
@@ -460,53 +434,93 @@ import '../styles/global.css';
 <!-- ============================================================
   S5  団体参加の流れ
   ============================================================ -->
-<section class="sec sec--tinted" id="flow">
+<section class="sec sec--alt" id="flow">
   <div class="container">
-    <h2 class="sec-heading rv">団体で参加するには？</h2>
-    <ol class="steps">
-      <li class="step rv" style="--sc:var(--nordt-n)"><span class="step-n">1</span><div><strong>このページからエントリー・お問い合わせ</strong><p>下のボタンから団体参加の旨をお伝えください。進め方をご案内します。</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-o)"><span class="step-n">2</span><div><strong>スクール内でテーマに取り組む</strong><p>「あなたの街の10年後」をテーマに、授業やワークショップで準備を進めてください。</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-r)"><span class="step-n">3</span><div><strong>生徒がプレゼン動画を提出（8/20まで）</strong><p>3分のプレゼン動画を撮影し、提出フォームからアップロード。スマホ撮影でOKです。</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-d)"><span class="step-n">4</span><div><strong>選考・全員にフィードバック</strong><p>NORDT基準で審査し、全員にプレゼンタイプ診断と評価シートをお届け。結果に関わらず、一人ひとりにコメントが届きます。</p></div></li>
-      <li class="step rv" style="--sc:var(--nordt-t)"><span class="step-n">5</span><div><strong>入賞チームは決勝へ</strong><p>上位10チームはプロの個別レクチャーを受けて、11/22（日）のオンライン決勝に進出。</p></div></li>
+    <h2 class="sec-heading rv">団体参加の流れ</h2>
+
+    <ol class="flow-steps">
+      <li class="flow-step rv" style="--sc:var(--nordt-n)">
+        <span class="flow-n">1</span>
+        <div>
+          <strong>お問い合わせ・エントリー</strong>
+          <p>このページからお問い合わせ、またはフォームからエントリーしてください。</p>
+        </div>
+      </li>
+      <li class="flow-step rv" style="--sc:var(--nordt-o)">
+        <span class="flow-n">2</span>
+        <div>
+          <strong>スクール内でテーマに取り組む</strong>
+          <p>「あなたの街の10年後」をテーマに、授業やワークショップで生徒がプレゼンを準備します。</p>
+        </div>
+      </li>
+      <li class="flow-step rv" style="--sc:var(--nordt-r)">
+        <span class="flow-n">3</span>
+        <div>
+          <strong>プレゼン動画を提出（8/20まで）</strong>
+          <p>3分のプレゼン動画を撮影して提出。スマホ撮影で問題ありません。</p>
+        </div>
+      </li>
+      <li class="flow-step rv" style="--sc:var(--nordt-d)">
+        <span class="flow-n">4</span>
+        <div>
+          <strong>選考・全員にフィードバック</strong>
+          <p>NORDT基準で審査し、全参加者にプレゼンタイプ診断と評価シートをお届けします。</p>
+        </div>
+      </li>
+      <li class="flow-step rv" style="--sc:var(--nordt-t)">
+        <span class="flow-n">5</span>
+        <div>
+          <strong>入賞チームは決勝へ</strong>
+          <p>上位10チームはプロの個別レクチャーを受けて、11/22の決勝に進出します。</p>
+        </div>
+      </li>
     </ol>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S6  スクール運営者の方へ（安心材料）
+  S6  運営体制
   ============================================================ -->
-<section class="sec sec--white angle-top-rev" id="safety">
+<section class="sec sec--white" id="safety">
   <div class="container">
-    <h2 class="sec-heading rv">スクール運営者の方へ</h2>
+    <h2 class="sec-heading rv">運営体制</h2>
+    <p class="sec-heading-sub rv">安心して生徒を送り出していただくために。</p>
 
-    <div class="safe-hero rv">
-      <p class="safe-main">「出てよかった」で終われる大会を。</p>
-      <p class="safe-sub">入賞できなかったら何も残らない——そんな大会にはしたくありませんでした。<br>全員にプロからのフィードバックと診断シートが届く。挑戦したこと自体に意味がある。<br>その設計だから、安心して生徒を送り出せます。</p>
-    </div>
-
-    <div class="safe-grid">
-      <div class="safe rv rv-d1"><div class="safe-ico" style="--bg:var(--c-orange)">🏆</div><h3>順位だけで終わらない</h3><p>優勝や順位はありますが、それがゴールではありません。全員の挑戦を5つの軸（NORDT）で評価し、一人ひとりにフィードバックを届けます。</p></div>
-      <div class="safe rv rv-d2"><div class="safe-ico" style="--bg:var(--c-blue)">💬</div><h3>全員にフィードバック</h3><p>参加者全員に、プレゼンタイプ診断とコメントをお届けします。「頑張ったのに何も返ってこなかった」にはなりません。</p></div>
-      <div class="safe rv rv-d3"><div class="safe-ico" style="--bg:var(--c-green)">📋</div><h3>評価基準が事前に公開されている</h3><p>NORDTの5軸で評価します。「何をどう頑張ればいいか」が最初からわかるので、授業の中で対策もしやすいです。</p></div>
+    <div class="safety-grid">
+      <div class="safety-card rv rv-d1">
+        <div class="safety-icon">01</div>
+        <h3>順位だけで終わらない</h3>
+        <p>全参加者にNORDTベースの評価とフィードバックをお届けします。「出てよかった」で終われる大会です。</p>
+      </div>
+      <div class="safety-card rv rv-d2">
+        <div class="safety-icon">02</div>
+        <h3>評価基準は事前公開</h3>
+        <p>NORDTの5軸を公開しているため、生徒もスクールも準備の方向性が明確です。</p>
+      </div>
+      <div class="safety-card rv rv-d3">
+        <div class="safety-icon">03</div>
+        <h3>オンライン完結</h3>
+        <p>ご自宅・教室から参加できます。移動の負担がなく、全国どこからでもエントリー可能です。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA② -->
+
+<!-- CTA -->
 <div class="cta-wrap rv">
-  <a href="#" class="cta-btn">1分で完了！<br>無料でエントリーする</a>
-  <p class="cta-note">※ オンライン開催。ご自宅・スクールから参加できます。</p>
+  <a href="#" class="cta-btn">無料でエントリーする</a>
+  <p class="cta-note">※ オンライン開催。ご自宅・教室から参加できます。</p>
 </div>
 
 
 <!-- ============================================================
-  S7  主催者情報（そのまま維持）
+  S7  主催者情報
   ============================================================ -->
-<section class="sec sec--tinted" id="organizer">
+<section class="sec sec--alt" id="organizer">
   <div class="container">
-    <h2 class="sec-heading rv">開催者<span class="pop">情報</span></h2>
+    <h2 class="sec-heading rv">主催</h2>
 
     <div class="org-grid rv">
       <div class="org-card rv-d1">
@@ -528,20 +542,21 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S8  FAQ — 企業向けに調整
+  S8  FAQ（企業向け）
   ============================================================ -->
 <section class="sec sec--white" id="faq">
   <div class="container">
     <h2 class="sec-heading rv">よくある質問</h2>
+
     <div class="faq-list">
-      <details class="faq rv"><summary>団体でまとめてエントリーできますか？</summary><p>はい。スクールや塾の先生がまとめてエントリーできます。生徒の人数や学年に制限はありません。</p></details>
+      <details class="faq rv"><summary>団体でエントリーできますか？</summary><p>はい。スクールや塾の先生がまとめてエントリーできます。生徒の人数や学年に制限はありません。</p></details>
       <details class="faq rv"><summary>参加費はかかりますか？</summary><p>無料です。エントリーからフィードバックの受け取りまで、費用は一切かかりません。</p></details>
-      <details class="faq rv"><summary>スクールの授業に組み込めますか？</summary><p>テーマ発表から動画提出まで約3ヶ月。「地域活性化」というテーマは探究学習の授業とも相性がいいので、カリキュラムの一部として組み込んでいるスクールもあります。</p></details>
-      <details class="faq rv"><summary>準備にどのくらい時間がかかりますか？</summary><p>テーマに沿って調べ、スライドを作り、3分のプレゼンを練習して撮影する——という流れです。2〜3ヶ月の期間があるので、週1回の授業で進めても十分間に合います。</p></details>
-      <details class="faq rv"><summary>審査基準は何ですか？</summary><p>NORDT（Needs・Original・Real・Design・Talk）の5軸で評価します。基準は事前に公開しているので、どこを伸ばせばいいかが明確です。</p></details>
-      <details class="faq rv"><summary>プレゼンの経験がない生徒でも参加できますか？</summary><p>もちろん参加できます。NORDTは「上手さ」だけでなく「考える力」「独自性」も評価するので、初挑戦でも力を発揮できます。</p></details>
-      <details class="faq rv"><summary>生成AI（ChatGPTなど）を使ってもいいですか？</summary><p>使ってOKです。ただし、AIの出力をそのままコピーしたプレゼンは「独創性（O）」のスコアが厳しくなります。自分の考えをベースにするのが大事です。</p></details>
-      <details class="faq rv"><summary>選考に落ちた生徒にもフィードバックは届きますか？</summary><p>はい。参加者全員に、NORDT診断シートとプレゼンタイプ診断をお届けします。</p></details>
+      <details class="faq rv"><summary>授業やカリキュラムに組み込めますか？</summary><p>テーマ発表から動画提出まで約3ヶ月の期間があります。「地域活性化」というテーマは探究学習の授業と相性がよく、カリキュラムの一部として取り入れているスクールもあります。</p></details>
+      <details class="faq rv"><summary>準備期間はどのくらい必要ですか？</summary><p>テーマに沿って調べ、スライドを作り、3分のプレゼンを練習して撮影する流れです。週1回の授業で進めても十分間に合います。</p></details>
+      <details class="faq rv"><summary>生成AI（ChatGPT等）を使ってもいいですか？</summary><p>使って問題ありません。ただし、AIの出力をそのまま使ったプレゼンは「独創性（O）」のスコアが低くなります。自分の考えをベースにすることが大切です。</p></details>
+      <details class="faq rv"><summary>プレゼンタイプ診断はいつ届きますか？</summary><p>大会終了後1週間以内に、全参加者にお届けします。</p></details>
+      <details class="faq rv"><summary>審査基準は何ですか？</summary><p>NORDT（Needs・Original・Real・Design・Talk）の5軸で評価します。基準は事前公開しているため、指導の方向性を立てやすくなっています。</p></details>
+      <details class="faq rv"><summary>オンラインでどのように参加しますか？</summary><p>一次選考は動画提出、二次選考以降はZoomを使用します。ご自宅・教室どちらからでも参加できます。</p></details>
     </div>
   </div>
 </section>
@@ -551,15 +566,12 @@ import '../styles/global.css';
   S9  最終CTA
   ============================================================ -->
 <section class="sec final" id="apply">
-  <div class="final-bg" aria-hidden="true">
-    <div class="final-burst"></div>
-  </div>
   <div class="container">
     <div class="final-body rv">
-      <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="final-logo" />
-      <h2 class="final-catch">生徒の「本気」が見える場を、<br>一緒につくりませんか？</h2>
-      <a href="#" class="cta-btn cta-btn--lg">1分で完了！<br>無料でエントリーする</a>
-      <p class="cta-note">※ 全員にフィードバックとプレゼンタイプ診断をお届けします。参加無料。</p>
+      <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル 2026" class="final-logo" />
+      <p class="final-theme">あなたの街の１０年後！ ―地域活性化を提案せよ―</p>
+      <a href="#" class="cta-btn cta-btn--lg">無料でエントリーする</a>
+      <p class="cta-note">※ 全参加者にフィードバックとプレゼンタイプ診断をお届けします。参加費無料。</p>
     </div>
   </div>
 </section>
@@ -581,701 +593,878 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-     STYLES — 参加者LPベースの白×ポップスタイル
+     STYLES — 提案書風ビジネスデザイン
      ============================================================ -->
 <style>
-/* ─────────── S1 HERO — リッチ×ポップ ─────────── */
-.hero{
-  position:relative;min-height:100dvh;display:flex;align-items:center;justify-content:center;
-  text-align:center;overflow:hidden;
-  background:linear-gradient(175deg,#FFFEF8 0%,#FFF9F0 40%,#F0F7FF 100%);
-  color:var(--c-text);
+/* ─────────── S1 HERO — 提案書の表紙 ─────────── */
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(170deg, #ffffff 0%, #f0f4ff 50%, #e8edf5 100%);
+  color: var(--c-text);
 }
 
-/* ─── 背景レイヤー ─── */
-.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-
-/* 放射状レイ */
-.hero-rays{
-  position:absolute;top:50%;left:50%;width:140vmax;height:140vmax;
-  transform:translate(-50%,-50%);
-  background:conic-gradient(
-    from 0deg,
-    transparent 0deg,rgba(255,215,0,.06) 10deg,transparent 20deg,
-    transparent 30deg,rgba(74,144,217,.05) 40deg,transparent 50deg,
-    transparent 60deg,rgba(76,175,80,.05) 70deg,transparent 80deg,
-    transparent 90deg,rgba(245,166,35,.06) 100deg,transparent 110deg,
-    transparent 120deg,rgba(208,72,62,.05) 130deg,transparent 140deg,
-    transparent 150deg,rgba(155,81,224,.05) 160deg,transparent 170deg,
-    transparent 180deg,rgba(255,215,0,.06) 190deg,transparent 200deg,
-    transparent 210deg,rgba(74,144,217,.05) 220deg,transparent 230deg,
-    transparent 240deg,rgba(76,175,80,.05) 250deg,transparent 260deg,
-    transparent 270deg,rgba(245,166,35,.06) 280deg,transparent 290deg,
-    transparent 300deg,rgba(208,72,62,.05) 310deg,transparent 320deg,
-    transparent 330deg,rgba(155,81,224,.05) 340deg,transparent 350deg
-  );
-  animation:raysSpin 60s linear infinite;
-  opacity:.8;
-}
-@keyframes raysSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-
-/* 浮遊バブル（NORDT5色） */
-.hero-bubble{
-  position:absolute;border-radius:50%;
-  animation:bubbleFloat 6s ease-in-out infinite;
-  opacity:.35;filter:blur(1px);
-}
-.hero-bubble--1{width:80px;height:80px;top:12%;left:8%;background:var(--nordt-n);animation-duration:7s}
-.hero-bubble--2{width:60px;height:60px;top:18%;right:12%;background:var(--nordt-o);animation-duration:5.5s;animation-delay:1s}
-.hero-bubble--3{width:50px;height:50px;bottom:25%;left:15%;background:var(--nordt-r);animation-duration:6.5s;animation-delay:2s}
-.hero-bubble--4{width:70px;height:70px;bottom:20%;right:8%;background:var(--nordt-d);animation-duration:5s;animation-delay:.5s}
-.hero-bubble--5{width:40px;height:40px;top:40%;left:3%;background:var(--nordt-t);animation-duration:8s;animation-delay:3s}
-@keyframes bubbleFloat{
-  0%,100%{transform:translateY(0) scale(1)}
-  50%{transform:translateY(-20px) scale(1.1)}
-}
-
-/* 紙吹雪 */
-.hero-confetti{
-  position:absolute;width:12px;height:12px;border-radius:2px;
-  opacity:.5;
-  animation:confettiFall 8s linear infinite;
-}
-.hero-confetti--1{left:10%;top:-5%;background:var(--nordt-n);animation-delay:0s;transform:rotate(30deg)}
-.hero-confetti--2{left:25%;top:-8%;background:var(--nordt-o);animation-delay:1.5s;width:8px;height:14px;transform:rotate(-20deg)}
-.hero-confetti--3{left:50%;top:-3%;background:var(--nordt-r);animation-delay:3s;width:10px;height:10px;border-radius:50%}
-.hero-confetti--4{left:70%;top:-6%;background:var(--nordt-d);animation-delay:4.5s;transform:rotate(60deg)}
-.hero-confetti--5{left:85%;top:-4%;background:var(--nordt-t);animation-delay:2s;width:14px;height:8px}
-.hero-confetti--6{left:40%;top:-7%;background:var(--c-lime);animation-delay:6s;border-radius:50%;width:10px;height:10px}
-@keyframes confettiFall{
-  0%{transform:translateY(0) rotate(0deg);opacity:.6}
-  100%{transform:translateY(110vh) rotate(720deg);opacity:0}
-}
-
-/* ─── メインコンテンツ ─── */
-.hero-inner{
-  position:relative;z-index:3;
-  padding:0;max-width:100vw;width:100vw;margin:0 auto;
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 /* 共催ロゴ */
-.hero-cohost{display:flex;align-items:center;justify-content:center;gap:.7rem;margin-bottom:1.5rem;animation:fadeUp .6s .1s both}
-.cohost-logo{height:28px;width:auto;opacity:.7}
-.cohost-x{font-size:1rem;opacity:.4;font-weight:700}
-.cohost-label{font-size:.72rem;font-weight:700;color:var(--c-text-muted);background:rgba(255,255,255,.7);padding:.2rem .7rem;border-radius:100px;margin-left:.3rem;backdrop-filter:blur(4px)}
+.hero-cohost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  margin-bottom: 2rem;
+}
+.cohost-logo { height: 26px; width: auto; opacity: .65; }
+.cohost-x { font-size: .9rem; opacity: .35; font-weight: 700; }
+.cohost-label {
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  background: rgba(255,255,255,.8);
+  padding: .15rem .6rem;
+  border-radius: 100px;
+  margin-left: .2rem;
+}
 
 /* 大会ロゴ */
-.hero-logo{
-  display:block;width:100%;max-width:960px;
-  margin:0 auto .2rem;
-  filter:drop-shadow(0 6px 24px rgba(0,0,0,.1));
-  animation:logoDrop .8s .15s cubic-bezier(.22,1,.36,1) both;
-}
-@keyframes logoDrop{0%{opacity:0;transform:scale(.6) translateY(-50px) rotate(-2deg)}100%{opacity:1;transform:scale(1) translateY(0) rotate(0deg)}}
-
-/* メインコピー（企業向け） */
-.hero-theme{
-  font-family:var(--f-heading);
-  font-size:clamp(1.3rem,3.8vw,2.4rem);font-weight:900;
-  line-height:1.55;letter-spacing:.04em;text-align:center;
-  max-width:640px;
-  margin:0 auto clamp(1rem,2.5vw,1.5rem);
-  padding:.8rem 1.5rem;
-  background:linear-gradient(135deg,rgba(255,255,255,.85),rgba(255,249,240,.9));
-  border:3px solid var(--c-orange);
-  border-radius:var(--radius-md);
-  box-shadow:0 4px 24px rgba(245,166,35,.15),inset 0 0 20px rgba(255,215,0,.08);
-  position:relative;
-  animation:slam .65s .35s cubic-bezier(.22,1,.36,1) both;
-}
-@keyframes slam{0%{opacity:0;transform:scale(1.3) translateY(-10px)}100%{opacity:1;transform:scale(1) translateY(0)}}
-
-/* サブコピー */
-.hero-sub-b2b{
-  font-family:var(--f-heading);
-  font-size:clamp(.88rem,2.2vw,1.1rem);font-weight:700;
-  color:var(--c-text-mid);text-align:center;
-  margin-bottom:clamp(1rem,3vw,1.5rem);
-  animation:fadeUp .5s .55s both;
-}
-
-.hero-badges-wrap{
-  display:flex;flex-direction:column;align-items:center;gap:.4rem;
-  margin-bottom:clamp(1rem,3vw,1.5rem);
-  animation:fadeUp .5s .7s both;
-}
-.hero-badges-row{display:flex;gap:.4rem;justify-content:center}
-
-/* タグ — ポップイン */
-.htag{
-  font-family:var(--f-pop);font-size:clamp(.58rem,1.8vw,.78rem);font-weight:700;
-  padding:.25rem .6rem;border-radius:100px;
-  border:2px solid;
-  animation:popIn .5s cubic-bezier(.22,1,.36,1) both;
-  white-space:nowrap;
-}
-.htag--purple{border-color:var(--nordt-n);color:#fff;background:var(--nordt-n)}
-.htag--green{border-color:var(--c-green);color:#fff;background:var(--c-green)}
-.htag--blue{border-color:var(--c-blue);color:#fff;background:var(--c-blue)}
-.htag--orange{border-color:var(--c-orange);color:#fff;background:var(--c-orange)}
-@keyframes popIn{0%{opacity:0;transform:scale(.5) translateY(15px)}100%{opacity:1;transform:scale(1) translateY(0)}}
-
-/* ─── CTA独立セクション ─── */
-.cta-sec{padding:clamp(1.5rem,4vw,2.5rem) 0}
-.cta-sec .cta-note{margin-top:.8rem}
-
-/* ─── オルカ ─── */
-.hero-orca{
-  position:absolute;bottom:60px;right:clamp(10px,4vw,60px);
-  width:clamp(80px,10vw,130px);z-index:4;
-  animation:orcaBob 3.5s ease-in-out infinite;
-  filter:drop-shadow(0 4px 12px rgba(0,0,0,.12));
-}
-@keyframes orcaBob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
-
-/* ─── スクロール誘導 ─── */
-.hero-scroll{
-  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
-  z-index:5;animation:fadeUp .6s 1.5s both;
-}
-.hero-scroll-arrow{
-  display:block;width:24px;height:24px;
-  border-right:3px solid var(--c-text-muted);border-bottom:3px solid var(--c-text-muted);
-  transform:rotate(45deg);opacity:.4;
-  animation:scrollBounce 1.5s ease-in-out infinite;
-}
-@keyframes scrollBounce{
-  0%,100%{transform:rotate(45deg) translateY(0);opacity:.4}
-  50%{transform:rotate(45deg) translateY(8px);opacity:.7}
-}
-
-@keyframes fadeUp{0%{opacity:0;transform:translateY(22px)}100%{opacity:1;transform:translateY(0)}}
-
-/* ─── モバイル調整 ─── */
-@media(max-width:600px){
-  .hero-orca{width:60px;bottom:50px;right:10px}
-  .hero-bubble{opacity:.2}
-  .hero-bubble--1{width:50px;height:50px}
-  .hero-bubble--2{width:40px;height:40px}
-  .hero-bubble--3{width:35px;height:35px}
-  .hero-bubble--4{width:45px;height:45px}
-  .hero-bubble--5{width:25px;height:25px}
-  .hero-confetti{opacity:.3}
-}
-
-
-/* ─────────── S2 BENEFITS（企業視点） ─────────── */
-.bene-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
-
-.bene{
-  background:#fff;border-radius:var(--radius-md);padding:2.4rem 1.8rem;
-  text-align:center;border:3px solid var(--c-border);position:relative;overflow:hidden;
-  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,border-color .3s;
-}
-.bene::after{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--ac);transform:scaleX(0);transition:transform .3s;transform-origin:left}
-.bene:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--ac)}
-.bene:hover::after{transform:scaleX(1)}
-
-.bene-badge{width:56px;height:56px;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1rem;color:#fff}
-.bene h3{font-family:var(--f-heading);font-size:1.05rem;font-weight:900;margin-bottom:.8rem;line-height:1.55}
-.bene p{font-size:.88rem;color:var(--c-text-light);line-height:1.85;text-align:left}
-
-
-/* ─────────── S2.5 THEME ─────────── */
-.theme-sec{padding:clamp(2.5rem,6vw,4rem) 0}
-.theme-box{
-  max-width:700px;margin:0 auto;text-align:center;
-  background:linear-gradient(135deg,#FFF9F0 0%,#FFF3E0 100%);
-  border:3px solid var(--c-orange);
-  border-radius:var(--radius-lg);
-  padding:clamp(2rem,5vw,3rem) clamp(1.5rem,4vw,3rem);
-  position:relative;overflow:hidden;
-  box-shadow:0 8px 32px rgba(245,166,35,.15);
-}
-.theme-box::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:6px;
-  background:linear-gradient(90deg,var(--c-orange),var(--c-red),var(--c-orange));
-}
-.theme-label{
-  display:inline-block;font-family:var(--f-heading);font-size:clamp(.85rem,2vw,1rem);
-  font-weight:700;color:var(--c-accent-dark);
-  background:rgba(255,255,255,.7);padding:.3rem 1.2rem;border-radius:100px;
-  margin-bottom:1rem;letter-spacing:.06em;
-}
-.theme-title{
-  font-family:var(--f-heading);font-size:clamp(1.3rem,4vw,2rem);
-  font-weight:900;color:var(--c-text);line-height:1.5;
-  letter-spacing:.04em;
-}
-
-/* ─────────── S3 OVERVIEW + NORDT ─────────── */
-.info-table{max-width:680px;margin:0 auto 3.5rem;border-radius:var(--radius-md);overflow:hidden;border:2px solid var(--c-border);background:#fff;box-shadow:var(--shadow-md)}
-.info-table dl{display:contents}
-.info-row{display:flex;border-bottom:1px solid var(--c-border)}
-.info-row:last-child{border-bottom:none}
-.info-row dt{flex:0 0 130px;padding:1rem 1.2rem;font-weight:700;font-size:.88rem;background:var(--c-bg-alt);display:flex;align-items:center}
-.info-row dd{flex:1;padding:1rem 1.2rem;font-size:.92rem}
-.info-free{font-family:var(--f-heading);font-weight:900;color:var(--c-red);font-size:1.2rem}
-
-.nordt{max-width:780px;margin:0 auto}
-.nordt-title{text-align:center;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap}
-.nordt-title span:first-child{font-family:var(--f-heading);font-size:1.2rem;font-weight:900}
-.nordt-letters{font-family:var(--f-heading);font-size:2.2rem;font-weight:900;letter-spacing:.12em}
-.nordt-letters b{display:inline-block}
-
-.nordt-hero{text-align:center;margin-bottom:2.5rem;padding:2rem;background:var(--c-bg-alt);border-radius:var(--radius-md);border:2px solid var(--c-border)}
-.nordt-main-copy{font-family:var(--f-heading);font-size:clamp(1.2rem,3vw,1.8rem);font-weight:900;color:var(--c-text);margin-bottom:.8rem;line-height:1.5}
-.nordt-sub-copy{font-size:.92rem;color:var(--c-text-light);line-height:1.85}
-
-.nordt-list{display:flex;flex-direction:column;gap:.9rem;margin-bottom:1.5rem}
-.nordt-card{
-  display:flex;align-items:center;gap:1.2rem;padding:1.1rem 1.6rem;
-  border-radius:var(--radius-sm);background:#fff;
-  border-left:5px solid var(--nc);box-shadow:var(--shadow-sm);
-  transition:transform .25s cubic-bezier(.22,1,.36,1),box-shadow .25s;
-}
-.nordt-card:hover{transform:translateX(8px);box-shadow:var(--shadow-md)}
-.nordt-l{font-family:var(--f-heading);font-size:2.2rem;font-weight:900;color:var(--nc);width:48px;text-align:center;flex-shrink:0}
-.nordt-card strong{font-family:var(--f-heading);font-size:1rem;margin-right:.4rem}
-.nordt-card small{color:var(--c-text-muted);font-size:.78rem}
-.nordt-card p{font-size:.88rem;color:var(--c-text-light);margin-top:.15rem}
-
-.nordt-note-text{
-  font-size:.88rem;color:var(--c-text-mid);font-weight:600;
-  background:var(--c-bg-alt);padding:1rem 1.4rem;border-radius:var(--radius-sm);
-  max-width:680px;margin:0 auto;text-align:center;line-height:1.75;
-}
-
-
-/* ─────────── S3.5 SCHEDULE ─────────── */
-
-/* フロー全体 */
-.sched-flow{
-  max-width:680px;margin:0 auto 2rem;
-  display:flex;flex-direction:column;align-items:center;
-}
-
-/* カード共通 */
-.sched-card{
-  position:relative;overflow:hidden;
-  width:100%;
-  background:color-mix(in srgb,var(--pc) 8%,#fff);
-  border:3px solid color-mix(in srgb,var(--pc) 30%,#fff);
-  border-radius:var(--radius-lg);
-  padding:clamp(1.4rem,3.5vw,2rem) clamp(1.6rem,4vw,2.2rem);
-  transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,border-color .35s;
-}
-.sched-card:hover{
-  transform:translateY(-6px) scale(1.02);
-  box-shadow:0 12px 32px color-mix(in srgb,var(--pc) 25%,transparent);
-  border-color:var(--pc);
-}
-
-/* ウォーターマーク番号 */
-.sched-watermark{
-  position:absolute;
-  right:-8px;top:50%;transform:translateY(-50%);
-  font-family:var(--f-heading);font-size:clamp(7rem,18vw,11rem);
-  font-weight:900;line-height:1;
-  color:color-mix(in srgb,var(--pc) 10%,transparent);
-  pointer-events:none;user-select:none;
-  z-index:0;
-}
-
-/* カード内コンテンツ */
-.sched-head,.sched-title,.sched-desc,.sched-teams{
-  position:relative;z-index:1;
-}
-
-/* ヘッダー */
-.sched-head{
-  display:flex;align-items:center;gap:.7rem;
-  margin-bottom:.5rem;flex-wrap:wrap;
-}
-.sched-step{
-  display:inline-block;
-  font-family:var(--f-heading);font-size:clamp(.72rem,1.8vw,.85rem);
-  font-weight:900;letter-spacing:.1em;
-  color:#fff;background:var(--pc);
-  padding:.28rem .85rem;border-radius:100px;
-}
-.sched-date{
-  font-family:var(--f-heading);font-size:clamp(.8rem,2vw,.95rem);
-  font-weight:700;color:var(--c-text-mid);
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.06));
 }
 
 /* タイトル */
-.sched-title{
-  font-family:var(--f-heading);
-  font-size:clamp(1.05rem,2.8vw,1.3rem);
-  font-weight:900;color:var(--pc);
-  margin-bottom:.4rem;
+.hero-title {
+  font-family: var(--f-heading);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: .06em;
+  margin-bottom: .3rem;
+  color: var(--c-text);
 }
 
-/* 説明文 */
-.sched-desc{
-  font-size:clamp(.82rem,2vw,.92rem);
-  color:var(--c-text-light);line-height:1.75;
-  margin-bottom:.6rem;
+.hero-subtitle {
+  font-family: var(--f-heading);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 700;
+  color: var(--c-blue);
+  margin-bottom: 2rem;
+  letter-spacing: .04em;
 }
 
-/* チーム数バッジ */
-.sched-teams{
-  display:inline-block;
-  font-family:var(--f-pop);font-size:clamp(.75rem,1.8vw,.88rem);
-  font-weight:700;color:#fff;
-  background:var(--pc);
-  padding:.3rem .9rem;border-radius:100px;
-  box-shadow:0 2px 8px color-mix(in srgb,var(--pc) 30%,transparent);
+/* テーマボックス */
+.hero-theme-box {
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+  padding: 1.2rem 1.5rem;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.hero-theme-label {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--c-blue);
+  letter-spacing: .08em;
+  margin-bottom: .4rem;
+}
+.hero-theme-text {
+  font-family: var(--f-heading);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 900;
+  line-height: 1.6;
 }
 
-/* カードサイズ変化（フェーズが進むほど大きく） */
-.sched-card--1{max-width:92%}
-.sched-card--2{max-width:94%}
-.sched-card--3{max-width:96%}
-.sched-card--4{max-width:98%}
-.sched-card--5{max-width:100%}
-
-/* 決勝カード */
-.sched-card--final{
-  background:linear-gradient(135deg,
-    color-mix(in srgb,var(--pc) 12%,#fff) 0%,
-    color-mix(in srgb,var(--pc) 6%,#fff) 50%,
-    color-mix(in srgb,var(--nordt-d) 8%,#fff) 100%);
-  border-width:4px;
-  border-color:var(--pc);
-  box-shadow:0 8px 28px color-mix(in srgb,var(--pc) 20%,transparent);
-  padding:clamp(1.8rem,4.5vw,2.6rem) clamp(2rem,5vw,2.8rem);
+/* タグ */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
 }
-.sched-card--final .sched-title{
-  font-size:clamp(1.2rem,3.2vw,1.55rem);
-}
-.sched-card--final .sched-step{
-  font-size:clamp(.82rem,2vw,.95rem);
-  padding:.35rem 1rem;
+.hero-tag {
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .3rem .9rem;
+  border-radius: 100px;
+  border: 1px solid var(--c-border);
+  background: #fff;
+  color: var(--c-text-mid);
 }
 
-/* コネクタ矢印（カード間） */
-.sched-connector{
-  display:flex;flex-direction:column;align-items:center;
-  padding:.3rem 0;
-}
-.sched-arrow{
-  width:28px;height:36px;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.1));
-}
-.sched-funnel{
-  font-family:var(--f-pop);
-  font-size:clamp(.72rem,1.8vw,.85rem);
-  font-weight:700;color:var(--pc);
-  margin-top:.1rem;
-  text-align:center;
+/* オルカ */
+.hero-orca {
+  position: absolute;
+  bottom: 40px;
+  right: clamp(16px, 5vw, 80px);
+  width: clamp(60px, 8vw, 100px);
+  z-index: 3;
+  opacity: .7;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.08));
 }
 
-/* 注記 */
-.schedule-note{
-  text-align:center;font-size:.8rem;color:var(--c-text-muted);
-  max-width:580px;margin:0 auto;
-  padding:.6rem 1rem;background:var(--c-bg-alt);
-  border-radius:var(--radius-sm);
-}
+/* CTA独立セクション */
+.cta-sec { padding: clamp(1.5rem, 4vw, 2.5rem) 0; }
 
-/* モバイル調整 */
-@media(max-width:600px){
-  .sched-card--1,.sched-card--2,.sched-card--3,.sched-card--4,.sched-card--5{
-    max-width:100%;
-  }
-  .sched-watermark{font-size:5.5rem;right:-4px}
-  .sched-connector{padding:.15rem 0}
-  .sched-arrow{width:22px;height:28px}
-  .sched-funnel{font-size:.7rem}
+@media (max-width: 600px) {
+  .hero-orca { width: 50px; bottom: 24px; right: 12px; }
 }
 
 
-/* ─────────── S4 DIAGNOSIS ─────────── */
-.diag-intro{text-align:center;margin-bottom:2rem}
-.diag-lead{font-size:1.05rem;font-weight:700;color:var(--c-text-mid);margin-bottom:.4rem}
-.diag-big{font-family:var(--f-heading);font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(--c-orange);margin-bottom:.8rem;line-height:1.3}
-.diag-desc{font-size:.92rem;line-height:1.85;color:var(--c-text-light);max-width:640px;margin:0 auto}
-
-.diag-chars{text-align:center;margin-bottom:2.5rem}
-.diag-chars-img{max-width:min(560px,90vw);margin:0 auto;border-radius:var(--radius-md);filter:drop-shadow(0 8px 24px rgba(0,0,0,.1))}
-
-/* タイプ一覧 */
-.type-showcase{display:flex;flex-direction:column;gap:2rem;margin-bottom:2rem}
-
-/* タイプセクション見出し */
-.type-section-title{
-  font-family:var(--f-heading);font-size:clamp(1.1rem,2.8vw,1.4rem);font-weight:900;
-  text-align:center;margin-bottom:1rem;
+/* ─────────── S2 BENEFITS ─────────── */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
-/* 横並び2列ペア */
-.type-pair{display:flex;gap:1rem;max-width:600px;margin:0 auto}
-.type-pair .type-card{flex:1;min-width:0}
-
-/* ペア内カード */
-.type-card{
-  border-radius:var(--radius-sm);text-align:center;
-  position:relative;overflow:hidden;
-  display:flex;flex-direction:column;align-items:center;
-  padding:.8rem 1rem 1rem;
-  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
+.benefit-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--c-border);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.type-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--tc);border-radius:4px 4px 0 0;z-index:3}
-/* キャラ画像 */
-.type-card-char{
-  width:clamp(100px,48%,150px);height:auto;
-  filter:drop-shadow(0 4px 12px rgba(0,0,0,.08));
-  margin-bottom:.5rem;
-}
-/* テキスト情報 */
-.type-card-info{text-align:center}
-.type-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md)}
-.type-code{
-  display:inline-block;font-family:var(--f-heading);font-size:.85rem;font-weight:900;
-  color:var(--c-text-muted);background:rgba(255,249,240,.9);padding:.2rem .8rem;
-  border-radius:100px;margin-bottom:.4rem;letter-spacing:.08em;
-}
-.type-code b{font-size:1.1rem}
-.type-catch{font-size:.82rem;color:var(--c-text);line-height:1.5;margin-bottom:.25rem;font-weight:600}
-.type-jobs{font-size:.72rem;color:var(--c-text-muted);line-height:1.4}
-
-/* 独立カード（バランサー） */
-.type-solo{
-  border-radius:var(--radius-md);
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;
-  min-height:200px;
-  max-width:600px;margin:0 auto;
-  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
-}
-.type-solo::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--tc);border-radius:4px 4px 0 0;z-index:3}
-.type-solo:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.type-solo-char{
-  position:relative;flex-shrink:0;
-  width:clamp(140px,18vw,200px);height:auto;
-  filter:drop-shadow(0 6px 20px rgba(0,0,0,.12));
-  z-index:1;padding:1rem 0 1rem 1.5rem;
-}
-.type-solo-content{
-  position:relative;z-index:2;flex:1;text-align:center;
-  padding:1.5rem 2rem;
-}
-.type-solo-content .type-code{font-size:1rem}
-.type-solo-content .type-catch{font-size:.95rem;font-weight:700;margin-bottom:.4rem;color:var(--c-text)}
-.type-solo-content .type-jobs{font-size:.8rem}
-
-/* シークレットカード */
-.secret-card{
-  max-width:600px;margin:0 auto;
-  background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
-  border-radius:var(--radius-md);overflow:hidden;
-  display:flex;align-items:center;
-  position:relative;
-  border:2px solid rgba(255,215,0,.3);
-  box-shadow:0 0 30px rgba(255,215,0,.08),0 8px 32px rgba(0,0,0,.3);
-}
-/* 金色ボーダーアニメーション */
-.secret-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:4px;
-  background:linear-gradient(90deg,transparent,#ffd700,#ff8c00,#ffd700,transparent);
-  background-size:200% 100%;
-  animation:secretShimmer 3s ease-in-out infinite;
-  z-index:3;
-}
-@keyframes secretShimmer{
-  0%,100%{background-position:200% 0}
-  50%{background-position:-200% 0}
-}
-/* シルエット領域 */
-.secret-silhouette{
-  position:relative;flex-shrink:0;
-  width:clamp(130px,18vw,180px);
-  padding:1.2rem 0 1.2rem 1.2rem;
-}
-.secret-char{
-  width:100%;height:auto;
-  filter:brightness(0) drop-shadow(0 0 20px rgba(255,215,0,.3));
-  opacity:.7;
-  transition:filter .4s,opacity .4s;
-}
-.secret-card:hover .secret-char{
-  filter:brightness(0) drop-shadow(0 0 30px rgba(255,215,0,.6));
-  opacity:.9;
-}
-/* オーバーレイ */
-.secret-overlay{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  font-size:clamp(3rem,8vw,4.5rem);font-weight:900;
-  color:rgba(255,215,0,.5);
-  text-shadow:0 0 20px rgba(255,215,0,.3);
-  pointer-events:none;
-  animation:secretPulse 2s ease-in-out infinite;
-}
-.secret-overlay::after{content:'?'}
-@keyframes secretPulse{
-  0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}
-  50%{opacity:.9;transform:translate(-50%,-50%) scale(1.08)}
-}
-/* テキスト情報 */
-.secret-info{
-  flex:1;text-align:center;padding:1.5rem 1.5rem 1.5rem .5rem;
-}
-.secret-badge{
-  display:inline-block;
-  font-family:var(--f-heading);font-size:.7rem;font-weight:900;
-  color:#1a1a2e;background:linear-gradient(135deg,#ffd700,#ff8c00);
-  padding:.25rem 1rem;border-radius:100px;
-  letter-spacing:.12em;text-transform:uppercase;
-  margin-bottom:.7rem;
-  animation:badgeGlow 2.5s ease-in-out infinite;
-}
-@keyframes badgeGlow{
-  0%,100%{box-shadow:0 0 8px rgba(255,215,0,.3)}
-  50%{box-shadow:0 0 20px rgba(255,215,0,.6)}
-}
-.secret-title{
-  font-family:var(--f-heading);font-size:clamp(1.2rem,3vw,1.5rem);
-  font-weight:900;color:#ffd700;
-  margin-bottom:.6rem;letter-spacing:.1em;
-}
-.secret-desc{
-  font-size:.8rem;color:rgba(255,255,255,.7);
-  line-height:1.7;margin-bottom:.8rem;
-}
-.secret-cta{
-  font-family:var(--f-heading);font-size:.78rem;font-weight:700;
-  color:#ff8c00;
-  animation:ctaBlink 1.5s ease-in-out infinite;
-}
-@keyframes ctaBlink{
-  0%,100%{opacity:.6}
-  50%{opacity:1}
-}
-/* 背景パーティクル風ドット */
-.secret-card::after{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,215,0,.08) 1px,transparent 1px);
-  background-size:20px 20px;
-  pointer-events:none;z-index:1;
-}
-.secret-silhouette,.secret-info{position:relative;z-index:2}
-
-.diag-bottom-note{text-align:center;font-size:.85rem;color:var(--c-text-mid);font-weight:700;background:var(--c-bg-alt);padding:.8rem 1.2rem;border-radius:var(--radius-sm);border-left:4px solid var(--c-orange);max-width:620px;margin:0 auto}
-
-@media(max-width:768px){
-  .type-pair{gap:.8rem;max-width:none}
-  .type-card-char{width:clamp(80px,30vw,120px)}
-  .type-solo{max-width:none;flex-direction:column;min-height:auto}
-  .type-solo-char{width:clamp(100px,35vw,160px);padding:1rem 0 0}
-  .type-solo-content{padding:1rem 1.2rem 1.2rem;text-align:center}
-  .secret-card{flex-direction:column;max-width:none;text-align:center}
-  .secret-silhouette{width:clamp(100px,35vw,150px);padding:1.5rem 0 0;margin:0 auto}
-  .secret-info{padding:1rem 1.2rem 1.5rem}
+.benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
-/* キャラクター帯 */
-.char-band{display:flex;justify-content:center;gap:1.5rem;padding:2rem 1rem;background:var(--c-bg-tinted);overflow:hidden}
-.char-band-img{height:clamp(80px,12vw,130px);width:auto;filter:drop-shadow(0 4px 12px rgba(0,0,0,.1));animation:orcaBob 3.5s ease-in-out infinite}
-.char-band-img:nth-child(2){animation-delay:.5s}
-.char-band-img:nth-child(3){animation-delay:1s}
-.char-band-img:nth-child(4){animation-delay:1.5s}
-
-/* CTA with orca */
-.cta-with-orca{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap}
-.cta-orca{width:clamp(70px,10vw,110px);filter:drop-shadow(0 4px 12px rgba(0,0,0,.12));animation:orcaBob 3.5s ease-in-out infinite}
-.cta-sub{font-family:var(--f-heading);font-size:clamp(.95rem,2.2vw,1.15rem);font-weight:900;color:var(--c-text);margin-bottom:.8rem}
-
-.cta-wrap--pop{background:linear-gradient(135deg,rgba(245,166,35,.06),rgba(208,72,62,.06))}
-
-
-/* ─────────── S5 FLOW ─────────── */
-.steps{list-style:none;max-width:600px;margin:0 auto;position:relative;padding-left:0}
-.steps::before{
-  content:'';position:absolute;left:29px;top:10px;bottom:10px;width:4px;
-  background:linear-gradient(to bottom,var(--nordt-n),var(--nordt-o),var(--nordt-r),var(--nordt-d),var(--nordt-t));
-  border-radius:4px;
+.benefit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  font-family: var(--f-heading);
 }
-.step{display:flex;align-items:flex-start;gap:1.6rem;margin-bottom:2rem;position:relative}
-.step-n{
-  flex-shrink:0;width:58px;height:58px;border-radius:50%;
-  background:var(--sc);color:#fff;display:flex;align-items:center;justify-content:center;
-  font-family:var(--f-heading);font-size:1.35rem;font-weight:900;z-index:1;box-shadow:0 4px 14px rgba(0,0,0,.12);
+
+.benefit-card h3 {
+  font-family: var(--f-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: .6rem;
+  line-height: 1.55;
 }
-.step div{padding-top:.7rem}
-.step strong{font-family:var(--f-heading);font-size:1.1rem;display:block;margin-bottom:.2rem}
-.step p{font-size:.88rem;color:var(--c-text-light)}
 
-
-/* ─────────── S6 SAFETY ─────────── */
-.safe-hero{text-align:center;margin-bottom:3rem;padding:2.5rem 2rem;background:var(--c-bg-alt);border-radius:var(--radius-md);border:2px solid var(--c-border)}
-.safe-main{font-family:var(--f-heading);font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;color:var(--c-text);margin-bottom:.8rem;line-height:1.5}
-.safe-sub{font-size:.92rem;color:var(--c-text-light);line-height:1.85}
-
-.safe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.safe{
-  background:#fff;border-radius:var(--radius-md);padding:2.4rem 1.8rem;text-align:center;
-  border:2px solid var(--c-border);transition:transform .3s,box-shadow .3s;
+.benefit-card p {
+  font-size: .88rem;
+  color: var(--c-text-light);
+  line-height: 1.85;
 }
-.safe:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
-.safe-ico{width:52px;height:52px;border-radius:50%;background:var(--bg);display:inline-flex;align-items:center;justify-content:center;font-size:1.35rem;color:#fff;margin-bottom:1rem}
-.safe h3{font-family:var(--f-heading);font-size:1.05rem;font-weight:900;margin-bottom:.6rem}
-.safe p{font-size:.88rem;color:var(--c-text-light);line-height:1.85;text-align:left}
 
 
-/* ─────────── S7 ORGANIZER ─────────── */
-.org-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.org-card{background:#fff;border-radius:var(--radius-md);padding:1.8rem;border:2px solid var(--c-border);box-shadow:var(--shadow-sm);text-align:center}
-.org-logo{height:40px;width:auto;margin:0 auto .8rem;object-fit:contain}
-.org-card h3{font-family:var(--f-heading);font-size:1.05rem;font-weight:900;margin-bottom:.2rem}
-.org-catch{color:var(--c-orange);font-weight:700;font-size:.88rem;margin-bottom:.5rem}
-.org-card a{font-weight:700;font-size:.85rem}
-.org-cohost-note{text-align:center;font-family:var(--f-heading);font-size:.88rem;font-weight:700;color:var(--c-text-muted);margin-top:1.5rem}
+/* ─────────── S2.5 THEME ─────────── */
+.theme-box {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+  box-shadow: var(--shadow-sm);
+}
+.theme-label {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--c-blue);
+  letter-spacing: .08em;
+  margin-bottom: .6rem;
+}
+.theme-title {
+  font-family: var(--f-heading);
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-weight: 900;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.theme-desc {
+  font-size: .88rem;
+  color: var(--c-text-light);
+  line-height: 1.85;
+}
 
-@media(max-width:768px){.org-grid{grid-template-columns:1fr}}
+
+/* ─────────── S3 大会概要 + NORDT ─────────── */
+.info-table {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.info-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.info-table th,
+.info-table td {
+  padding: .9rem 1.2rem;
+  font-size: .9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--c-border-light);
+}
+.info-table tr:last-child th,
+.info-table tr:last-child td { border-bottom: none; }
+.info-table th {
+  width: 140px;
+  font-weight: 700;
+  color: var(--c-text-mid);
+  background: var(--c-bg-alt);
+}
+
+/* NORDT */
+.nordt-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.nordt-heading {
+  font-family: var(--f-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+}
+.nordt-letters { font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: .06em; }
+.nordt-letters b { font-weight: 900; }
+
+.nordt-lead {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.nordt-main-copy {
+  font-family: var(--f-heading);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 900;
+  line-height: 1.65;
+  margin-bottom: .8rem;
+}
+.nordt-sub-copy {
+  font-size: .88rem;
+  color: var(--c-text-light);
+  line-height: 1.85;
+}
+
+.nordt-grid {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-bottom: 1.5rem;
+}
+
+.nordt-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  transition: box-shadow .2s ease;
+}
+.nordt-card:hover { box-shadow: var(--shadow-sm); }
+
+.nordt-l {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--nc);
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nordt-card strong {
+  font-size: .95rem;
+  display: block;
+  margin-bottom: .1rem;
+}
+.nordt-card small {
+  font-size: .75rem;
+  color: var(--c-text-muted);
+  display: block;
+  margin-bottom: .3rem;
+}
+.nordt-card p {
+  font-size: .85rem;
+  color: var(--c-text-light);
+  line-height: 1.6;
+}
+
+.nordt-note {
+  font-size: .85rem;
+  color: var(--c-text-light);
+  text-align: center;
+  line-height: 1.8;
+}
+
+
+/* ─────────── S3.5 スケジュール（タイムライン） ─────────── */
+.timeline {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 40px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--c-border);
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-marker {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--tc);
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: .85rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-left: -22px;
+}
+.timeline-marker--final {
+  width: 42px;
+  height: 42px;
+  font-size: .95rem;
+  margin-left: -25px;
+  box-shadow: 0 0 0 4px rgba(220,38,38,.15);
+}
+
+.timeline-content { flex: 1; padding-top: .2rem; }
+
+.timeline-head {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: .3rem;
+}
+.timeline-step {
+  font-size: .7rem;
+  font-weight: 700;
+  color: var(--c-blue);
+  letter-spacing: .08em;
+}
+.timeline-date {
+  font-size: .75rem;
+  color: var(--c-text-muted);
+}
+
+.timeline-content h3 {
+  font-family: var(--f-heading);
+  font-size: .95rem;
+  font-weight: 900;
+  margin-bottom: .3rem;
+}
+.timeline-content p {
+  font-size: .85rem;
+  color: var(--c-text-light);
+  line-height: 1.75;
+}
+
+.timeline-funnel {
+  text-align: center;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--c-blue);
+  margin: -.5rem 0 1rem;
+  padding: .4rem 1rem;
+  background: var(--c-blue-light);
+  border-radius: 100px;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.timeline-note {
+  font-size: .82rem;
+  color: var(--c-text-muted);
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+
+/* ─────────── キャラクター帯（控えめ） ─────────── */
+.char-band {
+  display: flex;
+  justify-content: center;
+  gap: clamp(.5rem, 2vw, 1.5rem);
+  padding: 2rem 1rem;
+  background: var(--c-bg-alt);
+  overflow: hidden;
+}
+.char-band-img {
+  height: clamp(60px, 10vw, 90px);
+  width: auto;
+  opacity: .55;
+  filter: grayscale(15%);
+  transition: opacity .3s ease;
+}
+.char-band-img:hover { opacity: .85; }
+
+
+/* ─────────── S4 プレゼンタイプ診断 ─────────── */
+.diag-intro { text-align: center; max-width: 640px; margin: 0 auto 2rem; }
+
+.diag-lead {
+  font-family: var(--f-heading);
+  font-size: clamp(.95rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+  color: var(--c-text-mid);
+  margin-bottom: .5rem;
+}
+
+.diag-big {
+  font-family: var(--f-heading);
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+  font-weight: 900;
+  color: var(--c-blue);
+  margin-bottom: 1rem;
+}
+
+.diag-desc {
+  font-size: .88rem;
+  color: var(--c-text-light);
+  line-height: 1.85;
+}
+
+.diag-chars { text-align: center; margin-bottom: 2.5rem; }
+.diag-chars-img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+/* タイプカード */
+.type-showcase {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.type-section { margin-bottom: 1.5rem; }
+
+.type-section-title {
+  font-family: var(--f-heading);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--c-text-mid);
+  margin-bottom: .8rem;
+  padding-left: .2rem;
+}
+
+.type-solo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  transition: box-shadow .2s ease;
+}
+.type-solo:hover { box-shadow: var(--shadow-sm); }
+.type-solo-char { width: 64px; height: 64px; object-fit: contain; }
+.type-solo-content { flex: 1; }
+
+.type-code {
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .05em;
+  display: block;
+  margin-bottom: .2rem;
+}
+.type-code b { margin-right: .1em; }
+
+.type-catch {
+  font-size: .85rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: .2rem;
+}
+
+.type-jobs {
+  font-size: .75rem;
+  color: var(--c-text-muted);
+}
+
+.type-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+}
+
+.type-card {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  transition: box-shadow .2s ease;
+}
+.type-card:hover { box-shadow: var(--shadow-sm); }
+.type-card-char { width: 52px; height: 52px; object-fit: contain; flex-shrink: 0; }
+.type-card-info { flex: 1; }
+
+/* ラスボス */
+.secret-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #1a1f36, #2d3250);
+  border-radius: var(--radius-md);
+  color: #fff;
+}
+
+.secret-silhouette { position: relative; flex-shrink: 0; }
+.secret-char { width: 80px; height: 80px; object-fit: contain; filter: brightness(1.2); }
+.secret-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(26,31,54,.3), transparent);
+  border-radius: 8px;
+}
+
+.secret-info { flex: 1; }
+.secret-badge {
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  color: #fbbf24;
+  display: block;
+  margin-bottom: .3rem;
+}
+.secret-title {
+  font-family: var(--f-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: .4rem;
+}
+.secret-desc {
+  font-size: .8rem;
+  line-height: 1.65;
+  opacity: .8;
+  margin-bottom: .5rem;
+}
+.secret-cta {
+  font-size: .78rem;
+  color: #93c5fd;
+  font-weight: 700;
+}
+
+.diag-bottom-note {
+  text-align: center;
+  font-size: .85rem;
+  color: var(--c-text-light);
+  margin-top: 2rem;
+  line-height: 1.7;
+}
+
+
+/* ─────────── CTA with Orca ─────────── */
+.cta-with-orca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.cta-orca { width: 70px; height: auto; opacity: .6; }
+.cta-sub {
+  font-family: var(--f-heading);
+  font-size: clamp(.9rem, 2vw, 1.05rem);
+  font-weight: 700;
+  color: var(--c-text-mid);
+  margin-bottom: .8rem;
+}
+
+@media (max-width: 600px) {
+  .cta-with-orca { flex-direction: column; text-align: center; }
+  .cta-orca { width: 50px; }
+}
+
+
+/* ─────────── S5 団体参加の流れ ─────────── */
+.flow-steps {
+  list-style: none;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.flow-step {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.flow-n {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--sc);
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: .85rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-step strong {
+  font-family: var(--f-heading);
+  font-size: .95rem;
+  font-weight: 900;
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.flow-step p {
+  font-size: .85rem;
+  color: var(--c-text-light);
+  line-height: 1.75;
+}
+
+
+/* ─────────── S6 運営体制 ─────────── */
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.safety-card {
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 1.5rem;
+  transition: box-shadow .2s ease;
+}
+.safety-card:hover { box-shadow: var(--shadow-sm); }
+
+.safety-icon {
+  font-family: var(--f-heading);
+  font-size: .8rem;
+  font-weight: 900;
+  color: var(--c-blue);
+  margin-bottom: .8rem;
+}
+
+.safety-card h3 {
+  font-family: var(--f-heading);
+  font-size: .95rem;
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.safety-card p {
+  font-size: .85rem;
+  color: var(--c-text-light);
+  line-height: 1.8;
+}
+
+
+/* ─────────── S7 主催者情報 ─────────── */
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.org-card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.org-logo {
+  height: 40px;
+  width: auto;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+.org-card h3 {
+  font-family: var(--f-heading);
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: .3rem;
+}
+
+.org-catch {
+  font-size: .82rem;
+  color: var(--c-text-light);
+  margin-bottom: .6rem;
+}
+
+.org-card a {
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.org-cohost-note {
+  text-align: center;
+  font-size: .82rem;
+  color: var(--c-text-muted);
+}
 
 
 /* ─────────── S8 FAQ ─────────── */
-.faq-list{max-width:720px;margin:0 auto}
-.faq{border-bottom:2px solid var(--c-border)}
-.faq summary{
-  padding:1.3rem 0;font-family:var(--f-heading);font-weight:700;font-size:1.02rem;cursor:pointer;
-  list-style:none;display:flex;align-items:center;gap:.7rem;transition:color .2s;
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
 }
-.faq summary:hover{color:var(--c-orange)}
-.faq summary::before{
-  content:'Q';background:var(--c-orange);color:#fff;font-size:.75rem;font-weight:900;
-  width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+
+.faq {
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: .6rem;
+  overflow: hidden;
+  transition: box-shadow .2s ease;
 }
-.faq summary::after{content:'+';margin-left:auto;font-size:1.4rem;color:var(--c-orange);transition:transform .3s;flex-shrink:0}
-.faq[open] summary::after{transform:rotate(45deg)}
-.faq summary::-webkit-details-marker{display:none}
-.faq p{padding:0 0 1.3rem 2.4rem;font-size:.92rem;color:var(--c-text-light);line-height:1.85}
+.faq:hover { box-shadow: var(--shadow-sm); }
+
+.faq summary {
+  padding: 1rem 1.3rem;
+  font-weight: 700;
+  font-size: .9rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  transition: background .2s;
+}
+.faq summary:hover { background: var(--c-bg-alt); }
+.faq summary::before {
+  content: '+';
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-blue);
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+  transition: transform .2s;
+}
+.faq[open] summary::before { content: '−'; }
+
+.faq p {
+  padding: 0 1.3rem 1rem 2.8rem;
+  font-size: .85rem;
+  color: var(--c-text-light);
+  line-height: 1.8;
+}
 
 
-/* ─────────── S9 FINAL CTA ─────────── */
-.final{
-  background:#fff;
-  color:var(--c-text);position:relative;overflow:hidden;padding:clamp(4rem,10vw,7rem) 0;
+/* ─────────── S9 最終CTA ─────────── */
+.final {
+  background: linear-gradient(170deg, #f0f4ff, #e8edf5);
+  text-align: center;
+  padding: clamp(4rem, 8vw, 6rem) 0;
 }
-.final-bg{position:absolute;inset:0;pointer-events:none}
-.final-burst{
-  position:absolute;top:50%;left:50%;
-  width:120vmax;height:120vmax;
-  transform:translate(-50%,-50%);
-  background:radial-gradient(circle,var(--c-lime) 0%,rgba(197,232,76,.2) 30%,transparent 50%);
-  opacity:.35;
+
+.final-body { max-width: 560px; margin: 0 auto; }
+
+.final-logo {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
 }
-.final-body{text-align:center;position:relative;z-index:1}
-.final-logo{width:100%;max-width:640px;margin:0 auto 1.5rem}
-.final-catch{font-family:var(--f-heading);font-size:clamp(1.4rem,4vw,2.4rem);font-weight:900;margin-bottom:1.2rem;line-height:1.4;color:var(--c-text)}
+
+.final-theme {
+  font-family: var(--f-heading);
+  font-size: clamp(.9rem, 2.2vw, 1.1rem);
+  font-weight: 700;
+  color: var(--c-text-mid);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
 
 
-/* ─────────── FOOTER ─────────── */
-.ft{text-align:center;padding:2rem 0;font-size:.78rem;color:var(--c-text-muted);background:var(--c-bg-tinted);border-top:1px solid var(--c-border)}
-.ft-logos{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.8rem}
-.ft-logos img{height:28px;width:auto;opacity:.45;transition:opacity .2s}
-.ft-logos a:hover img{opacity:.7}
-.ft-x{font-weight:700;color:var(--c-text-muted);font-size:.9rem}
+/* ─────────── Footer ─────────── */
+.ft {
+  background: var(--c-text);
+  color: rgba(255,255,255,.5);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: .75rem;
+}
+
+.ft-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  margin-bottom: .8rem;
+}
+.ft-logos img { height: 22px; width: auto; opacity: .5; filter: brightness(2); }
+.ft-x { font-size: .8rem; opacity: .4; }
+
+
+/* ─────────── Mobile ─────────── */
+@media (max-width: 600px) {
+  .type-pair { grid-template-columns: 1fr; }
+  .info-table th { width: 110px; }
+
+  .timeline { padding-left: 30px; }
+  .timeline::before { left: 14px; }
+  .timeline-marker { margin-left: -18px; width: 32px; height: 32px; font-size: .78rem; }
+  .timeline-marker--final { margin-left: -20px; width: 36px; height: 36px; }
+
+  .secret-card { flex-direction: column; text-align: center; }
+  .secret-char { width: 64px; height: 64px; }
+}
 </style>
