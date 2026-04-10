@@ -1,6 +1,6 @@
 /* ===========================
    探究プレゼンバトル B2B LP — Global Styles
-   企画書風 × 教育的あたたかさ / 信頼感ベース
+   参加者向けLPと同じデザイントーン（白ベース×ポップ）
    =========================== */
 
 :root {
@@ -13,8 +13,8 @@
   --c-green: #4caf50;
 
   /* アクセント */
-  --c-accent: #4a90d9;
-  --c-accent-dark: #3a78b8;
+  --c-accent: #f5a623;
+  --c-accent-dark: #d48b0a;
 
   /* NORDT — N紫・O緑・R青・Dオレンジ・T赤 */
   --nordt-n: #9b51e0;
@@ -23,18 +23,17 @@
   --nordt-d: #f5a623;
   --nordt-t: #d0483e;
 
-  /* B2B — 落ち着いた配色 */
-  --c-bg: #FFFFFF;
-  --c-bg-alt: #F7F8FA;
-  --c-bg-warm: #FAFAF8;
-  --c-bg-section: #F3F5F7;
-  --c-text: #1E2530;
-  --c-text-mid: #3D4550;
-  --c-text-light: #5A6370;
-  --c-text-muted: #8C929D;
+  /* 配色（参加者LPと同じ白ベース） */
+  --c-bg: #FFFEF8;
+  --c-bg-alt: #faf9f5;
+  --c-bg-tinted: #FFF9F0;
+  --c-text: #23272f;
+  --c-text-mid: #444b55;
+  --c-text-light: #5d6470;
+  --c-text-muted: #8d929c;
   --c-white: #FFFFFF;
-  --c-border: #E2E5EA;
-  --c-border-light: #ECEEF1;
+  --c-border: #e8e5df;
+  --c-border-light: #f0ede8;
 
   /* Typography */
   --f-body: 'Noto Sans JP', sans-serif;
@@ -42,15 +41,14 @@
   --f-pop: 'M PLUS Rounded 1c', sans-serif;
 
   /* Layout */
-  --container: min(960px, 90vw);
-  --container-narrow: min(760px, 88vw);
+  --container: min(1020px, 90vw);
   --section-py: clamp(4rem, 8vw, 7rem);
 
   /* Effects */
-  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
-  --shadow-cta: 0 6px 24px rgba(74, 144, 217, 0.3);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .04);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, .08);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, .12);
+  --shadow-cta: 0 6px 24px rgba(245, 166, 35, .35);
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -86,23 +84,18 @@ img {
 }
 
 a {
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
   text-decoration: none;
   transition: color .2s;
 }
 
 a:hover {
-  color: var(--c-accent-dark);
+  color: var(--c-orange);
 }
 
 /* ── Container ── */
 .container {
   width: var(--container);
-  margin-inline: auto;
-}
-
-.container--narrow {
-  width: var(--container-narrow);
   margin-inline: auto;
 }
 
@@ -112,76 +105,42 @@ a:hover {
   position: relative;
 }
 
-.sec--alt {
-  background: var(--c-bg-alt);
-}
+.sec--white { background: #fff; }
+.sec--tinted { background: var(--c-bg-tinted); }
 
-.sec--warm {
-  background: var(--c-bg-warm);
-}
-
-.sec--section {
-  background: var(--c-bg-section);
-}
-
-.sec--deep {
-  background: linear-gradient(175deg, #1E2530 0%, #2A3545 100%);
-  color: #fff;
-}
+/* 斜めトランジション */
+.angle-top { clip-path: polygon(0 clamp(20px,3vw,40px),100% 0,100% 100%,0 100%); padding-top: calc(var(--section-py) + clamp(20px,3vw,40px)); }
+.angle-top-rev { clip-path: polygon(0 0,100% clamp(20px,3vw,40px),100% 100%,0 100%); padding-top: calc(var(--section-py) + clamp(20px,3vw,40px)); }
 
 /* ── Section heading ── */
 .sec-heading {
   font-family: var(--f-heading);
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.5rem, 4.5vw, 2.4rem);
   font-weight: 900;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
   line-height: 1.4;
-  color: var(--c-text);
 }
 
-.sec-heading .accent {
-  color: var(--c-accent);
+.pop {
+  color: var(--c-orange);
+  position: relative;
 }
 
-.sec--deep .sec-heading {
-  color: #fff;
-}
-
-.sec-heading-bar {
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: var(--c-accent);
-  border-radius: 2px;
-  margin: .8rem auto 0;
-}
-
-.sec-sub {
-  text-align: center;
-  font-size: clamp(.88rem, 1.5vw, 1rem);
-  color: var(--c-text-light);
-  margin-top: -1.5rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
-}
-
-/* ── CTA button ── */
+/* ── CTA button（参加者LPと同じ派手なスタイル） ── */
 .cta-wrap {
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: clamp(2rem, 5vw, 3.5rem) 1rem;
 }
 
 .cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-dark));
+  display: inline-block;
+  background: linear-gradient(135deg, var(--c-orange), var(--c-red));
   color: #fff;
   font-family: var(--f-heading);
-  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 900;
-  padding: 1.05rem 2.8rem;
+  padding: 1.05rem 2.5rem;
   border-radius: 100px;
   border: none;
   cursor: pointer;
@@ -191,6 +150,8 @@ a:hover {
   position: relative;
   overflow: hidden;
   letter-spacing: .04em;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .cta-btn::after {
@@ -200,13 +161,13 @@ a:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .18), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
   transition: left .55s;
 }
 
 .cta-btn:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 36px rgba(74, 144, 217, .4);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 36px rgba(245, 166, 35, .45);
   color: #fff;
 }
 
@@ -216,6 +177,11 @@ a:hover {
 
 .cta-btn:active {
   transform: translateY(0) scale(.98);
+}
+
+.cta-btn--lg {
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+  padding: 1.3rem 3.5rem;
 }
 
 .cta-note {
@@ -242,12 +208,17 @@ a:hover {
 .rv-d3 { transition-delay: .3s; }
 .rv-d4 { transition-delay: .4s; }
 
-/* ── Divider ── */
-.divider {
-  height: 1px;
-  background: var(--c-border);
-  border: none;
-  margin: 0;
+/* ── ストライプ区切り線 ── */
+.stripe {
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--nordt-n) 0, var(--nordt-n) 20%,
+    var(--nordt-o) 20%, var(--nordt-o) 40%,
+    var(--nordt-r) 40%, var(--nordt-r) 60%,
+    var(--nordt-d) 60%, var(--nordt-d) 80%,
+    var(--nordt-t) 80%, var(--nordt-t) 100%
+  );
 }
 
 /* ── Responsive ── */
