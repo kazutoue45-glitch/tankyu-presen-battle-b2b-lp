@@ -207,11 +207,11 @@ import '../styles/global.css';
       </div>
 
       <div class="nordt-grid">
-        <div class="nordt-card rv" style="--nc:var(--nordt-n)"><span class="nordt-l">N</span><div><strong>Needs</strong><small>課題把握力</small><p>課題の本質を見抜き、需要を捉えているか</p></div></div>
-        <div class="nordt-card rv" style="--nc:var(--nordt-o)"><span class="nordt-l">O</span><div><strong>Original</strong><small>独創性</small><p>独創性があり、遊び心やこだわりが感じられるか</p></div></div>
-        <div class="nordt-card rv" style="--nc:var(--nordt-r)"><span class="nordt-l">R</span><div><strong>Real</strong><small>現実性</small><p>多様な視点から物事を現実的に考えられているか</p></div></div>
-        <div class="nordt-card rv" style="--nc:var(--nordt-d)"><span class="nordt-l">D</span><div><strong>Design</strong><small>構成力</small><p>スライドが論理的かつ印象的に構成されているか</p></div></div>
-        <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><div><strong>Talk</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div></div>
+        <div class="nordt-card rv" style="--nc:var(--nordt-n)"><span class="nordt-l">N</span><strong>ニーズ</strong><small>課題把握力</small><p>課題の本質を見抜き、需要を捉えているか</p></div>
+        <div class="nordt-card rv" style="--nc:var(--nordt-o)"><span class="nordt-l">O</span><strong>オリジナル</strong><small>独創性</small><p>独創性があり、遊び心やこだわりが感じられるか</p></div>
+        <div class="nordt-card rv" style="--nc:var(--nordt-r)"><span class="nordt-l">R</span><strong>リアル</strong><small>現実性</small><p>多様な視点から物事を現実的に考えられているか</p></div>
+        <div class="nordt-card rv" style="--nc:var(--nordt-d)"><span class="nordt-l">D</span><strong>デザイン</strong><small>構成力</small><p>スライドが論理的かつ印象的に構成されているか</p></div>
+        <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><strong>トーク</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div>
       </div>
 
       <p class="nordt-note rv">5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
@@ -1160,25 +1160,32 @@ import '../styles/global.css';
 }
 
 .nordt-grid {
-  display: flex; flex-direction: column;
-  gap: .8rem; margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem; margin-bottom: 1.5rem;
 }
 .nordt-card {
-  display: flex; align-items: flex-start; gap: 1rem;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: .5rem;
   background: #fff; border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm); padding: 1rem 1.2rem;
+  border-radius: var(--radius-md); padding: 1.5rem 1rem;
   transition: box-shadow .2s ease;
 }
 .nordt-card:hover { box-shadow: var(--shadow-sm); }
 .nordt-l {
-  flex-shrink: 0; width: 40px; height: 40px;
-  border-radius: 8px; background: var(--nc); color: #fff;
-  font-family: var(--f-heading); font-size: 1.1rem; font-weight: 900;
+  width: 44px; height: 44px;
+  border-radius: 50%; background: var(--nc); color: #fff;
+  font-family: var(--f-heading); font-size: 1.2rem; font-weight: 900;
   display: flex; align-items: center; justify-content: center;
+  margin-bottom: .2rem;
 }
-.nordt-card strong { font-size: .95rem; display: block; margin-bottom: .1rem; }
+.nordt-card strong { font-size: .95rem; display: block; }
 .nordt-card small { font-size: .75rem; color: var(--c-text-muted); display: block; margin-bottom: .3rem; }
-.nordt-card p { font-size: .85rem; color: var(--c-text-light); line-height: 1.6; }
+.nordt-card p { font-size: .82rem; color: var(--c-text-light); line-height: 1.6; }
+
+@media (max-width: 768px) {
+  .nordt-grid { grid-template-columns: repeat(2, 1fr); }
+}
 .nordt-note {
   font-size: .85rem; color: var(--c-text-light);
   text-align: center; line-height: 1.8;
