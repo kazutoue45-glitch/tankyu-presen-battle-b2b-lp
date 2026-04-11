@@ -474,6 +474,7 @@ import '../styles/global.css';
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-balancer.png`} alt="" class="type-card-img" />
             <div>
+              <h4 class="type-card-name">バランサー <span class="type-nordt"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b></span></h4>
               <p class="type-catch">みんなの力を引き出す調和の達人</p>
               <p class="type-jobs">保育士・ホテルスタッフ・通訳</p>
             </div>
@@ -481,7 +482,9 @@ import '../styles/global.css';
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-lastboss.png`} alt="" class="type-card-img" />
             <div>
+              <h4 class="type-card-name">ラスボス <span class="type-nordt"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b></span></h4>
               <p class="type-catch">全能力が最高値に達した伝説のタイプ</p>
+              <p class="type-jobs">経営者・プロデューサー・映画監督</p>
             </div>
           </div>
         </div>
@@ -493,13 +496,19 @@ import '../styles/global.css';
         <div class="type-group-cards">
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-storyteller-ot.png`} alt="" class="type-card-img" />
-            <p class="type-catch">笑顔と共感で人を巻き込む語り手</p>
-            <p class="type-jobs">テーマパークキャスト・美容師・ガイド</p>
+            <div>
+              <h4 class="type-card-name">ストーリーテラー <span class="type-nordt"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-t)">T</b></span></h4>
+              <p class="type-catch">笑顔と共感で人を巻き込む語り手</p>
+              <p class="type-jobs">テーマパークキャスト・美容師・ガイド</p>
+            </div>
           </div>
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-storyteller-dt.png`} alt="" class="type-card-img" />
-            <p class="type-catch">言葉を操り、会話をリードする表現者</p>
-            <p class="type-jobs">コピーライター・司会・作詞家</p>
+            <div>
+              <h4 class="type-card-name">ストーリーテラー <span class="type-nordt"><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b></span></h4>
+              <p class="type-catch">言葉を操り、会話をリードする表現者</p>
+              <p class="type-jobs">コピーライター・司会・作詞家</p>
+            </div>
           </div>
         </div>
       </div>
@@ -510,13 +519,19 @@ import '../styles/global.css';
         <div class="type-group-cards">
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-debater-nt.png`} alt="" class="type-card-img" />
-            <p class="type-catch">正義の心で人を納得させる論客</p>
-            <p class="type-jobs">教師・新聞記者・アナウンサー</p>
+            <div>
+              <h4 class="type-card-name">ディベーター <span class="type-nordt"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-t)">T</b></span></h4>
+              <p class="type-catch">正義の心で人を納得させる論客</p>
+              <p class="type-jobs">教師・新聞記者・アナウンサー</p>
+            </div>
           </div>
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-debater-rt.png`} alt="" class="type-card-img" />
-            <p class="type-catch">先頭に立って動く頼もしいリーダー</p>
-            <p class="type-jobs">弁護士・政治家・カウンセラー</p>
+            <div>
+              <h4 class="type-card-name">ディベーター <span class="type-nordt"><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-t)">T</b></span></h4>
+              <p class="type-catch">先頭に立って動く頼もしいリーダー</p>
+              <p class="type-jobs">弁護士・政治家・カウンセラー</p>
+            </div>
           </div>
         </div>
       </div>
@@ -527,13 +542,19 @@ import '../styles/global.css';
         <div class="type-group-cards">
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nr.png`} alt="" class="type-card-img" />
-            <p class="type-catch">すばやく正確に判断できる即断の人</p>
-            <p class="type-jobs">パイロット・外科医・消防士</p>
+            <div>
+              <h4 class="type-card-name">アナライザー <span class="type-nordt"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-r)">R</b></span></h4>
+              <p class="type-catch">すばやく正確に判断できる即断の人</p>
+              <p class="type-jobs">パイロット・外科医・消防士</p>
+            </div>
           </div>
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nd.png`} alt="" class="type-card-img" />
-            <p class="type-catch">冷静な分析力で本質を見抜く知性派</p>
-            <p class="type-jobs">プログラマー・薬剤師・気象予報士</p>
+            <div>
+              <h4 class="type-card-name">アナライザー <span class="type-nordt"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-d)">D</b></span></h4>
+              <p class="type-catch">冷静な分析力で本質を見抜く知性派</p>
+              <p class="type-jobs">プログラマー・薬剤師・気象予報士</p>
+            </div>
           </div>
         </div>
       </div>
@@ -544,13 +565,19 @@ import '../styles/global.css';
         <div class="type-group-cards">
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-creator-od.png`} alt="" class="type-card-img" />
-            <p class="type-catch">豊かな感性で世界を彩る芸術家</p>
-            <p class="type-jobs">作曲家・小説家・YouTuber</p>
+            <div>
+              <h4 class="type-card-name">クリエイター <span class="type-nordt"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-d)">D</b></span></h4>
+              <p class="type-catch">豊かな感性で世界を彩る芸術家</p>
+              <p class="type-jobs">作曲家・小説家・YouTuber</p>
+            </div>
           </div>
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-creator-rd.png`} alt="" class="type-card-img" />
-            <p class="type-catch">緻密な計画で作品を届ける職人</p>
-            <p class="type-jobs">建築士・声優・イラストレーター</p>
+            <div>
+              <h4 class="type-card-name">クリエイター <span class="type-nordt"><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b></span></h4>
+              <p class="type-catch">緻密な計画で作品を届ける職人</p>
+              <p class="type-jobs">建築士・声優・イラストレーター</p>
+            </div>
           </div>
         </div>
       </div>
@@ -561,13 +588,19 @@ import '../styles/global.css';
         <div class="type-group-cards">
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-pioneer-no.png`} alt="" class="type-card-img" />
-            <p class="type-catch">得意を活かして新しい価値を生む発明家</p>
-            <p class="type-jobs">アプリ開発・ゲームクリエイター・企画職</p>
+            <div>
+              <h4 class="type-card-name">パイオニア <span class="type-nordt"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b></span></h4>
+              <p class="type-catch">得意を活かして新しい価値を生む発明家</p>
+              <p class="type-jobs">アプリ開発・ゲームクリエイター・企画職</p>
+            </div>
           </div>
           <div class="type-card">
             <img src={`${import.meta.env.BASE_URL}images/type-pioneer-or.png`} alt="" class="type-card-img" />
-            <p class="type-catch">誰にも真似できないひらめきの天才</p>
-            <p class="type-jobs">科学者・発明家・起業家</p>
+            <div>
+              <h4 class="type-card-name">パイオニア <span class="type-nordt"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b></span></h4>
+              <p class="type-catch">誰にも真似できないひらめきの天才</p>
+              <p class="type-jobs">科学者・発明家・起業家</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1456,6 +1489,14 @@ import '../styles/global.css';
   font-family: var(--f-heading);
   font-size: .85rem; font-weight: 900; margin-bottom: .15rem;
 }
+.type-card-name {
+  font-family: var(--f-heading);
+  font-size: .85rem; font-weight: 900; margin-bottom: .2rem;
+}
+.type-nordt {
+  font-size: .8rem; font-weight: 900; letter-spacing: .05em; margin-left: .3rem;
+}
+.type-nordt b { margin-right: .05em; }
 .type-catch {
   font-size: .78rem; line-height: 1.45; color: var(--c-text-light);
   margin-bottom: .15rem;
