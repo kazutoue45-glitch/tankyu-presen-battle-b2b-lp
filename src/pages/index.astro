@@ -751,14 +751,38 @@ import '../styles/global.css';
     <h2 class="sec-heading rv">よくある質問</h2>
 
     <div class="faq-list">
-      <details class="faq rv"><summary>団体でまとめてエントリーできますか？</summary><p>はい。フォームからスクール単位で申し込みできます。</p></details>
-      <details class="faq rv"><summary>参加費はかかりますか？</summary><p>無料です。エントリーからフィードバックの受け取りまで、費用は一切かかりません。</p></details>
-      <details class="faq rv"><summary>授業やカリキュラムに組み込めますか？</summary><p>テーマ発表から動画提出まで約3ヶ月。成果発表として自然に組み込めます。</p></details>
-      <details class="faq rv"><summary>準備期間はどのくらい必要ですか？</summary><p>テーマ発表から約3ヶ月です。デザイン10の型に沿えば効率的に進められます。</p></details>
-      <details class="faq rv"><summary>生成AI（ChatGPT等）を使ってもいいですか？</summary><p>使用できます。ただしNORDTのOriginal軸で独創性を評価するため、AIの出力をそのまま使うとスコアは低くなります。</p></details>
-      <details class="faq rv"><summary>診断結果はスクール単位でまとめて届きますか？</summary><p>はい。スクール単位のレポートをお届けします。</p></details>
-      <details class="faq rv"><summary>審査基準は何ですか？</summary><p>NORDT（Needs・Original・Real・Design・Talk）の5軸です。基準は事前公開しています。</p></details>
-      <details class="faq rv"><summary>他のスクールも参加しますか？</summary><p>全国のプレゼン・探究教育スクールにご案内しています。</p></details>
+      <div class="faq-item rv">
+        <h3 class="faq-q">団体でまとめてエントリーできますか？</h3>
+        <p class="faq-a">はい。フォームからスクール単位で申し込みできます。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">参加費はかかりますか？</h3>
+        <p class="faq-a">無料です。エントリーからフィードバックの受け取りまで、費用は一切かかりません。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">授業やカリキュラムに組み込めますか？</h3>
+        <p class="faq-a">テーマ発表から動画提出まで約3ヶ月。成果発表として自然に組み込めます。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">準備期間はどのくらい必要ですか？</h3>
+        <p class="faq-a">テーマ発表から約3ヶ月です。デザイン10の型に沿えば効率的に進められます。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">生成AI（ChatGPT等）を使ってもいいですか？</h3>
+        <p class="faq-a">使用できます。ただしNORDTのOriginal軸で独創性を評価するため、AIの出力をそのまま使うとスコアは低くなります。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">診断結果はスクール単位でまとめて届きますか？</h3>
+        <p class="faq-a">はい。スクール単位のレポートをお届けします。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">審査基準は何ですか？</h3>
+        <p class="faq-a">NORDT（Needs・Original・Real・Design・Talk）の5軸です。基準は事前公開しています。</p>
+      </div>
+      <div class="faq-item rv">
+        <h3 class="faq-q">他のスクールも参加しますか？</h3>
+        <p class="faq-a">全国のプレゼン・探究教育スクールにご案内しています。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1618,30 +1642,29 @@ import '../styles/global.css';
 
 /* ─────────── S12 FAQ ─────────── */
 .faq-list { }
-.faq {
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  margin-bottom: .6rem; overflow: hidden;
-  transition: box-shadow .2s ease;
+.faq-item {
+  border-bottom: 1px solid var(--c-border);
+  padding: 1.5rem 0;
 }
-.faq:hover { box-shadow: var(--shadow-sm); }
-.faq summary {
-  padding: 1rem 1.3rem; font-weight: 700;
-  font-size: .9rem; cursor: pointer;
-  list-style: none;
+.faq-item:first-child { padding-top: 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-family: var(--f-heading);
+  font-size: 1rem; font-weight: 900;
+  margin-bottom: .5rem;
   display: flex; align-items: center; gap: .6rem;
-  transition: background .2s;
 }
-.faq summary:hover { background: var(--c-bg-alt); }
-.faq summary::before {
-  content: '+'; font-size: 1.1rem; font-weight: 700;
-  color: var(--c-blue); flex-shrink: 0;
-  width: 22px; text-align: center; transition: transform .2s;
+.faq-q::before {
+  content: 'Q';
+  font-family: var(--f-heading); font-size: .85rem; font-weight: 900;
+  color: #fff; background: var(--c-text);
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
 }
-.faq[open] summary::before { content: '\2212'; }
-.faq p {
-  padding: 0 1.3rem 1rem 2.8rem;
-  font-size: .85rem; color: var(--c-text-light); line-height: 1.8;
+.faq-a {
+  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
+  padding-left: calc(28px + .6rem);
 }
 
 
