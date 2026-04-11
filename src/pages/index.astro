@@ -12,6 +12,7 @@ import '../styles/global.css';
   <div class="container header-inner">
     <a href="#" class="header-logo">
       <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="header-logo-img" />
+      <span class="header-title">探究プレゼンバトル</span>
     </a>
     <nav class="header-nav" id="header-nav">
       <a href="#significance">教育的意義</a>
@@ -828,7 +829,11 @@ import '../styles/global.css';
   display: flex; align-items: center; justify-content: space-between;
   padding: .55rem 0;
 }
-.header-logo { display: flex; align-items: center; flex-shrink: 0; }
+.header-logo { display: flex; align-items: center; flex-shrink: 0; gap: .5rem; text-decoration: none; }
+.header-title {
+  font-family: var(--f-heading); font-size: .9rem; font-weight: 900;
+  color: var(--c-text); letter-spacing: .02em;
+}
 .header-logo-img { height: 30px; width: auto; }
 .header-nav { display: flex; align-items: center; gap: 1.2rem; }
 .header-nav a {
