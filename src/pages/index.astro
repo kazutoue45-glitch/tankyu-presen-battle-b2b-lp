@@ -463,103 +463,120 @@ import '../styles/global.css';
       </div>
     </div>
 
-    <!-- タイプカード一覧（3列グリッド） -->
-    <h3 class="type-grid-title rv">全13タイプ</h3>
+    <!-- タイプカード一覧（6グループ × 3列2行） -->
     <div class="type-grid">
 
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-balancer.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">バランサー</h4>
-        <span class="type-code">NORDT均等</span>
-        <p class="type-catch">みんなの力を引き出す調和の達人</p>
-        <p class="type-jobs">保育士・ホテルスタッフ・通訳</p>
+      <!-- グループ1: バランサー＆ラスボス -->
+      <div class="type-group rv">
+        <h3 class="type-group-title">バランサー＆ラスボス</h3>
+        <div class="type-group-cards">
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-balancer.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">バランサー</h4>
+            <p class="type-catch">みんなの力を引き出す調和の達人</p>
+            <p class="type-jobs">保育士・ホテルスタッフ・通訳</p>
+          </div>
+          <div class="type-card type-card--secret">
+            <img src={`${import.meta.env.BASE_URL}images/type-lastboss.png`} alt="" class="type-card-img type-card-img--secret" />
+            <h4 class="type-card-name">ラスボス</h4>
+            <p class="type-catch">全能力が最高値に達した伝説のタイプ</p>
+          </div>
+        </div>
       </div>
 
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-storyteller-ot.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">ストーリーテラー<small>OT</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-t)">T</b></span>
-        <p class="type-catch">笑顔と共感で人を巻き込む語り手</p>
-        <p class="type-jobs">テーマパークキャスト・美容師・ガイド</p>
+      <!-- グループ2: ストーリーテラー -->
+      <div class="type-group rv">
+        <h3 class="type-group-title">ストーリーテラータイプ</h3>
+        <div class="type-group-cards">
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-storyteller-ot.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">OT</h4>
+            <p class="type-catch">笑顔と共感で人を巻き込む語り手</p>
+            <p class="type-jobs">テーマパークキャスト・美容師・ガイド</p>
+          </div>
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-storyteller-dt.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">DT</h4>
+            <p class="type-catch">言葉を操り、会話をリードする表現者</p>
+            <p class="type-jobs">コピーライター・司会・作詞家</p>
+          </div>
+        </div>
       </div>
 
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-storyteller-dt.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">ストーリーテラー<small>DT</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b></span>
-        <p class="type-catch">言葉を操り、会話をリードする表現者</p>
-        <p class="type-jobs">コピーライター・司会・作詞家</p>
+      <!-- グループ3: ディベーター -->
+      <div class="type-group rv">
+        <h3 class="type-group-title">ディベータータイプ</h3>
+        <div class="type-group-cards">
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-debater-nt.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">NT</h4>
+            <p class="type-catch">正義の心で人を納得させる論客</p>
+            <p class="type-jobs">教師・新聞記者・アナウンサー</p>
+          </div>
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-debater-rt.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">RT</h4>
+            <p class="type-catch">先頭に立って動く頼もしいリーダー</p>
+            <p class="type-jobs">弁護士・政治家・カウンセラー</p>
+          </div>
+        </div>
       </div>
 
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-debater-nt.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">ディベーター<small>NT</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-t)">T</b></span>
-        <p class="type-catch">正義の心で人を納得させる論客</p>
-        <p class="type-jobs">教師・新聞記者・アナウンサー</p>
+      <!-- グループ4: アナライザー -->
+      <div class="type-group rv">
+        <h3 class="type-group-title">アナライザータイプ</h3>
+        <div class="type-group-cards">
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nr.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">NR</h4>
+            <p class="type-catch">すばやく正確に判断できる即断の人</p>
+            <p class="type-jobs">パイロット・外科医・消防士</p>
+          </div>
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nd.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">ND</h4>
+            <p class="type-catch">冷静な分析力で本質を見抜く知性派</p>
+            <p class="type-jobs">プログラマー・薬剤師・気象予報士</p>
+          </div>
+        </div>
       </div>
 
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-debater-rt.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">ディベーター<small>RT</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-t)">T</b></span>
-        <p class="type-catch">先頭に立って動く頼もしいリーダー</p>
-        <p class="type-jobs">弁護士・政治家・カウンセラー</p>
+      <!-- グループ5: クリエイター -->
+      <div class="type-group rv">
+        <h3 class="type-group-title">クリエイタータイプ</h3>
+        <div class="type-group-cards">
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-creator-od.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">OD</h4>
+            <p class="type-catch">豊かな感性で世界を彩る芸術家</p>
+            <p class="type-jobs">作曲家・小説家・YouTuber</p>
+          </div>
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-creator-rd.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">RD</h4>
+            <p class="type-catch">緻密な計画で作品を届ける職人</p>
+            <p class="type-jobs">建築士・声優・イラストレーター</p>
+          </div>
+        </div>
       </div>
 
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nr.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">アナライザー<small>NR</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-r)">R</b></span>
-        <p class="type-catch">すばやく正確に判断できる即断の人</p>
-        <p class="type-jobs">パイロット・外科医・消防士</p>
-      </div>
-
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-analyzer-nd.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">アナライザー<small>ND</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-d)">D</b></span>
-        <p class="type-catch">冷静な分析力で本質を見抜く知性派</p>
-        <p class="type-jobs">プログラマー・薬剤師・気象予報士</p>
-      </div>
-
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-creator-od.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">クリエイター<small>OD</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-d)">D</b></span>
-        <p class="type-catch">豊かな感性で世界を彩る芸術家</p>
-        <p class="type-jobs">作曲家・小説家・YouTuber</p>
-      </div>
-
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-creator-rd.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">クリエイター<small>RD</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b></span>
-        <p class="type-catch">緻密な計画で作品を届ける職人</p>
-        <p class="type-jobs">建築士・声優・イラストレーター</p>
-      </div>
-
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-pioneer-no.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">パイオニア<small>NO</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b></span>
-        <p class="type-catch">得意を活かして新しい価値を生む発明家</p>
-        <p class="type-jobs">アプリ開発・ゲームクリエイター・企画職</p>
-      </div>
-
-      <div class="type-card rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-pioneer-or.png`} alt="" class="type-card-img" />
-        <h4 class="type-card-name">パイオニア<small>OR</small></h4>
-        <span class="type-code"><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b></span>
-        <p class="type-catch">誰にも真似できないひらめきの天才</p>
-        <p class="type-jobs">科学者・発明家・起業家</p>
-      </div>
-
-      <div class="type-card type-card--secret rv">
-        <img src={`${import.meta.env.BASE_URL}images/type-lastboss.png`} alt="" class="type-card-img type-card-img--secret" />
-        <h4 class="type-card-name">ラスボス</h4>
-        <span class="type-code">NORDT最高値</span>
-        <p class="type-catch">全能力が最高値に達した者だけが覚醒する伝説のタイプ</p>
+      <!-- グループ6: パイオニア -->
+      <div class="type-group rv">
+        <h3 class="type-group-title">パイオニアタイプ</h3>
+        <div class="type-group-cards">
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-pioneer-no.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">NO</h4>
+            <p class="type-catch">得意を活かして新しい価値を生む発明家</p>
+            <p class="type-jobs">アプリ開発・ゲームクリエイター・企画職</p>
+          </div>
+          <div class="type-card">
+            <img src={`${import.meta.env.BASE_URL}images/type-pioneer-or.png`} alt="" class="type-card-img" />
+            <h4 class="type-card-name">OR</h4>
+            <p class="type-catch">誰にも真似できないひらめきの天才</p>
+            <p class="type-jobs">科学者・発明家・起業家</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1384,57 +1401,53 @@ import '../styles/global.css';
   box-shadow: var(--shadow-sm);
 }
 
-/* タイプカード（3列グリッド） */
-.type-grid-title {
-  font-family: var(--f-heading);
-  font-size: 1rem; font-weight: 700;
-  color: var(--c-text-mid); margin-bottom: 1.2rem;
-}
+/* タイプカード（6グループ × 3列2行） */
 .type-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
-.type-card {
+.type-group {
   background: #fff; border: 1px solid var(--c-border);
   border-radius: var(--radius-md); padding: 1.5rem;
   transition: box-shadow .2s ease;
 }
-.type-card:hover { box-shadow: var(--shadow-sm); }
+.type-group:hover { box-shadow: var(--shadow-sm); }
+.type-group-title {
+  font-family: var(--f-heading);
+  font-size: .95rem; font-weight: 900;
+  margin-bottom: 1rem; color: var(--c-text);
+}
+.type-group-cards {
+  display: flex; flex-direction: column; gap: .8rem;
+}
+.type-card {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .8rem; border-radius: var(--radius-sm);
+  background: var(--c-bg-alt);
+}
 .type-card-img {
-  width: 80px; height: 80px; object-fit: contain;
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,.08));
-  margin-bottom: .8rem;
+  width: 56px; height: 56px; object-fit: contain; flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.08));
 }
 .type-card-name {
   font-family: var(--f-heading);
-  font-size: .95rem; font-weight: 900;
-  margin-bottom: .3rem;
+  font-size: .85rem; font-weight: 900; margin-bottom: .15rem;
 }
-.type-card-name small {
-  font-size: .75rem; font-weight: 700;
-  color: var(--c-text-muted); margin-left: .3rem;
-}
-.type-code {
-  font-size: .8rem; font-weight: 900;
-  letter-spacing: .05em; display: block; margin-bottom: .4rem;
-}
-.type-code b { margin-right: .15em; }
 .type-catch {
-  font-size: .85rem; font-weight: 600;
-  line-height: 1.5; margin-bottom: .3rem; color: var(--c-text);
+  font-size: .78rem; line-height: 1.45; color: var(--c-text-light);
+  margin-bottom: .15rem;
 }
-.type-jobs { font-size: .75rem; color: var(--c-text-muted); }
+.type-jobs { font-size: .7rem; color: var(--c-text-muted); }
 
 .type-card--secret {
   background: linear-gradient(135deg, #1a1f36, #2d3250);
-  border-color: #2d3250; color: #fff;
+  color: #fff;
 }
 .type-card--secret .type-card-name { color: #fff; }
-.type-card--secret .type-code { color: rgba(255,255,255,.7); }
-.type-card--secret .type-catch { color: rgba(255,255,255,.85); }
+.type-card--secret .type-catch { color: rgba(255,255,255,.8); }
 .type-card-img--secret {
-  filter: brightness(0) drop-shadow(0 0 12px rgba(147,197,253,.4));
+  filter: brightness(0) drop-shadow(0 0 8px rgba(147,197,253,.4));
   opacity: .7;
 }
 
