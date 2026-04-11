@@ -23,13 +23,19 @@ import '../styles/global.css';
   S1  ファーストビュー — 提案書の表紙
   ============================================================ -->
 <section class="hero">
+  <!-- 背景イラスト -->
+  <div class="hero-bg">
+    <img src={`${import.meta.env.BASE_URL}images/hero-bg.png`} alt="" class="hero-bg-img" aria-hidden="true" />
+  </div>
+  <!-- オーバーレイ -->
+  <div class="hero-overlay"></div>
+
   <div class="hero-inner">
 
     <!-- 大会ロゴ -->
     <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル 2026" class="hero-logo rv" />
 
-    <!-- タイトル -->
-    <h1 class="hero-title rv">探究プレゼンバトル 2026</h1>
+    <!-- サブタイトル -->
     <p class="hero-subtitle rv">団体参加のご提案</p>
 
     <!-- テーマ -->
@@ -47,9 +53,6 @@ import '../styles/global.css';
     </div>
 
   </div>
-
-  <!-- オルカ船長 -->
-  <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="オルカ船長" class="hero-orca" />
 </section>
 
 
@@ -646,8 +649,33 @@ import '../styles/global.css';
   text-align: center;
   overflow: hidden;
   padding-top: 3.5rem;
-  background: linear-gradient(170deg, #ffffff 0%, #f0f4ff 50%, #e8edf5 100%);
-  color: var(--c-text);
+  color: #fff;
+}
+
+/* 背景イラスト */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* オーバーレイ（イラストの上に半透明を重ねて文字を読みやすくする） */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 18, 42, .55) 0%,
+    rgba(10, 18, 42, .45) 40%,
+    rgba(10, 18, 42, .65) 100%
+  );
 }
 
 .hero-inner {
@@ -683,27 +711,19 @@ import '../styles/global.css';
   display: block;
   width: 100%;
   max-width: 560px;
-  margin: 0 auto 1.5rem;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,.06));
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,.3));
 }
 
 /* タイトル */
-.hero-title {
-  font-family: var(--f-heading);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 900;
-  letter-spacing: .06em;
-  margin-bottom: .3rem;
-  color: var(--c-text);
-}
-
 .hero-subtitle {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 700;
-  color: var(--c-blue);
+  color: rgba(255,255,255,.9);
   margin-bottom: 2rem;
-  letter-spacing: .04em;
+  letter-spacing: .08em;
+  text-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
 
 /* テーマボックス */
@@ -711,16 +731,17 @@ import '../styles/global.css';
   max-width: 520px;
   margin: 0 auto 1.5rem;
   padding: 1.2rem 1.5rem;
-  background: #fff;
-  border: 1px solid var(--c-border);
+  background: rgba(255,255,255,.92);
+  border: none;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
+  color: var(--c-text);
 }
 .hero-theme-label {
   display: inline-block;
   font-size: .75rem;
   font-weight: 700;
-  color: var(--c-blue);
+  color: var(--c-accent);
   letter-spacing: .08em;
   margin-bottom: .4rem;
 }
@@ -729,6 +750,7 @@ import '../styles/global.css';
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 900;
   line-height: 1.6;
+  color: var(--c-text);
 }
 
 /* タグ */
@@ -743,28 +765,14 @@ import '../styles/global.css';
   font-weight: 700;
   padding: .3rem .9rem;
   border-radius: 100px;
-  border: 1px solid var(--c-border);
-  background: #fff;
-  color: var(--c-text-mid);
-}
-
-/* オルカ */
-.hero-orca {
-  position: absolute;
-  bottom: 40px;
-  right: clamp(16px, 5vw, 80px);
-  width: clamp(60px, 8vw, 100px);
-  z-index: 3;
-  opacity: .7;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,.08));
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  backdrop-filter: blur(4px);
 }
 
 /* CTA独立セクション */
 .cta-sec { padding: clamp(1.5rem, 4vw, 2.5rem) 0; }
-
-@media (max-width: 600px) {
-  .hero-orca { width: 50px; bottom: 24px; right: 12px; }
-}
 
 
 /* ─────────── S2 BENEFITS ─────────── */
