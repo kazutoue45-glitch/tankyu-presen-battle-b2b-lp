@@ -8,52 +8,59 @@ import '../styles/global.css';
 <!-- ============================================================
   Header
   ============================================================ -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-logos">
-      <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="小川探究" class="header-logo" />
-      <span class="header-x">&times;</span>
-      <img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" class="header-logo" />
-    </div>
-    <a href="#" class="header-cta">エントリーする</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#" class="header-logo">
+      <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル" class="header-logo-img" />
+    </a>
+    <nav class="header-nav" id="header-nav">
+      <a href="#significance">教育的意義</a>
+      <a href="#benefits">団体参加メリット</a>
+      <a href="#overview">大会概要</a>
+      <a href="#schedule">スケジュール</a>
+      <a href="#diagnosis">タイプ診断</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#" class="header-cta-btn">団体エントリー</a>
+    <button class="header-burger" id="header-burger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
 
 <!-- ============================================================
   S1  ファーストビュー — 提案書の表紙
   ============================================================ -->
 <section class="hero">
-  <!-- 背景イラスト -->
   <div class="hero-bg">
     <img src={`${import.meta.env.BASE_URL}images/hero-bg.png`} alt="" class="hero-bg-img" aria-hidden="true" />
   </div>
-  <!-- オーバーレイ（上部のみ濃く、下部は薄くしてキャラを見せる） -->
   <div class="hero-overlay"></div>
 
   <div class="hero-inner">
-
-    <!-- 大会ロゴ + サブタイトル（上部に固める） -->
     <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル 2026" class="hero-logo rv" />
     <p class="hero-subtitle rv">団体参加のご提案</p>
 
-    <!-- タグ（ロゴ直下にコンパクトに） -->
+    <p class="hero-catch rv">スクール内の発表会だけでは見えない、<br>生徒の「伝える力」を可視化しませんか？</p>
+
     <div class="hero-tags rv">
       <span class="hero-tag">参加無料</span>
       <span class="hero-tag">オンライン開催</span>
       <span class="hero-tag">全員にフィードバック</span>
       <span class="hero-tag">小学生〜高校生</span>
     </div>
-
   </div>
 </section>
 
 
 <!-- ============================================================
-  S1.5  CTA
+  S1.5  2段階CTA
   ============================================================ -->
 <section class="sec cta-sec">
-  <div class="container" style="text-align:center">
-    <a href="#" class="cta-btn">無料でエントリーする</a>
+  <div class="container cta-dual">
+    <a href="#" class="cta-btn cta-btn--lg">無料で団体エントリーする</a>
+    <a href="#" class="cta-btn-sub">まずは資料を見る・お問い合わせ</a>
     <p class="cta-note">※ 参加費無料・全参加者にフィードバックをお届けします</p>
   </div>
 </section>
@@ -62,58 +69,118 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S2  この大会が選ばれる理由
+  S2  教育的意義
   ============================================================ -->
-<section class="sec sec--white" id="benefits">
+<section class="sec sec--white" id="significance">
   <div class="container">
-    <h2 class="sec-heading rv">この大会が選ばれる理由</h2>
-    <div class="benefit-grid">
+    <h2 class="sec-heading rv">なぜ今、探究×プレゼンなのか</h2>
 
-      <article class="benefit-card rv rv-d1">
-        <div class="benefit-icon" style="background:rgba(37,99,235,.08);color:var(--c-blue)">01</div>
-        <h3>スクール内では再現できない「外の本番」</h3>
-        <p>知らない審査員、他スクールの参加者。いつもの教室では出せない緊張感の中で、生徒が「伝わるか？」と本気で向き合う。その経験は、安全な場所での練習とはまったく別物です。</p>
-      </article>
+    <div class="sig-flow">
+      <div class="sig-card rv rv-d1">
+        <span class="sig-step">1</span>
+        <h3>探究教育が求められている</h3>
+        <p>文科省が探究学習を推進し、東大を含む主要大学がプロジェクト型学習を拡充。一方で「何を、どう指導すればいいのか」に悩む教育者は少なくありません。</p>
+      </div>
 
-      <article class="benefit-card rv rv-d2">
-        <div class="benefit-icon" style="background:rgba(5,150,105,.08);color:var(--nordt-o)">02</div>
-        <h3>全員に届く「プレゼンタイプ診断」</h3>
-        <p>NORDT（5軸）に基づく個別診断を、参加者全員にお届けします。成績や順位ではなく、一人ひとりの伝え方の特性を客観的に可視化。保護者への成果報告にも活用できます。</p>
-      </article>
+      <div class="sig-arrow rv" aria-hidden="true">
+        <svg viewBox="0 0 40 48"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--c-blue)" /></svg>
+      </div>
 
-      <article class="benefit-card rv rv-d3">
-        <div class="benefit-icon" style="background:rgba(217,119,6,.08);color:var(--nordt-d)">03</div>
-        <h3>保護者に伝わる「大会出場」の価値</h3>
-        <p>「プレゼン大会に出場し、プロの審査員からフィードバックをもらった」という体験は、保護者の信頼を後押しします。入賞すればなおのこと。スクールの教育力を、目に見える形で伝えられます。</p>
-      </article>
+      <div class="sig-card rv rv-d2">
+        <span class="sig-step">2</span>
+        <h3>探究の土台は「プレゼン」にある</h3>
+        <p>課題設定、情報収集、整理・分析、まとめ・表現。探究学習の4ステップを、プレゼンはすべて内包しています。プレゼンを鍛えることは、探究力そのものを鍛えることです。</p>
+      </div>
 
+      <div class="sig-arrow rv" aria-hidden="true">
+        <svg viewBox="0 0 40 48"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--c-blue)" /></svg>
+      </div>
+
+      <div class="sig-card sig-card--accent rv rv-d3">
+        <span class="sig-step">3</span>
+        <h3>「大会」という明確なゴールが成長角度を変える</h3>
+        <p>日々の授業で身につけた力を「外の本番」にぶつける。順位だけで終わらない設計だからこそ、生徒は安心して全力を出せます。その結果、普段の授業へのモチベーションも変わります。</p>
+      </div>
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S2.5  テーマ
+  S3  団体参加のメリット（4点）
   ============================================================ -->
-<section class="sec sec--alt" id="theme">
+<section class="sec sec--alt" id="benefits">
+  <div class="container">
+    <h2 class="sec-heading rv">団体参加のメリット</h2>
+
+    <div class="merit-grid">
+      <article class="merit-card rv rv-d1">
+        <div class="merit-num">01</div>
+        <h3>スクール内では再現できない「外の本番」</h3>
+        <p>知らない審査員、他スクールの参加者。いつもの教室では出せない緊張感の中で、生徒が「伝わるか？」と本気で向き合う。その経験は、安全な環境での練習とは別物です。</p>
+      </article>
+
+      <article class="merit-card rv rv-d2">
+        <div class="merit-num">02</div>
+        <h3>全員に届くNORDT診断 → 保護者への成果報告に</h3>
+        <p>5軸の個別診断を、参加者全員にお届けします。順位や勝ち負けではなく「この子はどう伝えるタイプか」を可視化。保護者面談や成果報告にそのまま活用できます。</p>
+      </article>
+
+      <article class="merit-card rv rv-d3">
+        <div class="merit-num">03</div>
+        <h3>無料・オンライン・カリキュラム連動</h3>
+        <p>テーマ発表から動画提出まで約3ヶ月。授業の成果発表としてそのまま組み込めます。参加費無料、オンライン完結なので、導入のハードルがありません。</p>
+      </article>
+
+      <article class="merit-card rv rv-d4">
+        <div class="merit-num">04</div>
+        <h3>探究指導者の育成機会</h3>
+        <p>NORDTを通じて、先生自身が「何を・どう教えるか」を体得できます。決勝進出チームへの個別レクチャーに同席すれば、プロの指導を間近で学ぶ機会にもなります。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  S4  大会テーマ
+  ============================================================ -->
+<section class="sec sec--white" id="theme">
   <div class="container">
     <div class="theme-box rv">
       <span class="theme-label">今回のプレゼンテーマ</span>
       <p class="theme-title">あなたの街の１０年後！<br>―地域活性化を提案せよ―</p>
-      <p class="theme-desc">自分の住む街を10年後まで見通し、課題と解決策をプレゼンで提案する。<br>探究学習の授業やワークショップとの相性がよいテーマです。</p>
+    </div>
+
+    <div class="theme-angles rv">
+      <div class="theme-angle">
+        <h4>「あなたの街」を知る</h4>
+        <p>市のHP・広報誌から現状を調べる。年齢別人口、特産物、自慢できること。</p>
+      </div>
+      <div class="theme-angle">
+        <h4>「10年後」を描く</h4>
+        <p>今後の計画や予測を調べる。市の政策、都市開発計画、人口推移。</p>
+      </div>
+      <div class="theme-angle">
+        <h4>「地域活性化」を提案する</h4>
+        <p>「幸せな未来」を前提に、誇れるふるさと・住み続けたい街・移り住みたい街の視点で考える。</p>
+      </div>
+    </div>
+
+    <div class="theme-highlight rv">
+      <p>優れた提案は、実際に自治体へ提出する可能性があります。<br>生徒のプレゼンが「練習」で終わらず、社会に届く大会です。</p>
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S3  大会概要 + NORDT
+  S5  大会概要
   ============================================================ -->
-<section class="sec sec--white" id="overview">
+<section class="sec sec--alt" id="overview">
   <div class="container">
     <h2 class="sec-heading rv">大会概要</h2>
 
-    <!-- 情報テーブル -->
     <div class="info-table rv">
       <table>
         <tbody>
@@ -125,8 +192,15 @@ import '../styles/global.css';
         </tbody>
       </table>
     </div>
+  </div>
+</section>
 
-    <!-- NORDT -->
+
+<!-- ============================================================
+  S6  NORDT
+  ============================================================ -->
+<section class="sec sec--white" id="nordt">
+  <div class="container">
     <div class="nordt-section rv">
       <h3 class="nordt-heading">
         評価基準
@@ -150,12 +224,40 @@ import '../styles/global.css';
 
       <p class="nordt-note rv">5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
     </div>
+
+    <!-- 探究学習4ステップとNORDTの対応 -->
+    <div class="nordt-mapping rv">
+      <h4 class="nordt-mapping-title">探究学習の4ステップとNORDTの対応</h4>
+      <div class="nordt-mapping-grid">
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">1. 課題の設定</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b></span>
+        </div>
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">2. 情報の収集</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b></span>
+        </div>
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">3. 整理・分析</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b> + <b style="color:var(--nordt-d)">D</b></span>
+        </div>
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">4. まとめ・表現</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-d)">D</b> + <b style="color:var(--nordt-t)">T</b></span>
+        </div>
+      </div>
+      <p class="nordt-map-note"><b style="color:var(--nordt-o)">O</b>riginalと<b style="color:var(--nordt-r)">R</b>ealは全ステップに横断して関わります。</p>
+    </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S3.5  大会スケジュール
+  S7  大会スケジュール
   ============================================================ -->
 <section class="sec sec--alt" id="schedule">
   <div class="container">
@@ -168,7 +270,7 @@ import '../styles/global.css';
             <th>フェーズ</th>
             <th>日程</th>
             <th>内容</th>
-            <th>チーム数</th>
+            <th>スクール側の役割</th>
           </tr>
         </thead>
         <tbody>
@@ -176,56 +278,56 @@ import '../styles/global.css';
             <td rowspan="3" class="sched-phase" style="--pc:var(--nordt-n)"><span class="sched-phase-label">一次選考</span></td>
             <td class="sched-date">〜 8/20（締切）</td>
             <td>動画提出</td>
-            <td>応募チーム</td>
+            <td>授業で取り組み、動画撮影・提出をサポート</td>
           </tr>
           <tr>
             <td class="sched-date">8/21 〜 9/19</td>
             <td>動画審査</td>
-            <td>応募チーム</td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="sched-date">9/20</td>
             <td>一次選考通過チーム発表</td>
-            <td class="sched-funnel">→ 100チームへ</td>
+            <td>通過チームへの連絡・モチベーション維持</td>
           </tr>
           <tr>
             <td rowspan="4" class="sched-phase" style="--pc:var(--nordt-r)"><span class="sched-phase-label">二次選考</span></td>
             <td class="sched-date">9/21 〜 9/30</td>
             <td>二次選考の日程調整</td>
-            <td>100チーム</td>
+            <td>Zoom日程調整・接続サポート</td>
           </tr>
           <tr>
             <td class="sched-date">10/1 〜 10/14</td>
             <td>二次選考 Zoom</td>
-            <td>100チーム</td>
+            <td>Zoom日程調整・接続サポート</td>
           </tr>
           <tr>
             <td class="sched-date">10/15 〜 10/19</td>
             <td>二次選考審査</td>
-            <td>100チーム</td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="sched-date">10/20</td>
             <td>二次選考通過チーム発表</td>
-            <td class="sched-funnel">→ 10チームへ</td>
+            <td>—</td>
           </tr>
           <tr>
             <td class="sched-phase" style="--pc:var(--nordt-d)"><span class="sched-phase-label">個別レクチャー</span></td>
             <td class="sched-date">10/21 〜 11/15</td>
             <td>通過チームにオンラインで個別レクチャー</td>
-            <td>10チーム</td>
+            <td>個別レクチャー同席で指導者の学びの機会に</td>
           </tr>
           <tr>
             <td class="sched-phase" style="--pc:var(--nordt-d)"><span class="sched-phase-label">決勝準備</span></td>
             <td class="sched-date">11/16 〜 11/21</td>
             <td>決勝に向けて最終準備</td>
-            <td>10チーム</td>
+            <td>—</td>
           </tr>
           <tr class="sched-final-row">
             <td class="sched-phase" style="--pc:var(--nordt-t)"><span class="sched-phase-label">決勝</span></td>
             <td class="sched-date">11/22（日）</td>
             <td>オンライン決勝</td>
-            <td>10チーム</td>
+            <td>決勝応援・視聴</td>
           </tr>
         </tbody>
       </table>
@@ -235,6 +337,97 @@ import '../styles/global.css';
   </div>
 </section>
 
+
+<!-- ============================================================
+  S7.5  デザイン10
+  ============================================================ -->
+<section class="sec sec--white" id="design10">
+  <div class="container">
+    <h2 class="sec-heading rv">プレゼンの型 ── デザイン10</h2>
+    <p class="sec-heading-sub rv">10枚のスライド構成で、誰でもプレゼンの「骨格」が作れます。<br>NORDTと対応しているため、指導の方向が明確になります。</p>
+
+    <div class="d10-flow rv">
+      <div class="d10-card" style="--dc:var(--nordt-t)">
+        <span class="d10-num">1</span>
+        <span class="d10-name">自己紹介</span>
+        <span class="d10-axis"><b>T</b></span>
+      </div>
+      <div class="d10-card" style="--dc:var(--nordt-t)">
+        <span class="d10-num">2</span>
+        <span class="d10-name">メリット</span>
+        <span class="d10-axis"><b>T</b></span>
+      </div>
+      <div class="d10-card d10-card--down" style="--dc:var(--nordt-n)">
+        <span class="d10-num">3</span>
+        <span class="d10-name">現状説明</span>
+        <span class="d10-axis"><b>N</b></span>
+      </div>
+      <div class="d10-card d10-card--down" style="--dc:var(--nordt-n)">
+        <span class="d10-num">4</span>
+        <span class="d10-name">課題</span>
+        <span class="d10-axis"><b>N</b></span>
+      </div>
+      <div class="d10-card d10-card--down" style="--dc:var(--nordt-o)">
+        <span class="d10-num">5</span>
+        <span class="d10-name">自己分析</span>
+        <span class="d10-axis"><b>O</b></span>
+      </div>
+      <div class="d10-card" style="--dc:var(--nordt-o)">
+        <span class="d10-num">6</span>
+        <span class="d10-name">差別化</span>
+        <span class="d10-axis"><b>O</b></span>
+      </div>
+      <div class="d10-card d10-card--up" style="--dc:var(--nordt-r)">
+        <span class="d10-num">7</span>
+        <span class="d10-name">キャッチコピー</span>
+        <span class="d10-axis"><b>R</b></span>
+      </div>
+      <div class="d10-card d10-card--up" style="--dc:var(--nordt-r)">
+        <span class="d10-num">8</span>
+        <span class="d10-name">ターゲット</span>
+        <span class="d10-axis"><b>R</b></span>
+      </div>
+      <div class="d10-card d10-card--up" style="--dc:var(--nordt-r)">
+        <span class="d10-num">9</span>
+        <span class="d10-name">具体策</span>
+        <span class="d10-axis"><b>R</b></span>
+      </div>
+      <div class="d10-card d10-card--peak" style="--dc:var(--nordt-t)">
+        <span class="d10-num">10</span>
+        <span class="d10-name">お願い</span>
+        <span class="d10-axis"><b>T</b></span>
+      </div>
+    </div>
+
+    <p class="d10-wave-note rv">テンションの波：4・5で下げて → 7で上げ → 8・9・10で最高潮へ</p>
+
+    <div class="d10-merit rv">
+      <div class="d10-merit-item">
+        <h4>「型」があるから指導しやすい</h4>
+        <p>10枚それぞれに役割があるため、先生も生徒も「今どこを磨けばいいか」が明確です。</p>
+      </div>
+      <div class="d10-merit-item">
+        <h4>NORDTと完全対応</h4>
+        <p>各スライドにNORDTの軸が対応しているため、評価と指導が一本の線でつながります。</p>
+      </div>
+      <div class="d10-merit-item">
+        <h4>実践で証明済み</h4>
+        <p>90本以上の探究講座で使われ、磨き上げられたフレームワークです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA（中間） -->
+<div class="cta-wrap rv">
+  <div class="cta-dual">
+    <a href="#" class="cta-btn">無料で団体エントリーする</a>
+    <a href="#" class="cta-btn-sub">まずは資料を見る・お問い合わせ</a>
+  </div>
+</div>
+
+<div class="stripe"></div>
 
 <!-- キャラクター帯 -->
 <div class="char-band" aria-hidden="true">
@@ -246,17 +439,20 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S4  プレゼンタイプ診断
+  S8  プレゼンタイプ診断
   ============================================================ -->
 <section class="sec sec--white" id="diagnosis">
   <div class="container">
-    <h2 class="sec-heading rv">参加者全員に届く — プレゼンタイプ診断</h2>
+    <h2 class="sec-heading rv">参加者全員に届く ── プレゼンタイプ診断</h2>
 
-    <!-- リード -->
     <div class="diag-intro rv">
       <p class="diag-lead">人の心を動かす方法は、ひとつじゃない。</p>
       <p class="diag-big">プレゼンタイプ診断</p>
-      <p class="diag-desc">論理で納得させるタイプ。ストーリーで感情を揺さぶるタイプ。データで圧倒するタイプ。問いかけで考えさせるタイプ。——プレゼンの「正解」は、人の数だけあります。<br>参加者全員にNORDT（5つの軸）をもとにした<strong>プレゼンタイプ診断</strong>をお届けします。<br>生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。</p>
+      <p class="diag-desc">生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。結果に関わらず全員にお届けするため、保護者への成果報告にそのまま活用できます。</p>
+    </div>
+
+    <div class="diag-chars rv">
+      <img src={`${import.meta.env.BASE_URL}images/characters.webp`} alt="プレゼンタイプ診断キャラクター" class="diag-chars-img" />
     </div>
 
     <!-- タイプカード一覧 -->
@@ -399,7 +595,7 @@ import '../styles/global.css';
             <div class="secret-overlay"></div>
           </div>
           <div class="secret-info">
-            <p class="secret-desc">全能力が最高値に達した者だけが覚醒する<br>伝説のプレゼンタイプ。<br>その正体は——診断結果で明かされる。</p>
+            <p class="secret-desc">全能力が最高値に達した者だけが覚醒する<br>伝説のプレゼンタイプ。<br>その正体は――診断結果で明かされる。</p>
           </div>
         </div>
       </div>
@@ -411,14 +607,12 @@ import '../styles/global.css';
 </section>
 
 
-<!-- CTA（オルカ付き） -->
+<!-- CTA（診断後） -->
 <div class="cta-wrap rv">
-  <div class="cta-with-orca">
-    <img src={`${import.meta.env.BASE_URL}images/orca.png`} alt="" class="cta-orca" aria-hidden="true" />
-    <div>
-      <p class="cta-sub">生徒の「伝え方タイプ」を可視化しませんか？</p>
-      <a href="#" class="cta-btn">無料でエントリーする</a>
-    </div>
+  <div class="cta-dual">
+    <p class="cta-sub">生徒の「伝え方タイプ」を可視化しませんか？</p>
+    <a href="#" class="cta-btn">無料で団体エントリーする</a>
+    <a href="#" class="cta-btn-sub">まずは資料を見る・お問い合わせ</a>
   </div>
 </div>
 
@@ -426,7 +620,7 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S5  団体参加の流れ
+  S9  団体参加の流れ（5ステップ）
   ============================================================ -->
 <section class="sec sec--alt" id="flow">
   <div class="container">
@@ -437,7 +631,7 @@ import '../styles/global.css';
         <span class="flow-n">1</span>
         <div>
           <strong>お問い合わせ・エントリー</strong>
-          <p>このページからお問い合わせ、またはフォームからエントリーしてください。</p>
+          <p>このページからお問い合わせ、またはフォームからスクール単位でエントリーしてください。</p>
         </div>
       </li>
       <li class="flow-step rv" style="--sc:var(--nordt-o)">
@@ -474,7 +668,7 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S6  運営体制
+  S10  運営体制
   ============================================================ -->
 <section class="sec sec--white" id="safety">
   <div class="container">
@@ -497,24 +691,65 @@ import '../styles/global.css';
         <h3>オンライン完結</h3>
         <p>ご自宅・教室から参加できます。移動の負担がなく、全国どこからでもエントリー可能です。</p>
       </div>
+      <div class="safety-card rv rv-d4">
+        <div class="safety-icon">04</div>
+        <h3>スクールへの報告体制</h3>
+        <p>参加生徒の診断結果をスクール単位でレポートとしてお届けします。個別に集計する手間がかかりません。</p>
+      </div>
+      <div class="safety-card rv rv-d5">
+        <div class="safety-icon">05</div>
+        <h3>探究指導者の育成支援</h3>
+        <p>NORDTで「何をどう教えるか」を体得できます。個別レクチャーへの同席も、指導力向上の機会です。</p>
+      </div>
+    </div>
+
+    <!-- 2025年大会実績 -->
+    <div class="track-record rv">
+      <h3 class="track-title">2025年大会の実績</h3>
+      <div class="track-grid">
+        <div class="track-item">
+          <span class="track-label">開催日</span>
+          <span class="track-value">2025年12月14日</span>
+        </div>
+        <div class="track-item">
+          <span class="track-label">参加</span>
+          <span class="track-value">小4〜高3の9チーム</span>
+        </div>
+        <div class="track-item">
+          <span class="track-label">形式</span>
+          <span class="track-value">Zoom発表 + YouTube限定公開</span>
+        </div>
+        <div class="track-item">
+          <span class="track-label">表彰</span>
+          <span class="track-value">優勝・準優勝・バレッド賞</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- CTA -->
-<div class="cta-wrap rv">
-  <a href="#" class="cta-btn">無料でエントリーする</a>
-  <p class="cta-note">※ オンライン開催。ご自宅・教室から参加できます。</p>
-</div>
-
-
 <!-- ============================================================
-  S7  主催者情報
+  S11  主催情報
   ============================================================ -->
 <section class="sec sec--alt" id="organizer">
   <div class="container">
     <h2 class="sec-heading rv">主催</h2>
+
+    <!-- 小川探究 代表プロフィール -->
+    <div class="founder-card rv">
+      <div class="founder-info">
+        <h3>小川探究 代表 小川大輔</h3>
+        <ul class="founder-career">
+          <li>大阪大学 理学部物理学科 卒業（2008年）</li>
+          <li>ハウス食品 → ヒューマン・ブレーン（塾講師12年間）</li>
+          <li>創研学院 くずは校・アカデミア 香里園校を新規開校</li>
+          <li>2024年 小川探究 創設</li>
+          <li>90分の探究講座を150本以上 制作・実施</li>
+          <li>独自審査基準「NORDT」と指導フレームワーク「デザイン10」を開発</li>
+        </ul>
+      </div>
+    </div>
 
     <div class="org-grid rv">
       <div class="org-card rv-d1">
@@ -536,35 +771,38 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S8  FAQ（企業向け）
+  S12  FAQ（企業向け）
   ============================================================ -->
 <section class="sec sec--white" id="faq">
   <div class="container">
     <h2 class="sec-heading rv">よくある質問</h2>
 
     <div class="faq-list">
-      <details class="faq rv"><summary>団体でエントリーできますか？</summary><p>はい。スクールや塾の先生がまとめてエントリーできます。生徒の人数や学年に制限はありません。</p></details>
+      <details class="faq rv"><summary>団体でまとめてエントリーできますか？</summary><p>はい。フォームからスクール単位で申し込みできます。</p></details>
       <details class="faq rv"><summary>参加費はかかりますか？</summary><p>無料です。エントリーからフィードバックの受け取りまで、費用は一切かかりません。</p></details>
-      <details class="faq rv"><summary>授業やカリキュラムに組み込めますか？</summary><p>テーマ発表から動画提出まで約3ヶ月の期間があります。「地域活性化」というテーマは探究学習の授業と相性がよく、カリキュラムの一部として取り入れているスクールもあります。</p></details>
-      <details class="faq rv"><summary>準備期間はどのくらい必要ですか？</summary><p>テーマに沿って調べ、スライドを作り、3分のプレゼンを練習して撮影する流れです。週1回の授業で進めても十分間に合います。</p></details>
-      <details class="faq rv"><summary>生成AI（ChatGPT等）を使ってもいいですか？</summary><p>使って問題ありません。ただし、AIの出力をそのまま使ったプレゼンは「独創性（O）」のスコアが低くなります。自分の考えをベースにすることが大切です。</p></details>
-      <details class="faq rv"><summary>プレゼンタイプ診断はいつ届きますか？</summary><p>大会終了後1週間以内に、全参加者にお届けします。</p></details>
-      <details class="faq rv"><summary>審査基準は何ですか？</summary><p>NORDT（Needs・Original・Real・Design・Talk）の5軸で評価します。基準は事前公開しているため、指導の方向性を立てやすくなっています。</p></details>
-      <details class="faq rv"><summary>オンラインでどのように参加しますか？</summary><p>一次選考は動画提出、二次選考以降はZoomを使用します。ご自宅・教室どちらからでも参加できます。</p></details>
+      <details class="faq rv"><summary>授業やカリキュラムに組み込めますか？</summary><p>テーマ発表から動画提出まで約3ヶ月。成果発表として自然に組み込めます。</p></details>
+      <details class="faq rv"><summary>準備期間はどのくらい必要ですか？</summary><p>テーマ発表から約3ヶ月です。デザイン10の型に沿えば効率的に進められます。</p></details>
+      <details class="faq rv"><summary>生成AI（ChatGPT等）を使ってもいいですか？</summary><p>使用できます。ただしNORDTのOriginal軸で独創性を評価するため、AIの出力をそのまま使うとスコアは低くなります。</p></details>
+      <details class="faq rv"><summary>診断結果はスクール単位でまとめて届きますか？</summary><p>はい。スクール単位のレポートをお届けします。</p></details>
+      <details class="faq rv"><summary>審査基準は何ですか？</summary><p>NORDT（Needs・Original・Real・Design・Talk）の5軸です。基準は事前公開しています。</p></details>
+      <details class="faq rv"><summary>他のスクールも参加しますか？</summary><p>全国のプレゼン・探究教育スクールにご案内しています。</p></details>
     </div>
   </div>
 </section>
 
 
 <!-- ============================================================
-  S9  最終CTA
+  S13  最終CTA
   ============================================================ -->
 <section class="sec final" id="apply">
   <div class="container">
     <div class="final-body rv">
       <img src={`${import.meta.env.BASE_URL}images/hero-logo-2026.png`} alt="探究プレゼンバトル 2026" class="final-logo" />
       <p class="final-theme">あなたの街の１０年後！ ―地域活性化を提案せよ―</p>
-      <a href="#" class="cta-btn cta-btn--lg">無料でエントリーする</a>
+      <div class="cta-dual">
+        <a href="#" class="cta-btn cta-btn--lg">無料で団体エントリーする</a>
+        <a href="#" class="cta-btn-sub">まずは資料を見る・お問い合わせ</a>
+      </div>
       <p class="cta-note">※ 全参加者にフィードバックとプレゼンタイプ診断をお届けします。参加費無料。</p>
     </div>
   </div>
@@ -587,185 +825,133 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-     STYLES — 提案書風ビジネスデザイン
+     STYLES — 提案書風ビジネスデザイン（全面再設計）
      ============================================================ -->
 <style>
 /* ─────────── HEADER ─────────── */
 .site-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(8px);
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--c-border);
-  padding: .6rem 0;
+  transition: box-shadow .3s;
 }
+.site-header.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,.08); }
 .header-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .55rem 0;
 }
-.header-logos {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
+.header-logo { display: flex; align-items: center; flex-shrink: 0; }
+.header-logo-img { height: 30px; width: auto; }
+.header-nav { display: flex; align-items: center; gap: 1.2rem; }
+.header-nav a {
+  font-family: var(--f-heading); font-size: .78rem; font-weight: 700;
+  color: var(--c-text-mid); text-decoration: none;
+  transition: color .2s; white-space: nowrap;
 }
-.header-logo { height: 22px; width: auto; opacity: .7; }
-.header-x { font-size: .8rem; font-weight: 700; color: var(--c-text-muted); }
-.header-cta {
-  font-family: var(--f-heading);
-  font-size: .78rem;
-  font-weight: 700;
-  color: #fff;
-  background: var(--c-accent);
-  padding: .4rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: opacity .2s;
+.header-nav a:hover { color: var(--c-blue); }
+.header-cta-btn {
+  display: inline-flex; align-items: center;
+  font-family: var(--f-heading); font-size: .78rem; font-weight: 900;
+  color: #fff; background: var(--c-blue);
+  padding: .5rem 1.2rem; border-radius: 6px; text-decoration: none;
+  white-space: nowrap; letter-spacing: .03em;
+  box-shadow: 0 2px 8px rgba(37,99,235,.2);
+  transition: transform .2s, box-shadow .2s, background .2s;
 }
-.header-cta:hover { opacity: .85; }
+.header-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(37,99,235,.3);
+  background: var(--c-blue-dark); color: #fff;
+}
+.header-burger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 28px; height: 20px; position: relative; padding: 0;
+}
+.header-burger span {
+  display: block; position: absolute; left: 0; width: 100%; height: 2.5px;
+  background: var(--c-text); border-radius: 2px; transition: transform .3s, opacity .3s;
+}
+.header-burger span:nth-child(1) { top: 0; }
+.header-burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.header-burger span:nth-child(3) { bottom: 0; }
+.header-burger.open span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+.header-burger.open span:nth-child(2) { opacity: 0; }
+.header-burger.open span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
 
-/* ─────────── S1 HERO — 提案書の表紙 ─────────── */
+@media (max-width: 768px) {
+  .header-nav {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,.97); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    flex-direction: column; justify-content: center; align-items: center; gap: 2rem;
+    opacity: 0; pointer-events: none; transition: opacity .3s; z-index: 99;
+  }
+  .header-nav.open { opacity: 1; pointer-events: auto; }
+  .header-nav a { font-size: 1.1rem; }
+  .header-cta-btn { display: none; }
+  .header-burger { display: block; z-index: 101; }
+}
+
+
+/* ─────────── S1 HERO ─────────── */
 .hero {
   position: relative;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  overflow: hidden;
-  padding-top: 3.5rem;
-  color: #fff;
+  display: flex; flex-direction: column; justify-content: center;
+  text-align: center; overflow: hidden;
+  padding-top: 3.5rem; color: #fff;
 }
-
-/* 背景イラスト */
 .hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  position: absolute; inset: 0; z-index: 0;
 }
 .hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center bottom;
 }
-
-/* オーバーレイ（上部だけ濃く、下部は薄くしてキャラの顔を見せる） */
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(
     to bottom,
     rgba(10, 18, 42, .7) 0%,
-    rgba(10, 18, 42, .55) 35%,
-    rgba(10, 18, 42, .2) 65%,
-    rgba(10, 18, 42, .35) 100%
+    rgba(10, 18, 42, .5) 35%,
+    rgba(10, 18, 42, .15) 65%,
+    rgba(10, 18, 42, .3) 100%
   );
 }
-
-/* 上部コンテンツ（ロゴ・タグ） */
 .hero-inner {
-  position: relative;
-  z-index: 2;
+  position: relative; z-index: 2;
   padding: clamp(2rem,6vw,4rem) 1.5rem 1rem;
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 720px; margin: 0 auto;
 }
-
-/* 下部テーマボックス */
-.hero-bottom {
-  position: relative;
-  z-index: 2;
-  padding: 1rem 1.5rem clamp(1.5rem,4vw,2.5rem);
-  width: 100%;
-}
-
-/* 共催ロゴ */
-.hero-cohost {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .6rem;
-  margin-bottom: 2rem;
-}
-.cohost-logo { height: 26px; width: auto; opacity: .65; }
-.cohost-x { font-size: .9rem; opacity: .35; font-weight: 700; }
-.cohost-label {
-  font-size: .7rem;
-  font-weight: 700;
-  color: var(--c-text-muted);
-  background: rgba(255,255,255,.8);
-  padding: .15rem .6rem;
-  border-radius: 100px;
-  margin-left: .2rem;
-}
-
-/* 大会ロゴ */
 .hero-logo {
-  display: block;
-  width: 100%;
-  max-width: 480px;
+  display: block; width: 100%; max-width: 480px;
   margin: 0 auto .8rem;
   filter: drop-shadow(0 4px 20px rgba(0,0,0,.3));
 }
-
-/* タイトル */
 .hero-subtitle {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
-  font-weight: 700;
-  color: rgba(255,255,255,.9);
-  margin-bottom: 1.2rem;
-  letter-spacing: .08em;
+  font-weight: 700; color: rgba(255,255,255,.9);
+  margin-bottom: 1rem; letter-spacing: .08em;
   text-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
-
-/* テーマボックス */
-.hero-theme-box {
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  background: rgba(255,255,255,.92);
-  border: none;
-  border-radius: var(--radius-md);
-  box-shadow: 0 4px 20px rgba(0,0,0,.2);
-  color: var(--c-text);
-  backdrop-filter: blur(4px);
-}
-.hero-theme-label {
-  display: inline-block;
-  font-size: .75rem;
-  font-weight: 700;
-  color: var(--c-accent);
-  letter-spacing: .08em;
-  margin-bottom: .4rem;
-}
-.hero-theme-text {
+.hero-catch {
   font-family: var(--f-heading);
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  font-weight: 900;
-  line-height: 1.6;
-  color: var(--c-text);
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+  font-weight: 900; line-height: 1.65;
+  color: #fff; margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.4);
 }
-
-/* タグ */
 .hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
+  display: flex; flex-wrap: wrap; gap: .5rem;
   justify-content: center;
 }
 .hero-tag {
-  font-size: .78rem;
-  font-weight: 700;
-  padding: .3rem .9rem;
-  border-radius: 100px;
+  font-size: .78rem; font-weight: 700;
+  padding: .3rem .9rem; border-radius: 100px;
   border: 1px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.15);
-  color: #fff;
+  background: rgba(255,255,255,.15); color: #fff;
   backdrop-filter: blur(4px);
 }
 
@@ -773,241 +959,282 @@ import '../styles/global.css';
 .cta-sec { padding: clamp(1.5rem, 4vw, 2.5rem) 0; }
 
 
-/* ─────────── S2 BENEFITS ─────────── */
-.benefit-grid {
+/* ─────────── 2段階CTA ─────────── */
+.cta-dual { text-align: center; }
+.cta-btn-sub {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-size: clamp(.85rem, 2vw, .95rem);
+  font-weight: 700; color: var(--c-blue);
+  background: #fff;
+  border: 2px solid var(--c-blue);
+  padding: .7rem 2rem; border-radius: 8px;
+  text-decoration: none; margin-top: .8rem;
+  transition: background .2s, color .2s;
+}
+.cta-btn-sub:hover {
+  background: var(--c-blue); color: #fff;
+}
+.cta-sub {
+  font-family: var(--f-heading);
+  font-size: clamp(.9rem, 2vw, 1.05rem);
+  font-weight: 700; color: var(--c-text-mid);
+  margin-bottom: .8rem;
+}
+
+
+/* ─────────── S2 教育的意義 ─────────── */
+.sig-flow {
+  max-width: 660px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center;
+}
+.sig-card {
+  width: 100%; background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 1.5rem; position: relative;
+  transition: box-shadow .2s;
+}
+.sig-card:hover { box-shadow: var(--shadow-md); }
+.sig-card--accent {
+  border-color: var(--c-blue);
+  background: color-mix(in srgb, var(--c-blue) 4%, #fff);
+}
+.sig-step {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--c-blue); color: #fff;
+  font-family: var(--f-heading); font-size: .8rem; font-weight: 900;
+  margin-bottom: .8rem;
+}
+.sig-card h3 {
+  font-family: var(--f-heading);
+  font-size: 1rem; font-weight: 900;
+  margin-bottom: .5rem; line-height: 1.55;
+}
+.sig-card p {
+  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
+}
+.sig-arrow {
+  padding: .3rem 0; display: flex; align-items: center; justify-content: center;
+}
+.sig-arrow svg { width: 28px; height: 36px; }
+
+
+/* ─────────── S3 団体参加メリット ─────────── */
+.merit-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
-
-.benefit-card {
-  background: #fff;
-  border-radius: var(--radius-md);
+.merit-card {
+  background: #fff; border-radius: var(--radius-md);
   padding: 2rem 1.5rem;
   border: 1px solid var(--c-border);
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.benefit-card:hover {
+.merit-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
-
-.benefit-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .85rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
+.merit-num {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; font-weight: 900; margin-bottom: 1rem;
   font-family: var(--f-heading);
+  background: rgba(37,99,235,.08); color: var(--c-blue);
 }
-
-.benefit-card h3 {
+.merit-card h3 {
   font-family: var(--f-heading);
-  font-size: 1rem;
-  font-weight: 900;
-  margin-bottom: .6rem;
-  line-height: 1.55;
+  font-size: 1rem; font-weight: 900;
+  margin-bottom: .6rem; line-height: 1.55;
 }
-
-.benefit-card p {
-  font-size: .88rem;
-  color: var(--c-text-light);
-  line-height: 1.85;
+.merit-card p {
+  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
 }
 
 
-/* ─────────── S2.5 THEME ─────────── */
+/* ─────────── S4 テーマ ─────────── */
 .theme-box {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-  background: #fff;
+  max-width: 640px; margin: 0 auto 2rem;
+  text-align: center; background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3rem);
   box-shadow: var(--shadow-sm);
 }
 .theme-label {
-  display: inline-block;
-  font-size: .75rem;
-  font-weight: 700;
-  color: var(--c-blue);
-  letter-spacing: .08em;
-  margin-bottom: .6rem;
+  display: inline-block; font-size: .75rem;
+  font-weight: 700; color: var(--c-blue);
+  letter-spacing: .08em; margin-bottom: .6rem;
 }
 .theme-title {
   font-family: var(--f-heading);
   font-size: clamp(1.15rem, 3vw, 1.5rem);
-  font-weight: 900;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  font-weight: 900; line-height: 1.6;
 }
-.theme-desc {
-  font-size: .88rem;
-  color: var(--c-text-light);
-  line-height: 1.85;
+
+.theme-angles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem; max-width: 780px; margin: 0 auto 2rem;
+}
+.theme-angle {
+  background: var(--c-bg-alt); border-radius: var(--radius-sm);
+  padding: 1.2rem 1rem; border: 1px solid var(--c-border);
+}
+.theme-angle h4 {
+  font-family: var(--f-heading);
+  font-size: .9rem; font-weight: 900;
+  margin-bottom: .4rem; color: var(--c-text);
+}
+.theme-angle p {
+  font-size: .82rem; color: var(--c-text-light); line-height: 1.75;
+}
+
+.theme-highlight {
+  max-width: 640px; margin: 0 auto;
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+  background: color-mix(in srgb, var(--c-blue) 5%, #fff);
+  border: 1px solid color-mix(in srgb, var(--c-blue) 20%, #fff);
+  border-radius: var(--radius-sm);
+}
+.theme-highlight p {
+  font-size: .88rem; color: var(--c-text-mid);
+  line-height: 1.8; font-weight: 600;
 }
 
 
-/* ─────────── S3 大会概要 + NORDT ─────────── */
+/* ─────────── S5 大会概要 ─────────── */
 .info-table {
-  max-width: 600px;
-  margin: 0 auto 3rem;
-  background: #fff;
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  max-width: 600px; margin: 0 auto;
+  background: #fff; border: 1px solid var(--c-border);
+  border-radius: var(--radius-md); overflow: hidden;
 }
-.info-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
+.info-table table { width: 100%; border-collapse: collapse; }
 .info-table th,
 .info-table td {
-  padding: .9rem 1.2rem;
-  font-size: .9rem;
-  text-align: left;
-  border-bottom: 1px solid var(--c-border-light);
+  padding: .9rem 1.2rem; font-size: .9rem;
+  text-align: left; border-bottom: 1px solid var(--c-border-light);
 }
 .info-table tr:last-child th,
 .info-table tr:last-child td { border-bottom: none; }
 .info-table th {
-  width: 140px;
-  font-weight: 700;
-  color: var(--c-text-mid);
-  background: var(--c-bg-alt);
+  width: 140px; font-weight: 700;
+  color: var(--c-text-mid); background: var(--c-bg-alt);
 }
 
-/* NORDT */
-.nordt-section {
-  max-width: 700px;
-  margin: 0 auto;
-}
+
+/* ─────────── S6 NORDT ─────────── */
+.nordt-section { max-width: 700px; margin: 0 auto; }
 .nordt-heading {
   font-family: var(--f-heading);
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  font-weight: 900;
-  text-align: center;
+  font-weight: 900; text-align: center;
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .6rem;
+  display: flex; align-items: center; justify-content: center; gap: .6rem;
 }
 .nordt-letters { font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: .06em; }
 .nordt-letters b { font-weight: 900; }
 
-.nordt-lead {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+.nordt-lead { text-align: center; margin-bottom: 2rem; }
 .nordt-main-copy {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  font-weight: 900;
-  line-height: 1.65;
-  margin-bottom: .8rem;
+  font-weight: 900; line-height: 1.65; margin-bottom: .8rem;
 }
 .nordt-sub-copy {
-  font-size: .88rem;
-  color: var(--c-text-light);
-  line-height: 1.85;
+  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
 }
 
 .nordt-grid {
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-  margin-bottom: 1.5rem;
+  display: flex; flex-direction: column;
+  gap: .8rem; margin-bottom: 1.5rem;
 }
-
 .nordt-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: #fff;
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.2rem;
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: #fff; border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm); padding: 1rem 1.2rem;
   transition: box-shadow .2s ease;
 }
 .nordt-card:hover { box-shadow: var(--shadow-sm); }
-
 .nordt-l {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--nc);
-  color: #fff;
-  font-family: var(--f-heading);
-  font-size: 1.1rem;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0; width: 40px; height: 40px;
+  border-radius: 8px; background: var(--nc); color: #fff;
+  font-family: var(--f-heading); font-size: 1.1rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
 }
-
-.nordt-card strong {
-  font-size: .95rem;
-  display: block;
-  margin-bottom: .1rem;
-}
-.nordt-card small {
-  font-size: .75rem;
-  color: var(--c-text-muted);
-  display: block;
-  margin-bottom: .3rem;
-}
-.nordt-card p {
-  font-size: .85rem;
-  color: var(--c-text-light);
-  line-height: 1.6;
-}
-
+.nordt-card strong { font-size: .95rem; display: block; margin-bottom: .1rem; }
+.nordt-card small { font-size: .75rem; color: var(--c-text-muted); display: block; margin-bottom: .3rem; }
+.nordt-card p { font-size: .85rem; color: var(--c-text-light); line-height: 1.6; }
 .nordt-note {
-  font-size: .85rem;
-  color: var(--c-text-light);
-  text-align: center;
-  line-height: 1.8;
+  font-size: .85rem; color: var(--c-text-light);
+  text-align: center; line-height: 1.8;
 }
 
+/* NORDT × 探究学習マッピング */
+.nordt-mapping {
+  max-width: 600px; margin: 2.5rem auto 0;
+  padding: 1.8rem; background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+.nordt-mapping-title {
+  font-family: var(--f-heading);
+  font-size: .95rem; font-weight: 900;
+  text-align: center; margin-bottom: 1.2rem;
+}
+.nordt-mapping-grid {
+  display: flex; flex-direction: column; gap: .6rem;
+}
+.nordt-map-item {
+  display: flex; align-items: center; gap: .8rem;
+  background: #fff; padding: .6rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border-light);
+}
+.nordt-map-step {
+  font-size: .85rem; font-weight: 700;
+  color: var(--c-text-mid); flex: 1;
+}
+.nordt-map-arrow { color: var(--c-text-muted); font-size: .85rem; }
+.nordt-map-axis {
+  font-family: var(--f-heading);
+  font-size: 1rem; font-weight: 900;
+  min-width: 60px; text-align: center;
+}
+.nordt-map-axis b { margin: 0 .1em; }
+.nordt-map-note {
+  font-size: .8rem; color: var(--c-text-light);
+  text-align: center; margin-top: .8rem;
+  font-weight: 600;
+}
+.nordt-map-note b { font-weight: 900; }
 
-/* ─────────── S3.5 スケジュール（表形式） ─────────── */
+
+/* ─────────── S7 スケジュール ─────────── */
 .sched-table-wrap {
-  max-width: 820px;
-  margin: 0 auto;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  max-width: 900px; margin: 0 auto;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
 }
 .sched-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .88rem;
-  line-height: 1.6;
+  width: 100%; border-collapse: collapse;
+  font-size: .85rem; line-height: 1.6;
 }
 .sched-table thead th {
   font-family: var(--f-heading);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .06em;
-  color: #fff;
-  background: var(--c-text);
-  padding: .7rem 1rem;
-  text-align: left;
-  white-space: nowrap;
+  font-size: .75rem; font-weight: 700;
+  letter-spacing: .06em; color: #fff;
+  background: var(--c-text); padding: .7rem .8rem;
+  text-align: left; white-space: nowrap;
 }
 .sched-table tbody td {
-  padding: .7rem 1rem;
+  padding: .65rem .8rem;
   border-bottom: 1px solid var(--c-border);
   vertical-align: middle;
 }
 .sched-table tbody tr:last-child td { border-bottom: none; }
-
 .sched-phase {
   font-weight: 700;
   background: color-mix(in srgb, var(--pc) 8%, #fff);
@@ -1016,113 +1243,157 @@ import '../styles/global.css';
 }
 .sched-phase-label {
   font-family: var(--f-heading);
-  font-size: .85rem;
-  color: var(--c-text);
+  font-size: .82rem; color: var(--c-text);
 }
 .sched-date {
   font-family: var(--f-heading);
-  font-size: .82rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.sched-funnel {
-  font-weight: 700;
-  color: var(--c-accent);
+  font-size: .8rem; font-weight: 700; white-space: nowrap;
 }
 .sched-final-row td {
   background: color-mix(in srgb, var(--nordt-t) 6%, #fff);
   font-weight: 700;
 }
-
 .sched-note {
-  font-size: .82rem;
-  color: var(--c-text-muted);
-  text-align: center;
-  margin-top: 1.2rem;
-  line-height: 1.7;
+  font-size: .82rem; color: var(--c-text-muted);
+  text-align: center; margin-top: 1.2rem; line-height: 1.7;
 }
 
 @media (max-width: 600px) {
-  .sched-table { font-size: .78rem; }
+  .sched-table { font-size: .75rem; }
   .sched-table thead th,
-  .sched-table tbody td { padding: .5rem .6rem; }
+  .sched-table tbody td { padding: .5rem .5rem; }
 }
 
 
-/* ─────────── キャラクター帯（控えめ） ─────────── */
-.char-band {
-  display: flex;
-  justify-content: center;
-  gap: clamp(.5rem, 2vw, 1.5rem);
-  padding: 2rem 1rem;
+/* ─────────── S7.5 デザイン10 ─────────── */
+.d10-flow {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: .6rem;
+  max-width: 780px; margin: 0 auto 1.5rem;
+  padding: 1rem 0;
+}
+.d10-card {
+  display: flex; flex-direction: column;
+  align-items: center; gap: .3rem;
+  width: clamp(70px, 8vw, 80px);
+  padding: .8rem .4rem;
+  background: #fff; border: 2px solid var(--dc);
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: transform .2s, box-shadow .2s;
+}
+.d10-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--dc) 20%, transparent);
+}
+.d10-card--down { transform: translateY(8px); }
+.d10-card--down:hover { transform: translateY(4px); }
+.d10-card--up { transform: translateY(-4px); }
+.d10-card--up:hover { transform: translateY(-8px); }
+.d10-card--peak { transform: translateY(-10px); }
+.d10-card--peak:hover { transform: translateY(-14px); }
+
+.d10-num {
+  font-family: var(--f-heading);
+  font-size: .7rem; font-weight: 900;
+  color: #fff; background: var(--dc);
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.d10-name {
+  font-size: clamp(.6rem, 1.5vw, .72rem);
+  font-weight: 700; text-align: center;
+  line-height: 1.3; color: var(--c-text);
+}
+.d10-axis {
+  font-family: var(--f-heading);
+  font-size: .8rem; font-weight: 900;
+  color: var(--dc);
+}
+.d10-axis b { color: var(--dc); }
+
+.d10-wave-note {
+  text-align: center; font-size: .82rem;
+  color: var(--c-text-light); margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.d10-merit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem; max-width: 720px; margin: 0 auto;
+}
+.d10-merit-item {
   background: var(--c-bg-alt);
-  overflow: hidden;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+}
+.d10-merit-item h4 {
+  font-family: var(--f-heading);
+  font-size: .88rem; font-weight: 900;
+  margin-bottom: .4rem;
+}
+.d10-merit-item p {
+  font-size: .82rem; color: var(--c-text-light); line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .d10-flow { gap: .4rem; }
+  .d10-card { width: clamp(58px, 17vw, 70px); padding: .6rem .3rem; }
+  .d10-card--down { transform: translateY(5px); }
+  .d10-card--up { transform: translateY(-2px); }
+  .d10-card--peak { transform: translateY(-6px); }
+}
+
+
+/* ─────────── キャラクター帯 ─────────── */
+.char-band {
+  display: flex; justify-content: center;
+  gap: clamp(.5rem, 2vw, 1.5rem);
+  padding: 2rem 1rem; background: var(--c-bg-alt); overflow: hidden;
 }
 .char-band-img {
-  height: clamp(60px, 10vw, 90px);
-  width: auto;
-  opacity: .55;
-  filter: grayscale(15%);
+  height: clamp(60px, 10vw, 90px); width: auto;
+  opacity: .55; filter: grayscale(15%);
   transition: opacity .3s ease;
 }
 .char-band-img:hover { opacity: .85; }
 
 
-/* ─────────── S4 プレゼンタイプ診断 ─────────── */
+/* ─────────── S8 プレゼンタイプ診断 ─────────── */
 .diag-intro { text-align: center; max-width: 640px; margin: 0 auto 2rem; }
-
 .diag-lead {
   font-family: var(--f-heading);
   font-size: clamp(.95rem, 2.5vw, 1.1rem);
-  font-weight: 700;
-  color: var(--c-text-mid);
-  margin-bottom: .5rem;
+  font-weight: 700; color: var(--c-text-mid); margin-bottom: .5rem;
 }
-
 .diag-big {
   font-family: var(--f-heading);
   font-size: clamp(1.3rem, 3.5vw, 1.8rem);
-  font-weight: 900;
-  color: var(--c-blue);
-  margin-bottom: 1rem;
+  font-weight: 900; color: var(--c-blue); margin-bottom: 1rem;
 }
-
 .diag-desc {
-  font-size: .88rem;
-  color: var(--c-text-light);
-  line-height: 1.85;
+  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
 }
-
 .diag-chars { text-align: center; margin-bottom: 2.5rem; }
 .diag-chars-img {
-  max-width: 100%;
-  border-radius: var(--radius-md);
+  max-width: 100%; border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
 
 /* タイプカード */
-.type-showcase {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
+.type-showcase { max-width: 700px; margin: 0 auto; }
 .type-section { margin-bottom: 1.5rem; }
-
 .type-section-title {
   font-family: var(--f-heading);
-  font-size: .9rem;
-  font-weight: 700;
-  color: var(--c-text-mid);
-  margin-bottom: .8rem;
-  padding-left: .2rem;
+  font-size: .9rem; font-weight: 700;
+  color: var(--c-text-mid); margin-bottom: .8rem; padding-left: .2rem;
 }
 
 .type-solo {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.2rem 1.5rem;
-  background: #fff;
+  display: flex; align-items: center; gap: 1.2rem;
+  padding: 1.2rem 1.5rem; background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-md);
   transition: box-shadow .2s ease;
@@ -1132,38 +1403,22 @@ import '../styles/global.css';
 .type-solo-content { flex: 1; }
 
 .type-code {
-  font-size: .75rem;
-  font-weight: 900;
-  letter-spacing: .05em;
-  display: block;
-  margin-bottom: .2rem;
+  font-size: .75rem; font-weight: 900;
+  letter-spacing: .05em; display: block; margin-bottom: .2rem;
 }
 .type-code b { margin-right: .1em; }
-
 .type-catch {
-  font-size: .85rem;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: .2rem;
+  font-size: .85rem; font-weight: 700;
+  line-height: 1.5; margin-bottom: .2rem;
 }
-
-.type-jobs {
-  font-size: .75rem;
-  color: var(--c-text-muted);
-}
+.type-jobs { font-size: .75rem; color: var(--c-text-muted); }
 
 .type-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: .8rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: .8rem;
 }
-
 .type-card {
-  display: flex;
-  align-items: center;
-  gap: .8rem;
-  padding: 1rem;
-  background: #fff;
+  display: flex; align-items: center; gap: .8rem;
+  padding: 1rem; background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-sm);
   transition: box-shadow .2s ease;
@@ -1174,74 +1429,37 @@ import '../styles/global.css';
 
 /* ラスボス */
 .secret-card {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  display: flex; align-items: center; gap: 1.5rem;
   padding: 1.5rem;
   background: linear-gradient(135deg, #1a1f36, #2d3250);
-  border-radius: var(--radius-md);
-  color: #fff;
+  border-radius: var(--radius-md); color: #fff;
 }
-
 .secret-silhouette { position: relative; flex-shrink: 0; }
-.secret-char { width: 80px; height: 80px; object-fit: contain; filter: brightness(0) drop-shadow(0 0 12px rgba(147,197,253,.4)); opacity: .7; }
+.secret-char {
+  width: 80px; height: 80px; object-fit: contain;
+  filter: brightness(0) drop-shadow(0 0 12px rgba(147,197,253,.4)); opacity: .7;
+}
 .secret-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(26,31,54,.3), transparent);
   border-radius: 8px;
 }
-
 .secret-info { flex: 1; }
-.secret-badge {
-  font-size: .65rem;
-  font-weight: 900;
-  letter-spacing: .1em;
-  color: #fbbf24;
-  display: block;
-  margin-bottom: .3rem;
-}
-.secret-title {
-  font-family: var(--f-heading);
-  font-size: 1.1rem;
-  font-weight: 900;
-  margin-bottom: .4rem;
-}
 .secret-desc {
-  font-size: .8rem;
-  line-height: 1.65;
-  opacity: .8;
-  margin-bottom: .5rem;
-}
-.secret-cta {
-  font-size: .78rem;
-  color: #93c5fd;
-  font-weight: 700;
+  font-size: .8rem; line-height: 1.65; opacity: .8;
 }
 
 .diag-bottom-note {
-  text-align: center;
-  font-size: .85rem;
-  color: var(--c-text-light);
-  margin-top: 2rem;
-  line-height: 1.7;
+  text-align: center; font-size: .85rem;
+  color: var(--c-text-light); margin-top: 2rem; line-height: 1.7;
 }
 
 
-/* ─────────── CTA with Orca ─────────── */
+/* ─────────── CTA wrap ─────────── */
 .cta-with-orca {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  display: flex; align-items: center; justify-content: center; gap: 1.5rem;
 }
 .cta-orca { width: 70px; height: auto; opacity: .6; }
-.cta-sub {
-  font-family: var(--f-heading);
-  font-size: clamp(.9rem, 2vw, 1.05rem);
-  font-weight: 700;
-  color: var(--c-text-mid);
-  margin-bottom: .8rem;
-}
 
 @media (max-width: 600px) {
   .cta-with-orca { flex-direction: column; text-align: center; }
@@ -1249,223 +1467,192 @@ import '../styles/global.css';
 }
 
 
-/* ─────────── S5 団体参加の流れ ─────────── */
-.flow-steps {
-  list-style: none;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
+/* ─────────── S9 団体参加の流れ ─────────── */
+.flow-steps { list-style: none; max-width: 640px; margin: 0 auto; }
 .flow-step {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  align-items: flex-start;
+  display: flex; gap: 1rem;
+  margin-bottom: 1.5rem; align-items: flex-start;
 }
-
 .flow-n {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--sc);
-  color: #fff;
-  font-family: var(--f-heading);
-  font-size: .85rem;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0; width: 36px; height: 36px;
+  border-radius: 50%; background: var(--sc); color: #fff;
+  font-family: var(--f-heading); font-size: .85rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
 }
-
 .flow-step strong {
   font-family: var(--f-heading);
-  font-size: .95rem;
-  font-weight: 900;
-  display: block;
-  margin-bottom: .2rem;
+  font-size: .95rem; font-weight: 900;
+  display: block; margin-bottom: .2rem;
 }
-
 .flow-step p {
-  font-size: .85rem;
-  color: var(--c-text-light);
-  line-height: 1.75;
+  font-size: .85rem; color: var(--c-text-light); line-height: 1.75;
 }
 
 
-/* ─────────── S6 運営体制 ─────────── */
+/* ─────────── S10 運営体制 ─────────── */
 .safety-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
-
 .safety-card {
-  background: var(--c-bg-alt);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
-  padding: 1.8rem 1.5rem;
+  background: var(--c-bg-alt); border: 1px solid var(--c-border);
+  border-radius: var(--radius-md); padding: 1.8rem 1.5rem;
   transition: box-shadow .2s ease;
 }
 .safety-card:hover { box-shadow: var(--shadow-sm); }
-
 .safety-icon {
   font-family: var(--f-heading);
-  font-size: .8rem;
-  font-weight: 900;
-  color: var(--c-blue);
-  margin-bottom: .8rem;
+  font-size: .8rem; font-weight: 900;
+  color: var(--c-blue); margin-bottom: .8rem;
 }
-
 .safety-card h3 {
   font-family: var(--f-heading);
-  font-size: .95rem;
-  font-weight: 900;
-  margin-bottom: .5rem;
+  font-size: .95rem; font-weight: 900; margin-bottom: .5rem;
 }
-
 .safety-card p {
-  font-size: .85rem;
-  color: var(--c-text-light);
-  line-height: 1.8;
+  font-size: .85rem; color: var(--c-text-light); line-height: 1.8;
+}
+
+/* 2025年大会実績 */
+.track-record {
+  max-width: 640px; margin: 2.5rem auto 0;
+  background: #fff; border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 1.8rem; text-align: center;
+}
+.track-title {
+  font-family: var(--f-heading);
+  font-size: 1rem; font-weight: 900;
+  margin-bottom: 1.2rem;
+}
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: .8rem;
+}
+.track-item {
+  padding: .6rem; background: var(--c-bg-alt);
+  border-radius: var(--radius-sm);
+}
+.track-label {
+  display: block; font-size: .72rem;
+  font-weight: 700; color: var(--c-text-muted);
+  margin-bottom: .2rem; letter-spacing: .06em;
+}
+.track-value {
+  font-size: .88rem; font-weight: 700; color: var(--c-text);
 }
 
 
-/* ─────────── S7 主催者情報 ─────────── */
+/* ─────────── S11 主催者情報 ─────────── */
+.founder-card {
+  max-width: 640px; margin: 0 auto 2rem;
+  background: #fff; border: 1px solid var(--c-border);
+  border-radius: var(--radius-md); padding: 2rem 1.8rem;
+}
+.founder-info h3 {
+  font-family: var(--f-heading);
+  font-size: 1.05rem; font-weight: 900;
+  margin-bottom: 1rem;
+}
+.founder-career {
+  list-style: none; padding: 0;
+}
+.founder-career li {
+  font-size: .85rem; color: var(--c-text-light);
+  line-height: 1.75; padding: .3rem 0;
+  border-bottom: 1px solid var(--c-border-light);
+  padding-left: 1rem; position: relative;
+}
+.founder-career li::before {
+  content: ''; position: absolute; left: 0; top: .75rem;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--c-blue);
+}
+.founder-career li:last-child { border-bottom: none; }
+
 .org-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 1.5rem; margin-bottom: 1rem;
 }
-
 .org-card {
-  background: #fff;
-  border: 1px solid var(--c-border);
+  background: #fff; border: 1px solid var(--c-border);
   border-radius: var(--radius-md);
-  padding: 2rem 1.5rem;
-  text-align: center;
+  padding: 2rem 1.5rem; text-align: center;
 }
-
 .org-logo {
-  height: 40px;
-  width: auto;
-  margin: 0 auto 1rem;
-  object-fit: contain;
+  height: 40px; width: auto;
+  margin: 0 auto 1rem; object-fit: contain;
 }
-
 .org-card h3 {
   font-family: var(--f-heading);
-  font-size: 1rem;
-  font-weight: 900;
-  margin-bottom: .3rem;
+  font-size: 1rem; font-weight: 900; margin-bottom: .3rem;
 }
-
-.org-catch {
-  font-size: .82rem;
-  color: var(--c-text-light);
-  margin-bottom: .6rem;
-}
-
-.org-card a {
-  font-size: .82rem;
-  font-weight: 700;
-}
-
+.org-catch { font-size: .82rem; color: var(--c-text-light); margin-bottom: .6rem; }
+.org-card a { font-size: .82rem; font-weight: 700; }
 .org-cohost-note {
-  text-align: center;
-  font-size: .82rem;
-  color: var(--c-text-muted);
+  text-align: center; font-size: .82rem; color: var(--c-text-muted);
 }
 
 
-/* ─────────── S8 FAQ ─────────── */
-.faq-list {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
+/* ─────────── S12 FAQ ─────────── */
+.faq-list { max-width: 700px; margin: 0 auto; }
 .faq {
   border: 1px solid var(--c-border);
   border-radius: var(--radius-sm);
-  margin-bottom: .6rem;
-  overflow: hidden;
+  margin-bottom: .6rem; overflow: hidden;
   transition: box-shadow .2s ease;
 }
 .faq:hover { box-shadow: var(--shadow-sm); }
-
 .faq summary {
-  padding: 1rem 1.3rem;
-  font-weight: 700;
-  font-size: .9rem;
-  cursor: pointer;
+  padding: 1rem 1.3rem; font-weight: 700;
+  font-size: .9rem; cursor: pointer;
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: .6rem;
+  display: flex; align-items: center; gap: .6rem;
   transition: background .2s;
 }
 .faq summary:hover { background: var(--c-bg-alt); }
 .faq summary::before {
-  content: '+';
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--c-blue);
-  flex-shrink: 0;
-  width: 22px;
-  text-align: center;
-  transition: transform .2s;
+  content: '+'; font-size: 1.1rem; font-weight: 700;
+  color: var(--c-blue); flex-shrink: 0;
+  width: 22px; text-align: center; transition: transform .2s;
 }
-.faq[open] summary::before { content: '−'; }
-
+.faq[open] summary::before { content: '\2212'; }
 .faq p {
   padding: 0 1.3rem 1rem 2.8rem;
-  font-size: .85rem;
-  color: var(--c-text-light);
-  line-height: 1.8;
+  font-size: .85rem; color: var(--c-text-light); line-height: 1.8;
 }
 
 
-/* ─────────── S9 最終CTA ─────────── */
+/* ─────────── S13 最終CTA ─────────── */
 .final {
   background: linear-gradient(170deg, #f0f4ff, #e8edf5);
   text-align: center;
   padding: clamp(4rem, 8vw, 6rem) 0;
 }
-
 .final-body { max-width: 560px; margin: 0 auto; }
-
 .final-logo {
-  width: 100%;
-  max-width: 400px;
+  width: 100%; max-width: 400px;
   margin: 0 auto 1.5rem;
 }
-
 .final-theme {
   font-family: var(--f-heading);
   font-size: clamp(.9rem, 2.2vw, 1.1rem);
-  font-weight: 700;
-  color: var(--c-text-mid);
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+  font-weight: 700; color: var(--c-text-mid);
+  margin-bottom: 1.5rem; line-height: 1.6;
 }
 
 
 /* ─────────── Footer ─────────── */
 .ft {
-  background: var(--c-text);
-  color: rgba(255,255,255,.5);
-  padding: 2rem 0;
-  text-align: center;
-  font-size: .75rem;
+  background: var(--c-text); color: rgba(255,255,255,.5);
+  padding: 2rem 0; text-align: center; font-size: .75rem;
 }
-
 .ft-logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .8rem;
-  margin-bottom: .8rem;
+  display: flex; align-items: center;
+  justify-content: center; gap: .8rem; margin-bottom: .8rem;
 }
 .ft-logos img { height: 22px; width: auto; opacity: .5; filter: brightness(2); }
 .ft-x { font-size: .8rem; opacity: .4; }
@@ -1475,13 +1662,44 @@ import '../styles/global.css';
 @media (max-width: 600px) {
   .type-pair { grid-template-columns: 1fr; }
   .info-table th { width: 110px; }
-
-  .timeline { padding-left: 30px; }
-  .timeline::before { left: 14px; }
-  .timeline-marker { margin-left: -18px; width: 32px; height: 32px; font-size: .78rem; }
-  .timeline-marker--final { margin-left: -20px; width: 36px; height: 36px; }
-
   .secret-card { flex-direction: column; text-align: center; }
   .secret-char { width: 64px; height: 64px; }
 }
 </style>
+
+
+<!-- ============================================================
+     JS — ハンバーガー + スクロールリビール
+     ============================================================ -->
+<script>
+  // ─── ハンバーガーメニュー ───
+  const burger = document.getElementById('header-burger');
+  const nav = document.getElementById('header-nav');
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        nav.classList.remove('open');
+      })
+    );
+  }
+
+  // ─── ヘッダー shadow on scroll ───
+  const header = document.getElementById('site-header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+  }
+
+  // ─── スクロールリビール ───
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
