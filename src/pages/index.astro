@@ -884,7 +884,7 @@ import '../styles/global.css';
 .hero {
   position: relative;
   min-height: 100dvh;
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; flex-direction: column; justify-content: flex-end;
   text-align: center; overflow: hidden;
   padding-top: 3.5rem; color: #fff;
 }
@@ -893,21 +893,21 @@ import '../styles/global.css';
 }
 .hero-bg-img {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center 30%;
+  object-fit: cover; object-position: center 25%;
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(
     to bottom,
-    rgba(10, 18, 42, .7) 0%,
-    rgba(10, 18, 42, .5) 35%,
-    rgba(10, 18, 42, .15) 65%,
-    rgba(10, 18, 42, .3) 100%
+    rgba(10, 18, 42, .15) 0%,
+    rgba(10, 18, 42, .25) 30%,
+    rgba(10, 18, 42, .5) 55%,
+    rgba(10, 18, 42, .75) 100%
   );
 }
 .hero-inner {
   position: relative; z-index: 2;
-  padding: clamp(2rem,6vw,4rem) 1.5rem 1rem;
+  padding: 1rem 1.5rem clamp(2.5rem,6vw,4rem);
   max-width: 720px; margin: 0 auto;
 }
 .hero-logo {
