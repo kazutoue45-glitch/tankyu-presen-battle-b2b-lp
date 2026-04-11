@@ -45,7 +45,7 @@ import '../styles/global.css';
     <p class="hero-catch rv">スクール内の発表会だけでは見えない、<br>生徒の「伝える力」を可視化しませんか？</p>
 
     <div class="hero-tags rv">
-      <span class="hero-tag">参加無料</span>
+      <span class="hero-tag hero-tag--free">参加無料</span>
       <span class="hero-tag">オンライン開催</span>
       <span class="hero-tag">全員にフィードバック</span>
       <span class="hero-tag">小学生〜高校生</span>
@@ -188,7 +188,7 @@ import '../styles/global.css';
           <tr><th>開催形式</th><td>オンライン開催</td></tr>
           <tr><th>審査員</th><td>教育者・ビジネスパーソンなどが審査</td></tr>
           <tr><th>対象</th><td>小学生〜高校生</td></tr>
-          <tr><th>参加費</th><td><strong>無料</strong></td></tr>
+          <tr><th>参加費</th><td><strong class="info-free">無料</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -849,7 +849,7 @@ import '../styles/global.css';
 .header-nav a:hover { color: var(--c-blue); }
 .header-cta-btn {
   display: inline-flex; align-items: center;
-  font-family: var(--f-heading); font-size: .78rem; font-weight: 900;
+  font-family: var(--f-heading); font-size: .82rem; font-weight: 900;
   color: #fff; background: var(--c-blue);
   padding: .5rem 1.2rem; border-radius: 6px; text-decoration: none;
   white-space: nowrap; letter-spacing: .03em;
@@ -950,9 +950,19 @@ import '../styles/global.css';
   background: rgba(255,255,255,.15); color: #fff;
   backdrop-filter: blur(4px);
 }
+.hero-tag--free {
+  background: rgba(37,99,235,.85);
+  border-color: rgba(37,99,235,.6);
+  font-size: .85rem; font-weight: 900;
+  padding: .35rem 1.1rem;
+  letter-spacing: .06em;
+}
 
 /* CTA独立セクション */
 .cta-sec { padding: clamp(1.5rem, 4vw, 2.5rem) 0; }
+.cta-sec .cta-btn--lg {
+  box-shadow: 0 6px 20px rgba(37,99,235,.3);
+}
 
 
 /* ─────────── 2段階CTA ─────────── */
@@ -960,22 +970,23 @@ import '../styles/global.css';
 .cta-btn-sub {
   display: inline-block;
   font-family: var(--f-heading);
-  font-size: clamp(.85rem, 2vw, .95rem);
-  font-weight: 700; color: var(--c-blue);
+  font-size: clamp(.8rem, 1.8vw, .88rem);
+  font-weight: 700; color: var(--c-text-mid);
   background: #fff;
-  border: 2px solid var(--c-blue);
-  padding: .7rem 2rem; border-radius: 8px;
-  text-decoration: none; margin-top: .8rem;
-  transition: background .2s, color .2s;
+  border: 1.5px solid var(--c-border);
+  padding: .6rem 1.8rem; border-radius: 8px;
+  text-decoration: none; margin-top: .6rem;
+  transition: background .2s, color .2s, border-color .2s;
 }
 .cta-btn-sub:hover {
-  background: var(--c-blue); color: #fff;
+  background: var(--c-bg-alt); color: var(--c-blue);
+  border-color: var(--c-blue);
 }
 .cta-sub {
   font-family: var(--f-heading);
   font-size: clamp(.9rem, 2vw, 1.05rem);
   font-weight: 700; color: var(--c-text-mid);
-  margin-bottom: .8rem;
+  margin-bottom: .6rem;
 }
 
 
@@ -1001,15 +1012,16 @@ import '../styles/global.css';
   width: 32px; height: 32px; border-radius: 50%;
   background: var(--c-blue); color: #fff;
   font-family: var(--f-heading); font-size: .8rem; font-weight: 900;
-  margin-bottom: .8rem;
+  margin-bottom: .5rem;
 }
 .sig-card h3 {
   font-family: var(--f-heading);
   font-size: 1rem; font-weight: 900;
-  margin-bottom: .5rem; line-height: 1.55;
+  margin-bottom: .4rem; line-height: 1.55;
+  color: var(--c-text);
 }
 .sig-card p {
-  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
+  font-size: .86rem; color: var(--c-text-light); line-height: 1.8;
 }
 .sig-arrow {
   padding: .3rem 0; display: flex; align-items: center; justify-content: center;
@@ -1020,7 +1032,7 @@ import '../styles/global.css';
 /* ─────────── S3 団体参加メリット ─────────── */
 .merit-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 .merit-card {
@@ -1028,6 +1040,7 @@ import '../styles/global.css';
   padding: 2rem 1.5rem;
   border: 1px solid var(--c-border);
   transition: transform .2s ease, box-shadow .2s ease;
+  display: flex; flex-direction: column;
 }
 .merit-card:hover {
   transform: translateY(-3px);
@@ -1036,17 +1049,18 @@ import '../styles/global.css';
 .merit-num {
   width: 44px; height: 44px; border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-size: .85rem; font-weight: 900; margin-bottom: 1rem;
+  font-size: .85rem; font-weight: 900; margin-bottom: .8rem;
   font-family: var(--f-heading);
   background: rgba(37,99,235,.08); color: var(--c-blue);
 }
 .merit-card h3 {
   font-family: var(--f-heading);
   font-size: 1rem; font-weight: 900;
-  margin-bottom: .6rem; line-height: 1.55;
+  margin-bottom: .5rem; line-height: 1.55;
 }
 .merit-card p {
-  font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
+  font-size: .86rem; color: var(--c-text-light); line-height: 1.8;
+  flex: 1;
 }
 
 
@@ -1066,7 +1080,7 @@ import '../styles/global.css';
 }
 .theme-title {
   font-family: var(--f-heading);
-  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  font-size: clamp(1.3rem, 3.5vw, 1.8rem);
   font-weight: 900; line-height: 1.6;
 }
 
@@ -1078,14 +1092,17 @@ import '../styles/global.css';
 .theme-angle {
   background: var(--c-bg-alt); border-radius: var(--radius-sm);
   padding: 1.2rem 1rem; border: 1px solid var(--c-border);
+  min-height: 120px;
+  display: flex; flex-direction: column;
 }
 .theme-angle h4 {
   font-family: var(--f-heading);
   font-size: .9rem; font-weight: 900;
-  margin-bottom: .4rem; color: var(--c-text);
+  margin-bottom: .4rem; color: var(--c-blue);
 }
 .theme-angle p {
   font-size: .82rem; color: var(--c-text-light); line-height: 1.75;
+  flex: 1;
 }
 
 .theme-highlight {
@@ -1120,6 +1137,10 @@ import '../styles/global.css';
   width: 140px; font-weight: 700;
   color: var(--c-text-mid); background: var(--c-bg-alt);
 }
+.info-free {
+  color: var(--c-blue); font-size: 1.1rem;
+  font-weight: 900; letter-spacing: .04em;
+}
 
 
 /* ─────────── S6 NORDT ─────────── */
@@ -1134,11 +1155,12 @@ import '../styles/global.css';
 .nordt-letters { font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: .06em; }
 .nordt-letters b { font-weight: 900; }
 
-.nordt-lead { text-align: center; margin-bottom: 2rem; }
+.nordt-lead { text-align: center; margin-bottom: 1.8rem; }
 .nordt-main-copy {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  font-weight: 900; line-height: 1.65; margin-bottom: .8rem;
+  font-weight: 900; line-height: 1.65; margin-bottom: .6rem;
+  color: var(--c-text);
 }
 .nordt-sub-copy {
   font-size: .88rem; color: var(--c-text-light); line-height: 1.85;
@@ -1270,8 +1292,9 @@ import '../styles/global.css';
 }
 .d10-card {
   display: flex; flex-direction: column;
-  align-items: center; gap: .3rem;
+  align-items: center; justify-content: center; gap: .3rem;
   width: clamp(70px, 8vw, 80px);
+  min-height: clamp(90px, 10vw, 105px);
   padding: .8rem .4rem;
   background: #fff; border: 2px solid var(--dc);
   border-radius: var(--radius-sm);
@@ -1324,6 +1347,7 @@ import '../styles/global.css';
   border: 1px solid var(--c-border);
   border-radius: var(--radius-sm);
   padding: 1.2rem;
+  display: flex; flex-direction: column;
 }
 .d10-merit-item h4 {
   font-family: var(--f-heading);
@@ -1332,6 +1356,7 @@ import '../styles/global.css';
 }
 .d10-merit-item p {
   font-size: .82rem; color: var(--c-text-light); line-height: 1.75;
+  flex: 1;
 }
 
 @media (max-width: 600px) {
@@ -1463,6 +1488,7 @@ import '../styles/global.css';
 
 /* モバイル調整 */
 @media (max-width: 600px) {
+  .merit-grid { grid-template-columns: 1fr; }
   .type-pair { grid-template-columns: 1fr; }
   .type-solo { flex-direction: column; text-align: center; gap: .8rem; padding: 1.2rem; }
   .type-card { flex-direction: column; text-align: center; gap: .6rem; padding: 1rem; }
@@ -1497,11 +1523,13 @@ import '../styles/global.css';
 .flow-step strong {
   font-family: var(--f-heading);
   font-size: .95rem; font-weight: 900;
-  display: block; margin-bottom: .2rem;
+  display: block; margin-bottom: .15rem;
+  color: var(--c-text);
 }
 .flow-step p {
   font-size: .85rem; color: var(--c-text-light); line-height: 1.75;
 }
+.flow-step:last-child { margin-bottom: 0; }
 
 
 /* ─────────── S10 運営体制 ─────────── */
@@ -1511,52 +1539,64 @@ import '../styles/global.css';
   gap: 1.5rem;
 }
 .safety-card {
-  background: var(--c-bg-alt); border: 1px solid var(--c-border);
+  background: #fff; border: 1px solid var(--c-border);
   border-radius: var(--radius-md); padding: 1.8rem 1.5rem;
-  transition: box-shadow .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: flex; flex-direction: column;
 }
-.safety-card:hover { box-shadow: var(--shadow-sm); }
+.safety-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
 .safety-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
   font-family: var(--f-heading);
-  font-size: .8rem; font-weight: 900;
-  color: var(--c-blue); margin-bottom: .8rem;
+  font-size: .82rem; font-weight: 900;
+  background: rgba(37,99,235,.08); color: var(--c-blue);
+  margin-bottom: .8rem;
 }
 .safety-card h3 {
   font-family: var(--f-heading);
-  font-size: .95rem; font-weight: 900; margin-bottom: .5rem;
+  font-size: .95rem; font-weight: 900; margin-bottom: .4rem;
 }
 .safety-card p {
   font-size: .85rem; color: var(--c-text-light); line-height: 1.8;
+  flex: 1;
 }
 
 /* 2025年大会実績 */
 .track-record {
   max-width: 640px; margin: 2.5rem auto 0;
-  background: #fff; border: 1px solid var(--c-border);
+  background: color-mix(in srgb, var(--c-blue) 3%, #fff);
+  border: 2px solid color-mix(in srgb, var(--c-blue) 18%, #fff);
   border-radius: var(--radius-md);
-  padding: 1.8rem; text-align: center;
+  padding: 2rem; text-align: center;
 }
 .track-title {
   font-family: var(--f-heading);
-  font-size: 1rem; font-weight: 900;
+  font-size: 1.1rem; font-weight: 900;
   margin-bottom: 1.2rem;
+  color: var(--c-blue);
 }
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: .8rem;
 }
 .track-item {
-  padding: .6rem; background: var(--c-bg-alt);
+  padding: .8rem; background: #fff;
   border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border);
 }
 .track-label {
   display: block; font-size: .72rem;
   font-weight: 700; color: var(--c-text-muted);
   margin-bottom: .2rem; letter-spacing: .06em;
+  text-transform: uppercase;
 }
 .track-value {
-  font-size: .88rem; font-weight: 700; color: var(--c-text);
+  font-size: .92rem; font-weight: 900; color: var(--c-text);
 }
 
 
@@ -1650,13 +1690,18 @@ import '../styles/global.css';
 .final-body { max-width: 560px; margin: 0 auto; }
 .final-logo {
   width: 100%; max-width: 400px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.2rem;
 }
 .final-theme {
   font-family: var(--f-heading);
   font-size: clamp(.9rem, 2.2vw, 1.1rem);
   font-weight: 700; color: var(--c-text-mid);
-  margin-bottom: 1.5rem; line-height: 1.6;
+  margin-bottom: 1.2rem; line-height: 1.6;
+}
+.final .cta-btn--lg {
+  font-size: clamp(1.1rem, 2.8vw, 1.35rem);
+  padding: 1.3rem 3.8rem;
+  box-shadow: 0 6px 24px rgba(37,99,235,.3);
 }
 
 
@@ -1680,38 +1725,3 @@ import '../styles/global.css';
 </style>
 
 
-<!-- ============================================================
-     JS — ハンバーガー + スクロールリビール
-     ============================================================ -->
-<script>
-  // ─── ハンバーガーメニュー ───
-  const burger = document.getElementById('header-burger');
-  const nav = document.getElementById('header-nav');
-  if (burger && nav) {
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('open');
-      nav.classList.toggle('open');
-    });
-    nav.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => {
-        burger.classList.remove('open');
-        nav.classList.remove('open');
-      })
-    );
-  }
-
-  // ─── ヘッダー shadow on scroll ───
-  const header = document.getElementById('site-header');
-  if (header) {
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
-  }
-
-  // ─── スクロールリビール ───
-  const obs = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
-    { threshold: 0.12 }
-  );
-  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-</script>
