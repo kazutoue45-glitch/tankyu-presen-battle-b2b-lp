@@ -75,15 +75,11 @@ import '../styles/global.css';
   <div class="container">
     <h2 class="sec-heading rv">なぜ今、探究×プレゼンなのか</h2>
 
-    <div class="sig-flow">
+    <div class="sig-grid">
       <div class="sig-card rv rv-d1">
         <span class="sig-step">1</span>
         <h3>探究教育が求められている</h3>
         <p>文科省が探究学習を推進し、東大を含む主要大学がプロジェクト型学習を拡充。一方で「何を、どう指導すればいいのか」に悩む教育者は少なくありません。</p>
-      </div>
-
-      <div class="sig-arrow rv" aria-hidden="true">
-        <svg viewBox="0 0 40 48"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--c-blue)" /></svg>
       </div>
 
       <div class="sig-card rv rv-d2">
@@ -92,13 +88,9 @@ import '../styles/global.css';
         <p>課題設定、情報収集、整理・分析、まとめ・表現。探究学習の4ステップを、プレゼンはすべて内包しています。プレゼンを鍛えることは、探究力そのものを鍛えることです。</p>
       </div>
 
-      <div class="sig-arrow rv" aria-hidden="true">
-        <svg viewBox="0 0 40 48"><path d="M20 0 L20 34 L10 28 L20 44 L30 28 L20 34" fill="var(--c-blue)" /></svg>
-      </div>
-
       <div class="sig-card sig-card--accent rv rv-d3">
         <span class="sig-step">3</span>
-        <h3>「大会」という明確なゴールが成長角度を変える</h3>
+        <h3>「大会」というゴールが成長角度を変える</h3>
         <p>日々の授業で身につけた力を「外の本番」にぶつける。順位だけで終わらない設計だからこそ、生徒は安心して全力を出せます。その結果、普段の授業へのモチベーションも変わります。</p>
       </div>
     </div>
@@ -446,9 +438,7 @@ import '../styles/global.css';
     <h2 class="sec-heading rv">プレゼンタイプ診断</h2>
 
     <div class="diag-intro rv">
-      <p class="diag-lead">人の心を動かす方法は、ひとつじゃない。</p>
-      <p class="diag-big">プレゼンタイプ診断</p>
-      <p class="diag-desc">生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。保護者への成果報告にそのまま活用できます。</p>
+      <p class="diag-desc">生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。NORDT（5軸）に基づき、一人ひとりの強みと伸びしろを診断します。保護者への成果報告にそのまま活用できます。</p>
     </div>
 
     <!-- タイプカード一覧 -->
@@ -598,7 +588,7 @@ import '../styles/global.css';
 
     </div>
 
-    <p class="diag-bottom-note rv">参加するだけで届きます。結果に関わらず、全員が受け取れる「その子だけの診断シート」です。</p>
+    <p class="diag-bottom-note rv">NORDTの5軸に基づく「その子だけの診断シート」をお届けします。</p>
   </div>
 </section>
 
@@ -991,15 +981,17 @@ import '../styles/global.css';
 
 
 /* ─────────── S2 教育的意義 ─────────── */
-.sig-flow {
-  max-width: 660px; margin: 0 auto;
-  display: flex; flex-direction: column; align-items: center;
+.sig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 .sig-card {
-  width: 100%; background: #fff;
+  background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-md);
-  padding: 1.8rem 1.5rem; position: relative;
+  padding: 1.8rem 1.5rem;
+  display: flex; flex-direction: column;
   transition: box-shadow .2s;
 }
 .sig-card:hover { box-shadow: var(--shadow-md); }
@@ -1022,11 +1014,12 @@ import '../styles/global.css';
 }
 .sig-card p {
   font-size: .86rem; color: var(--c-text-light); line-height: 1.8;
+  flex: 1;
 }
-.sig-arrow {
-  padding: .3rem 0; display: flex; align-items: center; justify-content: center;
+
+@media (max-width: 768px) {
+  .sig-grid { grid-template-columns: 1fr; }
 }
-.sig-arrow svg { width: 28px; height: 36px; }
 
 
 /* ─────────── S3 団体参加メリット ─────────── */
@@ -1066,8 +1059,8 @@ import '../styles/global.css';
 
 /* ─────────── S4 テーマ ─────────── */
 .theme-box {
-  max-width: 640px; margin: 0 auto 2rem;
-  text-align: center; background: #fff;
+  max-width: 640px; margin: 0 0 2rem;
+  text-align: left; background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3rem);
@@ -1155,7 +1148,7 @@ import '../styles/global.css';
 .nordt-letters { font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: .06em; }
 .nordt-letters b { font-weight: 900; }
 
-.nordt-lead { text-align: center; margin-bottom: 1.8rem; }
+.nordt-lead { text-align: left; margin-bottom: 1.8rem; }
 .nordt-main-copy {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -1390,7 +1383,7 @@ import '../styles/global.css';
 
 
 /* ─────────── S8 プレゼンタイプ診断 ─────────── */
-.diag-intro { text-align: center; max-width: 640px; margin: 0 auto 2rem; }
+.diag-intro { text-align: left; max-width: 780px; margin: 0 0 2rem; }
 .diag-lead {
   font-family: var(--f-heading);
   font-size: clamp(.95rem, 2.5vw, 1.1rem);
@@ -1489,7 +1482,7 @@ import '../styles/global.css';
 }
 
 .diag-bottom-note {
-  text-align: center; font-size: .88rem;
+  text-align: left; font-size: .88rem;
   color: var(--c-text-light); margin-top: 2.5rem; line-height: 1.7;
 }
 

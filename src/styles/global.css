@@ -83,7 +83,7 @@ a:hover { color: var(--c-blue-dark); }
   font-family: var(--f-heading);
   font-size: clamp(1.4rem, 3.5vw, 2rem);
   font-weight: 900;
-  text-align: center;
+  text-align: left;
   margin-bottom: clamp(1.2rem, 2.5vw, 1.8rem);
   line-height: 1.4;
   color: var(--c-text);
@@ -97,11 +97,11 @@ a:hover { color: var(--c-blue-dark); }
   height: 4px;
   background: linear-gradient(90deg, var(--c-blue), var(--c-blue-dark));
   border-radius: 2px;
-  margin: .8rem auto 0;
+  margin: .8rem 0 0;
 }
 
 .sec-heading-sub {
-  text-align: center;
+  text-align: left;
   font-size: clamp(.88rem, 2vw, 1rem);
   color: var(--c-text-light);
   margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
