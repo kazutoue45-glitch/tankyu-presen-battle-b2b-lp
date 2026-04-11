@@ -1285,17 +1285,19 @@ import '../styles/global.css';
 
 /* ─────────── S7.5 デザイン10 ─────────── */
 .d10-flow {
-  display: flex; flex-wrap: wrap;
-  justify-content: center; gap: .6rem;
-  max-width: 780px; margin: 0 auto 1.5rem;
-  padding: 1rem 0;
+  display: flex; flex-wrap: nowrap;
+  justify-content: center; gap: .5rem;
+  max-width: 100%; margin: 0 auto 1.5rem;
+  padding: 1.5rem 0;
+  align-items: center;
 }
 .d10-card {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: .3rem;
-  width: clamp(70px, 8vw, 80px);
-  min-height: clamp(90px, 10vw, 105px);
-  padding: .8rem .4rem;
+  flex: 0 0 auto;
+  width: clamp(60px, 7.5vw, 88px);
+  min-height: clamp(85px, 9vw, 105px);
+  padding: .7rem .3rem;
   background: #fff; border: 2px solid var(--dc);
   border-radius: var(--radius-sm);
   position: relative;
@@ -1359,9 +1361,14 @@ import '../styles/global.css';
   flex: 1;
 }
 
-@media (max-width: 600px) {
-  .d10-flow { gap: .4rem; }
-  .d10-card { width: clamp(58px, 17vw, 70px); padding: .6rem .3rem; }
+@media (max-width: 768px) {
+  .d10-flow {
+    justify-content: flex-start;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    padding: 1.5rem 1rem;
+    gap: .4rem;
+  }
+  .d10-card { width: 64px; min-height: 80px; padding: .6rem .3rem; }
   .d10-card--down { transform: translateY(5px); }
   .d10-card--up { transform: translateY(-2px); }
   .d10-card--peak { transform: translateY(-6px); }
