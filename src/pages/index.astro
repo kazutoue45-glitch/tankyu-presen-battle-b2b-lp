@@ -215,7 +215,7 @@ import '../styles/global.css';
         <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><strong>トーク</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div>
       </div>
 
-      <p class="nordt-note rv">5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
+      <p class="nordt-note rv">各項目20点×5軸＝100点満点で採点します。5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
     </div>
 
     <!-- 探究学習4ステップとNORDTの対応 -->
@@ -440,6 +440,32 @@ import '../styles/global.css';
 
     <div class="diag-intro rv">
       <p class="diag-desc">生徒一人ひとりの「伝え方の特性」を、プロの目で可視化する仕組みです。NORDT（5軸）に基づき、一人ひとりの強みと伸びしろを診断します。保護者への成果報告にそのまま活用できます。</p>
+    </div>
+
+    <div class="diag-sheet rv">
+      <h3 class="diag-sheet-title">プレゼン診断シートの内容</h3>
+      <div class="diag-sheet-grid">
+        <div class="diag-sheet-item">
+          <span class="diag-sheet-icon">📊</span>
+          <strong>NORDTレーダーチャート</strong>
+          <p>5軸のスコアをレーダーチャートで可視化。強みと伸びしろが一目でわかります。</p>
+        </div>
+        <div class="diag-sheet-item">
+          <span class="diag-sheet-icon">💬</span>
+          <strong>全体コメント</strong>
+          <p>審査員によるプレゼン全体への講評。どこが良かったか、何を磨けばさらに伸びるかを具体的に記載します。</p>
+        </div>
+        <div class="diag-sheet-item">
+          <span class="diag-sheet-icon">🎯</span>
+          <strong>すぐ使えるテクニック</strong>
+          <p>次のプレゼンですぐに試せる具体的なアドバイスを記載します。</p>
+        </div>
+        <div class="diag-sheet-item">
+          <span class="diag-sheet-icon">🧩</span>
+          <strong>プレゼンタイプ診断</strong>
+          <p>NORDTのスコア上位2項目の組み合わせで「その子だけのプレゼンタイプ」を判定します。</p>
+        </div>
+      </div>
     </div>
 
     <!-- タイプカード一覧 -->
@@ -1390,6 +1416,26 @@ import '../styles/global.css';
 
 /* ─────────── S8 プレゼンタイプ診断 ─────────── */
 .diag-intro { text-align: center; max-width: 640px; margin: 0 auto 2rem; }
+
+.diag-sheet { margin-bottom: 2.5rem; }
+.diag-sheet-title {
+  font-family: var(--f-heading); font-size: 1.1rem; font-weight: 900;
+  text-align: center; margin-bottom: 1.2rem;
+}
+.diag-sheet-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+}
+.diag-sheet-item {
+  text-align: center; background: var(--c-bg-alt);
+  border: 1px solid var(--c-border); border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+}
+.diag-sheet-icon { font-size: 1.5rem; display: block; margin-bottom: .5rem; }
+.diag-sheet-item strong {
+  font-family: var(--f-heading); font-size: .9rem; display: block; margin-bottom: .4rem;
+}
+.diag-sheet-item p { font-size: .82rem; color: var(--c-text-light); line-height: 1.7; }
+@media (max-width: 768px) { .diag-sheet-grid { grid-template-columns: repeat(2, 1fr); } }
 .diag-lead {
   font-family: var(--f-heading);
   font-size: clamp(.95rem, 2.5vw, 1.1rem);
