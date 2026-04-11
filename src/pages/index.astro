@@ -6,6 +6,20 @@ import '../styles/global.css';
 <Layout title="探究プレゼンバトル 2026 — 団体参加のご提案">
 
 <!-- ============================================================
+  Header
+  ============================================================ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-logos">
+      <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="小川探究" class="header-logo" />
+      <span class="header-x">&times;</span>
+      <img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" class="header-logo" />
+    </div>
+    <a href="#" class="header-cta">エントリーする</a>
+  </div>
+</header>
+
+<!-- ============================================================
   S1  ファーストビュー — 提案書の表紙
   ============================================================ -->
 <section class="hero">
@@ -402,10 +416,7 @@ import '../styles/global.css';
             <div class="secret-overlay"></div>
           </div>
           <div class="secret-info">
-            <span class="secret-badge">ULTRA RARE</span>
-            <p class="secret-title">？？？タイプ</p>
             <p class="secret-desc">全能力が最高値に達した者だけが覚醒する<br>伝説のプレゼンタイプ。<br>その正体は——診断結果で明かされる。</p>
-            <p class="secret-cta">あなたの生徒がこのタイプかもしれません</p>
           </div>
         </div>
       </div>
@@ -596,6 +607,42 @@ import '../styles/global.css';
      STYLES — 提案書風ビジネスデザイン
      ============================================================ -->
 <style>
+/* ─────────── HEADER ─────────── */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--c-border);
+  padding: .6rem 0;
+}
+.header-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.header-logo { height: 22px; width: auto; opacity: .7; }
+.header-x { font-size: .8rem; font-weight: 700; color: var(--c-text-muted); }
+.header-cta {
+  font-family: var(--f-heading);
+  font-size: .78rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--c-accent);
+  padding: .4rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.header-cta:hover { opacity: .85; }
+
 /* ─────────── S1 HERO — 提案書の表紙 ─────────── */
 .hero {
   position: relative;
@@ -605,6 +652,7 @@ import '../styles/global.css';
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding-top: 3.5rem;
   background: linear-gradient(170deg, #ffffff 0%, #f0f4ff 50%, #e8edf5 100%);
   color: var(--c-text);
 }
