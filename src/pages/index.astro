@@ -135,52 +135,53 @@ import '../styles/global.css';
 
 
 <!-- ============================================================
-  S4+S5  大会テーマ・概要（統合セクション）
+  S4  大会テーマ
   ============================================================ -->
-<section class="sec sec--white" id="overview">
+<section class="sec sec--white" id="theme">
   <div class="container">
-    <h2 class="sec-heading rv">大会テーマ・概要</h2>
+    <h2 class="sec-heading rv">大会テーマ</h2>
 
-    <div class="two-col rv">
-      <!-- 左カラム: テーマ -->
-      <div class="theme-col">
-        <span class="theme-label">今回のプレゼンテーマ</span>
-        <p class="theme-title">あなたの街の１０年後！<br>―地域活性化を提案せよ―</p>
+    <p class="theme-title rv">あなたの街の１０年後！<br>―地域活性化を提案せよ―</p>
 
-        <div class="theme-angles">
-          <div class="theme-angle">
-            <h4>「あなたの街」を知る</h4>
-            <p>市のHP・広報誌から現状を調べる。年齢別人口、特産物、自慢できること。</p>
-          </div>
-          <div class="theme-angle">
-            <h4>「10年後」を描く</h4>
-            <p>今後の計画や予測を調べる。市の政策、都市開発計画、人口推移。</p>
-          </div>
-          <div class="theme-angle">
-            <h4>「地域活性化」を提案する</h4>
-            <p>「幸せな未来」を前提に、誇れるふるさと・住み続けたい街・移り住みたい街の視点で考える。</p>
-          </div>
-        </div>
-
-        <div class="theme-highlight">
-          <p>優れた提案は、実際に自治体へ提出する可能性があります。<br>生徒のプレゼンが「練習」で終わらず、社会に届く大会です。</p>
-        </div>
+    <div class="theme-angles rv">
+      <div class="theme-angle-card">
+        <h4>「あなたの街」を知る</h4>
+        <p>市のHP・広報誌から現状を調べる。年齢別人口、特産物、自慢できること。</p>
       </div>
-
-      <!-- 右カラム: 大会概要 -->
-      <div class="overview-col">
-        <div class="info-table">
-          <table>
-            <tbody>
-              <tr><th>プレゼン時間</th><td>3分</td></tr>
-              <tr><th>開催形式</th><td>オンライン開催</td></tr>
-              <tr><th>審査員</th><td>教育者・ビジネスパーソンなどが審査</td></tr>
-              <tr><th>対象</th><td>小学生〜高校生</td></tr>
-              <tr><th>参加費</th><td><strong class="info-free">無料</strong></td></tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="theme-angle-card">
+        <h4>「10年後」を描く</h4>
+        <p>今後の計画や予測を調べる。市の政策、都市開発計画、人口推移。</p>
       </div>
+      <div class="theme-angle-card">
+        <h4>「地域活性化」を提案する</h4>
+        <p>「幸せな未来」を前提に、誇れるふるさと・住み続けたい街・移り住みたい街の視点で考える。</p>
+      </div>
+    </div>
+
+    <div class="theme-highlight rv">
+      <p>優れた提案は、実際に自治体へ提出する可能性があります。<br>生徒のプレゼンが「練習」で終わらず、社会に届く大会です。</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  S5  大会概要
+  ============================================================ -->
+<section class="sec sec--alt" id="overview">
+  <div class="container">
+    <h2 class="sec-heading rv">大会概要</h2>
+
+    <div class="info-table rv">
+      <table>
+        <tbody>
+          <tr><th>プレゼン時間</th><td>3分</td></tr>
+          <tr><th>開催形式</th><td>オンライン開催</td></tr>
+          <tr><th>審査員</th><td>教育者・ビジネスパーソンなどが審査</td></tr>
+          <tr><th>対象</th><td>小学生〜高校生</td></tr>
+          <tr><th>参加費</th><td><strong class="info-free">無料</strong></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -191,59 +192,53 @@ import '../styles/global.css';
   ============================================================ -->
 <section class="sec sec--white" id="nordt">
   <div class="container">
-    <div class="two-col two-col--wide-left rv">
-      <!-- 左カラム: NORDT 5軸 -->
-      <div class="nordt-left">
-        <h3 class="nordt-heading">
-          評価基準
-          <span class="nordt-letters" aria-label="NORDT">
-            <b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b>
-          </span>
-        </h3>
+    <h2 class="sec-heading rv">
+      評価基準
+      <span class="nordt-letters" aria-label="NORDT">
+        <b style="color:var(--nordt-n)">N</b><b style="color:var(--nordt-o)">O</b><b style="color:var(--nordt-r)">R</b><b style="color:var(--nordt-d)">D</b><b style="color:var(--nordt-t)">T</b>
+      </span>
+    </h2>
 
-        <div class="nordt-lead">
-          <p class="nordt-main-copy">100人が納得するニーズに、<br>1人しか持てないオリジナリティを。</p>
-          <p class="nordt-sub-copy">「みんなが困っていること」を見つける力と、自分だけのアイデアで切り込む力。<br>この2つが重なったとき、その子だけの「最強の提案」が生まれます。</p>
+    <div class="nordt-lead rv">
+      <p class="nordt-main-copy">100人が納得するニーズに、<br>1人しか持てないオリジナリティを。</p>
+      <p class="nordt-sub-copy">「みんなが困っていること」を見つける力と、自分だけのアイデアで切り込む力。<br>この2つが重なったとき、その子だけの「最強の提案」が生まれます。</p>
+    </div>
+
+    <div class="nordt-grid rv">
+      <div class="nordt-card" style="--nc:var(--nordt-n)"><span class="nordt-l">N</span><strong>ニーズ</strong><small>課題把握力</small><p>課題の本質を見抜き、需要を捉えているか</p></div>
+      <div class="nordt-card" style="--nc:var(--nordt-o)"><span class="nordt-l">O</span><strong>オリジナル</strong><small>独創性</small><p>独創性があり、遊び心やこだわりが感じられるか</p></div>
+      <div class="nordt-card" style="--nc:var(--nordt-r)"><span class="nordt-l">R</span><strong>リアル</strong><small>現実性</small><p>多様な視点から物事を現実的に考えられているか</p></div>
+      <div class="nordt-card" style="--nc:var(--nordt-d)"><span class="nordt-l">D</span><strong>デザイン</strong><small>構成力</small><p>スライドが論理的かつ印象的に構成されているか</p></div>
+      <div class="nordt-card" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><strong>トーク</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div>
+    </div>
+
+    <p class="nordt-note rv">各項目20点×5軸＝100点満点で採点します。5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
+
+    <div class="nordt-mapping rv">
+      <h3 class="nordt-mapping-title">探究学習の4ステップとNORDTの対応</h3>
+      <div class="nordt-mapping-grid">
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">1. 課題の設定</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b></span>
         </div>
-
-        <div class="nordt-grid">
-          <div class="nordt-card rv" style="--nc:var(--nordt-n)"><span class="nordt-l">N</span><strong>ニーズ</strong><small>課題把握力</small><p>課題の本質を見抜き、需要を捉えているか</p></div>
-          <div class="nordt-card rv" style="--nc:var(--nordt-o)"><span class="nordt-l">O</span><strong>オリジナル</strong><small>独創性</small><p>独創性があり、遊び心やこだわりが感じられるか</p></div>
-          <div class="nordt-card rv" style="--nc:var(--nordt-r)"><span class="nordt-l">R</span><strong>リアル</strong><small>現実性</small><p>多様な視点から物事を現実的に考えられているか</p></div>
-          <div class="nordt-card rv" style="--nc:var(--nordt-d)"><span class="nordt-l">D</span><strong>デザイン</strong><small>構成力</small><p>スライドが論理的かつ印象的に構成されているか</p></div>
-          <div class="nordt-card rv" style="--nc:var(--nordt-t)"><span class="nordt-l">T</span><strong>トーク</strong><small>話術</small><p>ユーモアを含め、巧みな話術を有しているか</p></div>
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">2. 情報の収集</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b></span>
         </div>
-
-        <p class="nordt-note">各項目20点×5軸＝100点満点で採点します。5つの軸で評価するため、スクールでの指導にそのまま活用できます。「何を伸ばすか」が明確になり、大会後のカリキュラム設計にも役立ちます。</p>
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">3. 整理・分析</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b> + <b style="color:var(--nordt-d)">D</b></span>
+        </div>
+        <div class="nordt-map-item">
+          <span class="nordt-map-step">4. まとめ・表現</span>
+          <span class="nordt-map-arrow">→</span>
+          <span class="nordt-map-axis"><b style="color:var(--nordt-d)">D</b> + <b style="color:var(--nordt-t)">T</b></span>
+        </div>
       </div>
-
-      <!-- 右カラム: 探究学習4ステップとの対応 -->
-      <div class="nordt-right">
-        <h4 class="nordt-mapping-title">探究学習の4ステップとNORDTの対応</h4>
-        <div class="nordt-mapping-grid">
-          <div class="nordt-map-item">
-            <span class="nordt-map-step">1. 課題の設定</span>
-            <span class="nordt-map-arrow">→</span>
-            <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b></span>
-          </div>
-          <div class="nordt-map-item">
-            <span class="nordt-map-step">2. 情報の収集</span>
-            <span class="nordt-map-arrow">→</span>
-            <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b></span>
-          </div>
-          <div class="nordt-map-item">
-            <span class="nordt-map-step">3. 整理・分析</span>
-            <span class="nordt-map-arrow">→</span>
-            <span class="nordt-map-axis"><b style="color:var(--nordt-n)">N</b> + <b style="color:var(--nordt-d)">D</b></span>
-          </div>
-          <div class="nordt-map-item">
-            <span class="nordt-map-step">4. まとめ・表現</span>
-            <span class="nordt-map-arrow">→</span>
-            <span class="nordt-map-axis"><b style="color:var(--nordt-d)">D</b> + <b style="color:var(--nordt-t)">T</b></span>
-          </div>
-        </div>
-        <p class="nordt-map-note"><b style="color:var(--nordt-o)">O</b>riginalと<b style="color:var(--nordt-r)">R</b>ealは全ステップに横断して関わります。</p>
-      </div>
+      <p class="nordt-map-note"><b style="color:var(--nordt-o)">O</b>riginalと<b style="color:var(--nordt-r)">R</b>ealは全ステップに横断して関わります。</p>
     </div>
   </div>
 </section>
@@ -1065,81 +1060,66 @@ import '../styles/global.css';
 }
 
 
-/* ─────────── 共通: 2カラムレイアウト ─────────── */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: stretch;
-}
-.two-col--wide-left { grid-template-columns: 3fr 2fr; }
-.two-col > * {
-  background: #fff;
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
-  padding: clamp(1.5rem, 3vw, 2rem);
-}
-@media (max-width: 768px) {
-  .two-col, .two-col--wide-left { grid-template-columns: 1fr; }
-}
-
-/* ─────────── S4+S5 テーマ・概要統合 ─────────── */
-.theme-col { display: flex; flex-direction: column; gap: 1rem; }
-.overview-col { display: flex; flex-direction: column; justify-content: center; }
-
-.theme-label {
-  display: inline-block; font-size: .75rem;
-  font-weight: 700; color: var(--c-blue);
-  letter-spacing: .08em; margin-bottom: .4rem;
-}
+/* ─────────── S4 大会テーマ ─────────── */
 .theme-title {
   font-family: var(--f-heading);
   font-size: clamp(1.15rem, 3vw, 1.5rem);
   font-weight: 900; line-height: 1.6;
-  text-align: center; margin-bottom: 1rem;
+  text-align: left; margin-bottom: 1.5rem;
 }
 
 .theme-angles {
-  display: grid; grid-template-columns: 1fr;
-  gap: .6rem;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; margin-bottom: 1.5rem;
 }
-.theme-angle {
-  background: var(--c-bg-alt); border-radius: var(--radius-sm);
-  padding: .8rem 1rem; border: 1px solid var(--c-border);
-  text-align: center;
+.theme-angle-card {
+  background: #fff; border-radius: var(--radius-md);
+  padding: 1.5rem; border: 1px solid var(--c-border);
+  text-align: left;
+  transition: box-shadow .2s;
 }
-.theme-angle h4 {
+.theme-angle-card:hover { box-shadow: var(--shadow-sm); }
+.theme-angle-card h4 {
   font-family: var(--f-heading);
-  font-size: .85rem; font-weight: 900;
-  margin-bottom: .2rem; color: var(--c-blue);
+  font-size: .9rem; font-weight: 900;
+  margin-bottom: .4rem; color: var(--c-blue);
 }
-.theme-angle p {
-  font-size: .8rem; color: var(--c-text-light); line-height: 1.7;
+.theme-angle-card p {
+  font-size: .85rem; color: var(--c-text-light); line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .theme-angles { grid-template-columns: 1fr; }
 }
 
 .theme-highlight {
-  text-align: center; padding: .8rem 1rem;
+  text-align: left; padding: 1rem 1.2rem;
   background: color-mix(in srgb, var(--c-blue) 5%, #fff);
   border: 1px solid color-mix(in srgb, var(--c-blue) 20%, #fff);
   border-radius: var(--radius-sm);
 }
 .theme-highlight p {
-  font-size: .82rem; color: var(--c-text-mid);
+  font-size: .85rem; color: var(--c-text-mid);
   line-height: 1.75; font-weight: 600;
 }
 
-/* 大会概要テーブル */
-.info-table { overflow: hidden; }
+/* S5 大会概要テーブル */
+.info-table {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
 .info-table table { width: 100%; border-collapse: collapse; }
 .info-table th,
 .info-table td {
-  padding: .9rem 1rem; font-size: .9rem;
+  padding: .9rem 1.2rem; font-size: .9rem;
   text-align: left; border-bottom: 1px solid var(--c-border-light);
 }
 .info-table tr:last-child th,
 .info-table tr:last-child td { border-bottom: none; }
 .info-table th {
-  width: 130px; font-weight: 700;
+  width: 160px; font-weight: 700;
   color: var(--c-text-mid); background: var(--c-bg-alt);
 }
 .info-free {
@@ -1148,21 +1128,11 @@ import '../styles/global.css';
 }
 
 
-/* ─────────── S6 NORDT 2カラム ─────────── */
-.nordt-left { display: flex; flex-direction: column; }
-.nordt-right { display: flex; flex-direction: column; justify-content: center; }
+/* ─────────── S6 NORDT ─────────── */
+.sec-heading .nordt-letters { font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: .06em; }
+.sec-heading .nordt-letters b { font-weight: 900; }
 
-.nordt-heading {
-  font-family: var(--f-heading);
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  font-weight: 900; text-align: center;
-  margin-bottom: 1.5rem;
-  display: flex; align-items: center; justify-content: center; gap: .6rem;
-}
-.nordt-letters { font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: .06em; }
-.nordt-letters b { font-weight: 900; }
-
-.nordt-lead { text-align: center; margin-bottom: 1.8rem; }
+.nordt-lead { text-align: left; margin-bottom: 1.8rem; }
 .nordt-main-copy {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -1205,23 +1175,30 @@ import '../styles/global.css';
 
 .nordt-note {
   font-size: .85rem; color: var(--c-text-light);
-  text-align: center; line-height: 1.8;
+  text-align: left; line-height: 1.8;
+  margin-bottom: 2.5rem;
 }
 
 /* NORDT × 探究学習マッピング */
+.nordt-mapping {
+  background: var(--c-bg-alt);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
 .nordt-mapping-title {
   font-family: var(--f-heading);
-  font-size: .95rem; font-weight: 900;
-  text-align: center; margin-bottom: 1.2rem;
+  font-size: 1rem; font-weight: 900;
+  text-align: left; margin-bottom: 1.2rem;
 }
 .nordt-mapping-grid {
-  display: flex; flex-direction: column; gap: .6rem;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem;
 }
 .nordt-map-item {
   display: flex; align-items: center; gap: .8rem;
-  background: #fff; padding: .6rem 1rem;
+  background: #fff; padding: .8rem 1rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--c-border-light);
+  border: 1px solid var(--c-border);
 }
 .nordt-map-step {
   font-size: .85rem; font-weight: 700;
@@ -1231,20 +1208,23 @@ import '../styles/global.css';
 .nordt-map-axis {
   font-family: var(--f-heading);
   font-size: 1rem; font-weight: 900;
-  min-width: 60px; text-align: center;
+  min-width: 40px; text-align: center;
 }
 .nordt-map-axis b { margin: 0 .1em; }
 .nordt-map-note {
   font-size: .8rem; color: var(--c-text-light);
-  text-align: center; margin-top: .8rem;
+  text-align: left; margin-top: .8rem;
   font-weight: 600;
 }
 .nordt-map-note b { font-weight: 900; }
 
+@media (max-width: 768px) {
+  .nordt-mapping-grid { grid-template-columns: 1fr; }
+}
+
 
 /* ─────────── S7 スケジュール ─────────── */
 .sched-table-wrap {
-  max-width: 900px; margin: 0 auto;
   overflow-x: auto; -webkit-overflow-scrolling: touch;
 }
 .sched-table {
@@ -1284,7 +1264,7 @@ import '../styles/global.css';
 }
 .sched-note {
   font-size: .82rem; color: var(--c-text-muted);
-  text-align: center; margin-top: 1.2rem; line-height: 1.7;
+  text-align: left; margin-top: 1.2rem; line-height: 1.7;
 }
 
 @media (max-width: 600px) {
@@ -1345,22 +1325,29 @@ import '../styles/global.css';
 .d10-axis b { color: var(--dc); }
 
 .d10-wave-note {
-  text-align: center; font-size: .82rem;
+  text-align: left; font-size: .82rem;
   color: var(--c-text-light); margin-bottom: 2rem;
   font-style: italic;
 }
 
 .d10-merit {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem; max-width: 720px; margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 .d10-merit-item {
-  background: var(--c-bg-alt);
+  background: #fff;
   border: 1px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
   display: flex; flex-direction: column;
+  text-align: left;
+  transition: box-shadow .2s;
+}
+.d10-merit-item:hover { box-shadow: var(--shadow-sm); }
+
+@media (max-width: 768px) {
+  .d10-merit { grid-template-columns: 1fr; }
 }
 .d10-merit-item h4 {
   font-family: var(--f-heading);
@@ -1401,21 +1388,23 @@ import '../styles/global.css';
 
 
 /* ─────────── S8 プレゼンタイプ診断 ─────────── */
-.diag-intro { text-align: center; max-width: 640px; margin: 0 auto 2rem; }
+.diag-intro { text-align: left; margin-bottom: 2rem; }
 
 .diag-sheet { margin-bottom: 2.5rem; }
 .diag-sheet-title {
   font-family: var(--f-heading); font-size: 1.1rem; font-weight: 900;
-  text-align: center; margin-bottom: 1.2rem;
+  text-align: left; margin-bottom: 1.2rem;
 }
 .diag-sheet-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
 .diag-sheet-item {
-  text-align: center; background: var(--c-bg-alt);
+  text-align: left; background: #fff;
   border: 1px solid var(--c-border); border-radius: var(--radius-md);
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
+  transition: box-shadow .2s;
 }
+.diag-sheet-item:hover { box-shadow: var(--shadow-sm); }
 .diag-sheet-icon { font-size: 1.5rem; display: block; margin-bottom: .5rem; }
 .diag-sheet-item strong {
   font-family: var(--f-heading); font-size: .9rem; display: block; margin-bottom: .4rem;
@@ -1442,7 +1431,7 @@ import '../styles/global.css';
 }
 
 /* タイプカード */
-.type-showcase { max-width: 900px; margin: 0 auto; }
+.type-showcase { }
 .type-section { margin-bottom: 2rem; }
 .type-section-title {
   font-family: var(--f-heading);
@@ -1456,7 +1445,7 @@ import '../styles/global.css';
   padding: 1.5rem 2rem; background: #fff;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-md);
-  max-width: 600px; margin: 0 auto;
+  max-width: 600px;
   transition: box-shadow .2s ease;
 }
 .type-solo:hover { box-shadow: var(--shadow-sm); }
@@ -1502,7 +1491,7 @@ import '../styles/global.css';
   padding: 1.8rem 2rem;
   background: linear-gradient(135deg, #1a1f36, #2d3250);
   border-radius: var(--radius-md); color: #fff;
-  max-width: 600px; margin: 0 auto;
+  max-width: 600px;
 }
 .secret-silhouette { position: relative; flex-shrink: 0; }
 .secret-char {
@@ -1520,7 +1509,7 @@ import '../styles/global.css';
 }
 
 .diag-bottom-note {
-  text-align: center; font-size: .88rem;
+  text-align: left; font-size: .88rem;
   color: var(--c-text-light); margin-top: 2.5rem; line-height: 1.7;
 }
 
@@ -1547,7 +1536,7 @@ import '../styles/global.css';
 
 
 /* ─────────── S9 団体参加の流れ ─────────── */
-.flow-steps { list-style: none; max-width: 640px; margin: 0 auto; }
+.flow-steps { list-style: none; max-width: 720px; }
 .flow-step {
   display: flex; gap: 1rem;
   margin-bottom: 1.5rem; align-items: flex-start;
@@ -1570,7 +1559,7 @@ import '../styles/global.css';
 .flow-step:last-child { margin-bottom: 0; }
 .flow-note {
   font-size: .82rem; color: var(--c-text-muted);
-  text-align: center; margin-top: 1.5rem; line-height: 1.7;
+  text-align: left; margin-top: 1.5rem; line-height: 1.7;
 }
 
 
@@ -1609,11 +1598,11 @@ import '../styles/global.css';
 
 /* 2025年大会実績 */
 .track-record {
-  max-width: 640px; margin: 2.5rem auto 0;
+  margin-top: 2.5rem;
   background: color-mix(in srgb, var(--c-blue) 3%, #fff);
   border: 2px solid color-mix(in srgb, var(--c-blue) 18%, #fff);
   border-radius: var(--radius-md);
-  padding: 2rem; text-align: center;
+  padding: 2rem; text-align: left;
 }
 .track-title {
   font-family: var(--f-heading);
@@ -1623,8 +1612,11 @@ import '../styles/global.css';
 }
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: .8rem;
+}
+@media (max-width: 768px) {
+  .track-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .track-item {
   padding: .8rem; background: #fff;
@@ -1644,7 +1636,7 @@ import '../styles/global.css';
 
 /* ─────────── S11 主催者情報 ─────────── */
 .founder-card {
-  max-width: 640px; margin: 0 auto 2rem;
+  margin-bottom: 2rem;
   background: #fff; border: 1px solid var(--c-border);
   border-radius: var(--radius-md); padding: 2rem 1.8rem;
 }
@@ -1677,11 +1669,11 @@ import '../styles/global.css';
 .org-card {
   background: #fff; border: 1px solid var(--c-border);
   border-radius: var(--radius-md);
-  padding: 2rem 1.5rem; text-align: center;
+  padding: 2rem 1.5rem; text-align: left;
 }
 .org-logo {
   height: 40px; width: auto;
-  margin: 0 auto 1rem; object-fit: contain;
+  margin: 0 0 1rem; object-fit: contain;
 }
 .org-card h3 {
   font-family: var(--f-heading);
@@ -1690,12 +1682,12 @@ import '../styles/global.css';
 .org-catch { font-size: .82rem; color: var(--c-text-light); margin-bottom: .6rem; }
 .org-card a { font-size: .82rem; font-weight: 700; }
 .org-cohost-note {
-  text-align: center; font-size: .82rem; color: var(--c-text-muted);
+  text-align: left; font-size: .82rem; color: var(--c-text-muted);
 }
 
 
 /* ─────────── S12 FAQ ─────────── */
-.faq-list { max-width: 700px; margin: 0 auto; }
+.faq-list { }
 .faq {
   border: 1px solid var(--c-border);
   border-radius: var(--radius-sm);
