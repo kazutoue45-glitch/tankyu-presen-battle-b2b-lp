@@ -436,13 +436,6 @@ import '../styles/global.css';
   </div>
 </section>
 
-<!-- キャラクター帯 -->
-<div class="char-band" aria-hidden="true">
-  <img src={`${import.meta.env.BASE_URL}images/char1.png`} alt="" class="char-band-img" />
-  <img src={`${import.meta.env.BASE_URL}images/char2.png`} alt="" class="char-band-img" />
-  <img src={`${import.meta.env.BASE_URL}images/char3.png`} alt="" class="char-band-img" />
-  <img src={`${import.meta.env.BASE_URL}images/char4.png`} alt="" class="char-band-img" />
-</div>
 
 
 <!-- ============================================================
@@ -604,7 +597,7 @@ import '../styles/global.css';
     <!-- セルフチェック診断 -->
     <div class="selfcheck-cta rv" style="margin-top:2.5rem">
       <h3 class="selfcheck-title">キミのプレゼンタイプ、知りたくない？</h3>
-      <p class="selfcheck-desc">12の質問に答えるだけ。たった1分でセルフチェックできます。</p>
+      <p class="selfcheck-desc">12の質問に答えるだけ。たった数分でセルフチェックできます。</p>
       <a href="https://detection-ogawa.web.app" target="_blank" rel="noopener noreferrer" class="cta-btn selfcheck-btn">セルフチェックしてみる →</a>
     </div>
 
@@ -719,7 +712,7 @@ import '../styles/global.css';
         </div>
         <div class="track-item">
           <span class="track-label">参加</span>
-          <span class="track-value">小4〜高3の9チーム</span>
+          <span class="track-value">小学生〜高校生の9チーム</span>
         </div>
         <div class="track-item">
           <span class="track-label">形式</span>
@@ -858,9 +851,13 @@ import '../styles/global.css';
       <a href="https://kids.valed.jp/" target="_blank" rel="noopener noreferrer"><img src={`${import.meta.env.BASE_URL}images/valed-logo.png`} alt="バレッドキッズ" /></a>
     </div>
     <div class="ft-social">
-      <a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" target="_blank" rel="noopener noreferrer" class="ft-social-link">
-        TikTok @prelabo をフォロー →
-      </a>
+      <a href="https://www.tiktok.com/@prelabo?_r=1&_t=ZS-94tLesYEsNs" target="_blank" rel="noopener noreferrer" class="ft-social-link">TikTok</a>
+      <span class="ft-social-sep">|</span>
+      <a href="https://www.youtube.com/@小川探究-c3w" target="_blank" rel="noopener noreferrer" class="ft-social-link">YouTube</a>
+      <span class="ft-social-sep">|</span>
+      <a href="https://www.instagram.com/prelabo_ogawa.tankyu/" target="_blank" rel="noopener noreferrer" class="ft-social-link">Instagram</a>
+      <span class="ft-social-sep">|</span>
+      <a href="https://lin.ee/9zFVLu5" target="_blank" rel="noopener noreferrer" class="ft-social-link">公式LINE（お問い合わせ）</a>
     </div>
     <p>&copy; 2026 小川探究 &times; バレッドキッズ All Rights Reserved.</p>
   </div>
@@ -1835,7 +1832,10 @@ import '../styles/global.css';
 }
 
 /* ─────────── Footer Social ─────────── */
-.ft-social { margin-bottom: .8rem; }
+.ft-social {
+  display: flex; align-items: center; justify-content: center;
+  gap: .6rem; flex-wrap: wrap; margin-bottom: .8rem;
+}
 .ft-social-link {
   color: rgba(255,255,255,.6);
   font-size: .8rem;
@@ -1843,6 +1843,10 @@ import '../styles/global.css';
   transition: color .2s;
 }
 .ft-social-link:hover { color: #fff; }
+.ft-social-sep {
+  color: rgba(255,255,255,.25);
+  font-size: .7rem;
+}
 
 
 /* ─────────── Mobile ─────────── */
