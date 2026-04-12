@@ -941,10 +941,10 @@ import '../styles/global.css';
 /* ─────────── S1 HERO ─────────── */
 .hero {
   position: relative;
-  min-height: 100dvh;
+  min-height: auto;
   display: flex; flex-direction: column; justify-content: center;
   text-align: center; overflow: hidden;
-  padding-top: 3.5rem; color: #fff;
+  padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 8vw, 5rem); color: var(--c-text);
 }
 @media (max-width: 768px) {
   .hero { justify-content: flex-start; padding-top: 0; }
@@ -964,7 +964,7 @@ import '../styles/global.css';
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: var(--c-text);
+  background: #fff;
 }
 .hero-inner {
   position: relative; z-index: 2;
@@ -979,16 +979,14 @@ import '../styles/global.css';
 .hero-subtitle {
   font-family: var(--f-heading);
   font-size: clamp(1rem, 2.5vw, 1.3rem);
-  font-weight: 700; color: rgba(255,255,255,.9);
+  font-weight: 700; color: var(--c-text-mid);
   margin-bottom: 1rem; letter-spacing: .08em;
-  text-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
 .hero-catch {
   font-family: var(--f-heading);
   font-size: clamp(1.1rem, 2.8vw, 1.5rem);
   font-weight: 900; line-height: 1.65;
-  color: #fff; margin-bottom: 1.5rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,.4);
+  color: var(--c-text); margin-bottom: 1.5rem;
 }
 .hero-tags {
   display: flex; flex-wrap: wrap; gap: .5rem;
@@ -997,13 +995,13 @@ import '../styles/global.css';
 .hero-tag {
   font-size: .78rem; font-weight: 700;
   padding: .3rem .9rem; border-radius: 100px;
-  border: 1px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.2); color: #fff;
-  backdrop-filter: blur(4px);
+  border: 1px solid var(--c-border);
+  background: var(--c-bg-alt); color: var(--c-text);
 }
 .hero-tag--free {
-  background: rgba(37,99,235,.85);
-  border-color: rgba(37,99,235,.6);
+  background: var(--c-blue);
+  border-color: var(--c-blue);
+  color: #fff;
   font-size: .85rem; font-weight: 900;
   padding: .35rem 1.1rem;
   letter-spacing: .06em;
