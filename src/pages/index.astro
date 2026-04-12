@@ -34,9 +34,6 @@ import '../styles/global.css';
   S1  ファーストビュー — 提案書の表紙
   ============================================================ -->
 <section class="hero">
-  <div class="hero-bg">
-    <img src={`${import.meta.env.BASE_URL}images/hero-bg.jpg`} alt="" class="hero-bg-img" aria-hidden="true" />
-  </div>
   <div class="hero-overlay"></div>
 
   <div class="hero-inner">
@@ -967,7 +964,7 @@ import '../styles/global.css';
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: rgba(10, 18, 42, .35);
+  background: linear-gradient(170deg, #0a122a, #1a2a5e);
 }
 .hero-inner {
   position: relative; z-index: 2;
